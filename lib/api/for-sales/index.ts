@@ -4,6 +4,8 @@ import { getClient } from "@/lib/graphql/apollo-client"
 import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
 import { Advertisement, ADVERTISEMENT_TYPES } from "@/types/advertisement"
 import { SORT_DIRECTIONS } from "@/types/sort-direction"
+import CACHE_TIMES from "@/configs/cache-times"
+import CACHE_KEYS from "@/configs/cache-keys"
 
 const getForSales = async (
   pageSize: number = 10,
@@ -23,6 +25,15 @@ const getForSales = async (
             created_at: SORT_DIRECTIONS.DESC,
           },
         ],
+      },
+      context: {
+        fetchOptions: {
+          cache: "force-cache",
+          next: {
+            revalidate: CACHE_TIMES.FOR_SALES,
+            tags: [CACHE_KEYS.FOR_SALES],
+          },
+        },
       },
     })
 
