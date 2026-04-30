@@ -11,10 +11,8 @@ type Props = {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html className="h-full">
-      <body className={clsx(inter.className, "flex h-full flex-col")}>
-        {children}
-      </body>
+    <html>
+      <body className={clsx(inter.className)}>{children}</body>
     </html>
   )
 }

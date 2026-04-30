@@ -17,8 +17,8 @@ const SideBarItem: React.FC<Props> = ({ href, title, icon }) => {
     <Link
       href={href}
       className={cn(
-        "text-4.5 flex cursor-pointer items-center gap-x-5 rounded-md py-4.5 pl-5.5 leading-4.5 font-medium text-sidebar-foreground transition-colors duration-200 hover:bg-gray-100",
-        isActive && "bg-gray-200 text-primary"
+        "flex cursor-pointer items-center gap-x-5 rounded-md py-4 pl-5 text-base font-medium text-sidebar-foreground transition-colors duration-200 hover:bg-sidebar-accent/80",
+        isActive && "bg-sidebar-accent text-sidebar-accent-foreground"
       )}
     >
       {icon}
