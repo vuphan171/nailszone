@@ -17,7 +17,7 @@ export async function generateMetadata(props: Props) {
 
   const t = await getTranslations({
     locale: locale as Locale,
-    namespace: "AppMetadata",
+    namespace: "Common.Metadata",
   })
 
   return {

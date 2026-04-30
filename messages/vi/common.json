@@ -1,6 +1,19 @@
 {
-    "AppMetadata": {
-        "title": "VI: NailsZone - Vietnamese Nail Salon",
-        "description": "VI: NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
+    "Common": {
+        "Metadata": {
+            "title": "NailsZone - Vietnamese Nail Salon",
+            "description": "NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
+        },
+        "Navigation": {
+            "home": "Home",
+            "jobs": "Jobs",
+            "master_class": "Master Class",
+            "for_sale": "For Sale",
+            "legal": "Legal",
+            "customer_service": "Customer service",
+            "request_support": "Request Support",
+            "about_nailszone": "About NailsZone",
+            "add_nailszone_to_your_device": "Add NailsZone to your device"
+        }
     }
 }

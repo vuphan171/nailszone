@@ -4,7 +4,7 @@ import { Locale } from "next-intl"
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
 
-  const t = await getTranslations("AppMetadata")
+  const t = await getTranslations("Common.Metadata")
 
   setRequestLocale(locale as Locale)
 

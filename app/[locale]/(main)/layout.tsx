@@ -12,7 +12,7 @@ export default function Layout({ children }: Props) {
       <Header />
       <div className="relative flex min-h-dvh">
         <SideBar />
-        <div className="bg-surface shrink grow pt-16">{children}</div>
+        <div className="shrink grow bg-surface pt-16">{children}</div>
       </div>
     </>
   )
