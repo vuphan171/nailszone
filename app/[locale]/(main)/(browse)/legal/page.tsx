@@ -17,7 +17,7 @@ const Page = async ({ params }: Props) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations("terms_and_conditions_page")
+  const t = await getTranslations("legal_page")
 
   return (
     <div className="px-8 pt-6">

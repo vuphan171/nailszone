@@ -10,7 +10,7 @@ type Props = {
 }
 
 const PolicyCard: React.FC<Props> = ({ slug, icon, title, description }) => {
-  const t = useTranslations("terms_and_conditions_page")
+  const t = useTranslations("legal_page")
 
   return (
     <Link
