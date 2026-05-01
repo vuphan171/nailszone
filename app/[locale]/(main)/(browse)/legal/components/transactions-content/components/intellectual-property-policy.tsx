@@ -16,7 +16,7 @@ const IntellectualPropertyPolicy = ({ value }: Props) => {
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
+      <AccordionTrigger className="py-4 text-base leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>
@@ -45,7 +45,8 @@ const IntellectualPropertyPolicy = ({ value }: Props) => {
           {t("reporting.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("reporting.notification_label")} {t("reporting.notification_intro")}
+          {t("reporting.notification_label")}{" "}
+          {t("reporting.notification_intro")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
