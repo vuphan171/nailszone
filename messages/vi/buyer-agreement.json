@@ -1,0 +1,45 @@
+{
+  "buyer_agreement_page": {
+    "metadata": {
+      "title": "Buyer Agreement - NailsZone",
+      "description": "Terms for engaging with NailsZone as a buyer."
+    },
+    "title": "Buyer Agreement",
+    "introduction": {
+      "title": "Introduction",
+      "description": "Welcome to NailsZone, your premier destination for discovering and purchasing the finest nail care products and services. This Buyer Agreement outlines the terms under which you engage with the NailsZone platform as a buyer. It is designed to ensure a secure, enjoyable, and fair shopping experience for all members of the NailsZone community."
+    },
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "description": "By purchasing products or services on NailsZone, you agree to abide by this Buyer Agreement, along with our <terms>Terms and Conditions</terms>, <privacy>Privacy Policy</privacy>, and <cookies>Cookie Policy</cookies>. Your continued use of the platform signifies your acceptance of these terms."
+    },
+    "buyer_responsibilities": {
+      "title": "Buyer Responsibilities",
+      "description": "<accurate>Accurate Information:</accurate> Provide accurate and complete information at checkout and maintain up-to-date contact details for shipping and communication. <respectful>Respectful Interaction:</respectful> Engage respectfully with sellers, adhering to NailsZone's community standards. Harassment or abuse of sellers will not be tolerated. <compliance>Compliance with Policies:</compliance> Adhere to NailsZone's <policy>Return and Refund Policy</policy>, understanding that returns and refunds must align with the seller's specified terms."
+    },
+    "transactions": {
+      "title": "Transactions and Payment",
+      "description": "<direct>Direct Transactions:</direct> All financial transactions are conducted directly between the buyer and the seller. NailsZone facilitates these transactions but does not act as a middleman. <payment>Payment Security:</payment> NailsZone is committed to maintaining a secure payment environment. Please ensure that all payment information is accurate and secure."
+    },
+    "limitation_of_liability": {
+      "title": "Limitation of Liability",
+      "description": "<transactional>Transactional Risks:</transactional> You acknowledge that all transactions are directly between you and the selling party. NailsZone is not liable for any issues that may arise from transactions, including but not limited to, disputes, delivery issues, or product quality. <content>Content Accuracy:</content> While NailsZone strives to ensure the accuracy of listing content, we cannot guarantee that all listings are free of errors or inaccuracies. Buyers purchase at their own risk."
+    },
+    "disclaimers": {
+      "title": "Disclaimers",
+      "description": "<asis>As-Is Basis:</asis> Products and services purchased through NailsZone are provided on an \"as-is\" basis without warranty of any kind, either express or implied. <thirdparty>Third-Party Links:</thirdparty> The NailsZone platform may contain links to third-party websites or services that are not owned or controlled by NailsZone. We assume no responsibility for the content, policies, or practices of any third-party sites."
+    },
+    "governing_law": {
+      "title": "Governing Law and Dispute Resolution",
+      "description": "This Agreement and your use of the NailsZone platform shall be governed by the laws of the jurisdiction in which NailsZone operates. Any disputes arising from this Agreement shall be resolved through arbitration or applicable dispute resolution mechanisms."
+    },
+    "amendments": {
+      "title": "Amendments",
+      "description": "NailsZone reserves the right to modify this Buyer Agreement at any time. You will be notified of significant changes, and continued use of the platform will constitute acceptance of the new terms."
+    },
+    "acknowledgment": {
+      "title": "Acknowledgment and Acceptance",
+      "description": "By making a purchase on NailsZone, you acknowledge that you have read, understood, and agreed to comply with the terms outlined in this Buyer Agreement."
+    }
+  }
+}

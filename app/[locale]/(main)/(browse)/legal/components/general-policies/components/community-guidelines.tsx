@@ -11,12 +11,12 @@ type Props = {
   value: string
 }
 
-const CookiePolicy = ({ value }: Props) => {
-  const t = useTranslations("cookie_policy_page")
+const CommunityGuidelines = ({ value }: Props) => {
+  const t = useTranslations("community_guidelines_page")
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight text-primary **:data-[slot=accordion-trigger-icon]:size-4.5">
+      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>
@@ -24,56 +24,72 @@ const CookiePolicy = ({ value }: Props) => {
         <Typography className="mt-2" variant="p">
           {t("introduction.description")}
         </Typography>
-        <Typography variant="h6">{t("what_are_cookies.title")}</Typography>
-        <Typography className="mt-2" variant="p">
-          {t("what_are_cookies.description")}
-        </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("how_we_use_cookies.title")}
+          {t("respectful_interaction.title")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("how_we_use_cookies.essential")}
+            {t("respectful_interaction.courtesy")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("how_we_use_cookies.performance_analytics")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("how_we_use_cookies.functionality")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("how_we_use_cookies.advertising")}
+            {t("respectful_interaction.no_harassment")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("third_party_cookies.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("third_party_cookies.description")}
+          {t("content_standards.title")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("third_party_cookies.analytics_providers")}
+            {t("content_standards.relevant")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("third_party_cookies.social_media")}
+            {t("content_standards.no_hate")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("content_standards.safe_legal")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("managing_your_cookies.title")}
+          {t("intellectual_property.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("managing_your_cookies.description")}
+          {t("intellectual_property.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("changes.title")}
+          {t("privacy_and_confidentiality.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("changes.description")}
+          {t("privacy_and_confidentiality.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("engagement_and_interaction.title")}
+        </Typography>
+        <Typography className="my-0 list-decimal" variant="ul">
+          <Typography variant="p" as="li">
+            {t("engagement_and_interaction.positive")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("engagement_and_interaction.reporting")}
+          </Typography>
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("enforcement_and_consequences.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("enforcement_and_consequences.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("amendments.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("amendments.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
@@ -98,4 +114,4 @@ const CookiePolicy = ({ value }: Props) => {
   )
 }
 
-export default CookiePolicy
+export default CommunityGuidelines

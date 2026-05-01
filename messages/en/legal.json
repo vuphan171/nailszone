@@ -6,17 +6,8 @@
         },
         "title": "Terms and Conditions",
         "view_policy": "View Policy",
-        "general_policies": {
-            "title": "General Policies",
-            "description": "General policies for NailsZone"
-        },
-        "specific_agreements": {
-            "title": "Specific Agreements",
-            "description": "Specific agreements for NailsZone"
-        },
-        "transactions_and_content": {
-            "title": "Transactions and Content",
-            "description": "Transactions and content for NailsZone"
-        }
+        "general_policies": "General Policies",
+        "specific_agreements": "Specific Agreements",
+        "transactions_and_content": "Transactions & Content"
     }
 }

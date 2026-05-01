@@ -1,56 +1,56 @@
 {
   "privacy_policy_page": {
     "metadata": {
-      "title": "Chính sách quyền riêng tư - NailsZone",
-      "description": "Cách NailsZone thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn."
+      "title": "Privacy Policy - NailsZone",
+      "description": "How NailsZone collects, uses, and protects your personal information."
     },
-    "title": "Chính sách quyền riêng tư cho NailsZone",
+    "title": "Privacy Policy for NailsZone",
     "introduction": {
-      "title": "Giới thiệu",
-      "description": "Tại NailsZone, chúng tôi cam kết bảo vệ quyền riêng tư của bạn. Chính sách quyền riêng tư này giải thích cách chúng tôi thu thập, sử dụng, chia sẻ và bảo vệ thông tin cá nhân của bạn khi bạn truy cập trang web, sử dụng dịch vụ hoặc tương tác với chúng tôi. Khi sử dụng NailsZone, bạn đồng ý với các thực hành xử lý dữ liệu được mô tả trong chính sách này."
+      "title": "Introduction",
+      "description": "At NailsZone, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and safeguard your personal information when you visit our website, use our services, or interact with us. By using NailsZone, you consent to the data practices described in this policy."
     },
     "information_we_collect": {
-      "title": "Thông tin chúng tôi thu thập",
-      "personal_identification": "Thông tin nhận dạng cá nhân: Chúng tôi có thể thu thập tên, địa chỉ email, địa chỉ thực, số điện thoại và các thông tin liên hệ khác khi bạn đăng ký, mua hàng hoặc tương tác với dịch vụ của chúng tôi.",
-      "payment": "Thông tin thanh toán: Đối với giao dịch mua hàng, chi tiết thanh toán được xử lý an toàn bởi các nhà cung cấp dịch vụ thanh toán của chúng tôi.",
-      "browsing": "Thông tin duyệt web: Chúng tôi tự động thu thập thông tin về hành vi duyệt web của bạn, bao gồm địa chỉ IP, loại trình duyệt và mô hình sử dụng."
+      "title": "Information We Collect",
+      "personal_identification": "Personal Identification Information: We may collect your name, email address, physical address, phone number, and other contact details when you register, make a purchase, or interact with our services.",
+      "payment": "Payment Information: For purchases, payment details are processed securely by our payment service providers.",
+      "browsing": "Browsing Information: We automatically collect information about your browsing behavior, including your IP address, browser type, and usage patterns."
     },
     "how_we_use_information": {
-      "title": "Cách chúng tôi sử dụng thông tin của bạn",
-      "description": "Cung cấp dịch vụ: Để quản lý tài khoản, xử lý đơn hàng và cung cấp dịch vụ. Liên lạc: Để liên hệ với bạn về tài khoản hoặc giao dịch, và thông báo cho bạn về khuyến mãi, cập nhật hoặc dịch vụ liên quan. Cải thiện: Để cải thiện và cá nhân hóa trải nghiệm của bạn trên trang web."
+      "title": "How We Use Your Information",
+      "description": "Service Provision: To manage your account, process orders, and deliver services. Communication: To communicate with you about your account or transactions, and to inform you about relevant promotions, updates, or services. Improvement: To improve and personalize your experience on our website."
     },
     "sharing_of_information": {
-      "title": "Chia sẻ thông tin",
-      "service_providers": "Nhà cung cấp dịch vụ: Chúng tôi có thể chia sẻ thông tin của bạn với bên thứ ba thực hiện dịch vụ thay mặt chúng tôi, chẳng hạn như xử lý thanh toán và logistics giao hàng.",
-      "legal_requirements": "Yêu cầu pháp lý: Chúng tôi có thể tiết lộ thông tin của bạn nếu luật pháp yêu cầu hoặc nếu chúng tôi cho rằng hành động đó là cần thiết để bảo vệ quyền, tài sản hoặc an toàn của chúng tôi, người dùng hoặc công chúng.",
-      "consent": "Sự đồng ý: Chúng tôi sẽ không chia sẻ dữ liệu cá nhân của bạn với các bên thứ ba khác nếu không có sự đồng ý rõ ràng của bạn."
+      "title": "Sharing of Information",
+      "service_providers": "Service Providers: We may share your information with third parties that perform services on our behalf, such as payment processing and delivery logistics.",
+      "legal_requirements": "Legal Requirements: We may disclose your information if required by law or if we believe such action is necessary to protect our rights, property, or safety, or that of our users or the public.",
+      "consent": "Consent: We will not share your personal data with other third parties without your explicit consent."
     },
     "data_protection": {
-      "title": "Bảo vệ dữ liệu",
-      "description": "Biện pháp bảo mật: Chúng tôi áp dụng nhiều biện pháp bảo mật để duy trì an toàn cho thông tin cá nhân của bạn, bao gồm mã hóa và kiểm soát truy cập. Tuân thủ: Chúng tôi tuân thủ GDPR, CCPA/CPRA, PIPEDA và các luật quyền riêng tư khác có hiệu lực khi thu thập, sử dụng và bảo vệ thông tin của bạn."
+      "title": "Data Protection",
+      "description": "Security Measures: We implement a variety of security measures to maintain the safety of your personal information, including encryption and access controls. Compliance: We comply with GDPR, CCPA/CPRA, PIPEDA, and other applicable privacy laws in collecting, using, and protecting your information."
     },
     "your_rights": {
-      "title": "Quyền của bạn",
-      "access_correction": "Truy cập và chỉnh sửa: Bạn có quyền truy cập và chỉnh sửa thông tin cá nhân của mình.",
-      "deletion": "Xóa: Bạn có thể yêu cầu xóa dữ liệu cá nhân của mình trong một số điều kiện nhất định.",
-      "consent_withdrawal": "Rút lại đồng ý: Bạn có quyền rút lại đồng ý bất cứ lúc nào, khi có liên quan.",
-      "data_portability": "Khả năng chuyển dữ liệu: Bạn có quyền nhận dữ liệu cá nhân của mình ở định dạng có cấu trúc, được sử dụng phổ biến."
+      "title": "Your Rights",
+      "access_correction": "Access and Correction: You have the right to access and correct your personal information.",
+      "deletion": "Deletion: You can request the deletion of your personal data under certain conditions.",
+      "consent_withdrawal": "Consent Withdrawal: You have the right to withdraw consent at any time, where relevant.",
+      "data_portability": "Data Portability: You have the right to receive your personal data in a structured, commonly used format."
     },
     "cookies_and_tracking": {
-      "title": "Cookie và công nghệ theo dõi",
-      "description": "<link>Chính sách cookie</link> của chúng tôi mô tả cách chúng tôi sử dụng cookie và công nghệ theo dõi để nâng cao trải nghiệm của bạn và thu thập dữ liệu về việc sử dụng trang web."
+      "title": "Cookies and Tracking Technologies",
+      "description": "Our <link>Cookie Policy</link> details how we use cookies and tracking technologies to enhance your experience and gather data about website usage."
     },
     "international_transfers": {
-      "title": "Chuyển giao quốc tế",
-      "description": "Thông tin của bạn có thể được chuyển đến, lưu trữ và xử lý tại một quốc gia khác với nơi thu thập, luôn tuân thủ nghiêm ngặt các luật áp dụng về bảo vệ dữ liệu."
+      "title": "International Transfers",
+      "description": "Your information may be transferred to, stored, and processed in a country different from where it was collected, always under strict compliance with applicable laws regarding data protection."
     },
     "changes": {
-      "title": "Thay đổi Chính sách quyền riêng tư này",
-      "description": "NailsZone có quyền cập nhật Chính sách quyền riêng tư này bất cứ lúc nào. Chúng tôi sẽ thông báo cho bạn về các thay đổi quan trọng và ghi rõ ở đầu chính sách thời điểm cập nhật gần nhất."
+      "title": "Changes to This Privacy Policy",
+      "description": "NailsZone reserves the right to update this Privacy Policy at any time. We will notify you of significant changes and indicate at the top of the policy when it was last updated."
     },
     "contact_us": {
-      "title": "Liên hệ",
-      "description": "Nếu có thắc mắc về Chính sách quyền riêng tư này hoặc các chính sách của chúng tôi, vui lòng liên hệ <email>teamnz@levincigroup.com</email>."
+      "title": "Contact Us",
+      "description": "For questions about this Privacy Policy or any of our policies, please contact us at <email>teamnz@levincigroup.com</email>."
     }
   }
 }

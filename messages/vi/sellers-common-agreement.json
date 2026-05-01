@@ -1,0 +1,57 @@
+{
+  "sellers_common_agreement_page": {
+    "metadata": {
+      "title": "Sellers Common Agreement - NailsZone",
+      "description": "Terms for retail suppliers and nail masters selling on NailsZone."
+    },
+    "title": "Sellers Common Agreement",
+    "introduction": {
+      "title": "Introduction",
+      "description": "Welcome to the NailsZone seller community! This Agreement serves as a guide to the terms and conditions under which you offer products and services on NailsZone. It encompasses both our retail suppliers and nail-master roles, ensuring a seamless, secure, and lawful e-commerce operation."
+    },
+    "compliance": {
+      "title": "Compliance with E-Commerce Laws",
+      "description": "By agreeing to sell on NailsZone, you commit to adhering to the basic laws governing e-commerce website operations, including, but not limited to, GDPR, CCPA/CPRA, COPPA, CalOPPA, EU Cookie Law, Eraser Button Law, and ADA. Detailed adherence strategies are outlined in the NailsZone Regulatory Information Document."
+    },
+    "seller_registration": {
+      "title": "Seller Registration",
+      "description": "Prior to selling, ensure your account information is accurate and up-to-date. This transparency builds trust with potential buyers and aligns with our platform's values of integrity and accountability."
+    },
+    "product_listing": {
+      "title": "Product Listing and Representation",
+      "description": "<detailing>Detailing:</detailing> Product descriptions must be concise yet comprehensive, providing all necessary details within a 200-character limit. <imagery>Imagery:</imagery> Images should realistically represent the products, occupying at least 85% of the image area in JPEG, TIFF, or PNG format. <accuracy>Accuracy:</accuracy> Ensure the product and its features are clearly visible, avoiding blurred or pixelated images."
+    },
+    "customer_service": {
+      "title": "Customer Service and Financial Transactions",
+      "description": "As a seller, you agree to NailsZone's <policy>Return & Refund Policy</policy>, allowing buyers to refund within seven days. Direct marketing to NailsZone customers or redirecting them from the NailsZone sales process is prohibited. Fulfill orders promptly, provide clear shipping, return, and refund policies, and maintain professional communication with customers."
+    },
+    "prohibited": {
+      "title": "Prohibited Seller Activities",
+      "description": "No solicitation of positive feedback through bribes. Use of customer contact information for unauthorized marketing purposes or directing them to external sites is strictly forbidden."
+    },
+    "sales_shipping": {
+      "title": "Sales and Shipping Policies",
+      "description": "Offer shipping services that reflect the actual costs and delivery speeds. Charges may include actual shipping costs, processing fees, and any applicable taxes or government-imposed fees. Free shipping can be applied selectively based on your strategic preferences."
+    },
+    "pricing": {
+      "title": "Pricing and Promotions",
+      "description": "Original pricing must adhere to our guidelines, fostering a competitive and fair marketplace. Sellers are expected to price items independently, without coordinating with others, to ensure market competitiveness."
+    },
+    "responsibilities": {
+      "title": "Seller's Responsibilities and NailsZone's Limitation of Liability",
+      "description": "Sellers are responsible for the legal and ethical listing and selling of products and services on NailsZone. NailsZone endeavors to provide a safe, secure platform but is not liable for disputes arising from sales transactions or seller actions. Our platform acts as a facilitator between buyers and sellers without entering the contractual relationship or assuming liability for transactions."
+    },
+    "governing_law": {
+      "title": "Governing Law and Dispute Resolution",
+      "description": "This Agreement shall be governed and construed in accordance with the laws of the jurisdiction in which NailsZone operates. Disputes will be resolved through arbitration or applicable dispute resolution mechanisms."
+    },
+    "amendments": {
+      "title": "Amendments",
+      "description": "NailsZone reserves the right to modify this Agreement at any time. Sellers will be notified of significant changes, and continued use of the platform will constitute acceptance of the new terms."
+    },
+    "acknowledgment": {
+      "title": "Acknowledgment and Acceptance",
+      "description": "By continuing to use the NailsZone platform for selling purposes, you acknowledge and agree to comply with the terms outlined in this Agreement, contributing to a respectful, lawful, and thriving NailsZone community."
+    }
+  }
+}

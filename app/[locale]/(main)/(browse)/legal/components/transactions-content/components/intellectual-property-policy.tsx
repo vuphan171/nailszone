@@ -11,12 +11,12 @@ type Props = {
   value: string
 }
 
-const DisputeResolutionAgreement = ({ value }: Props) => {
-  const t = useTranslations("dispute_resolution_agreement_page")
+const IntellectualPropertyPolicy = ({ value }: Props) => {
+  const t = useTranslations("intellectual_property_policy_page")
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight text-primary **:data-[slot=accordion-trigger-icon]:size-4.5">
+      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>
@@ -24,81 +24,92 @@ const DisputeResolutionAgreement = ({ value }: Props) => {
         <Typography className="mt-2" variant="p">
           {t("introduction.description")}
         </Typography>
-        <Typography variant="h6">{t("purpose.title")}</Typography>
-        <Typography className="mt-2" variant="p">
-          {t("purpose.description")}
-        </Typography>
-        <Typography variant="h6">{t("scope.title")}</Typography>
-        <Typography className="mt-2" variant="p">
-          {t("scope.description")}
-        </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("arbitration_process.title")}
+          {t("respect.title")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("arbitration_process.initiation")}
+            {t.rich("respect.user_content", {
+              label: (chunks) => chunks,
+            })}
           </Typography>
           <Typography variant="p" as="li">
-            {t("arbitration_process.provider")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("arbitration_process.rules")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("arbitration_process.location")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("arbitration_process.arbitrator_decision")}
+            {t.rich("respect.attribution", {
+              label: (chunks) => chunks,
+            })}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("exceptions_to_arbitration.title")}
+          {t("reporting.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("reporting.notification_label")} {t("reporting.notification_intro")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("exceptions_to_arbitration.small_claims")}
+            {t("reporting.notification_bullet_1")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("exceptions_to_arbitration.injunctive_relief")}
+            {t("reporting.notification_bullet_2")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("reporting.notification_bullet_3")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("reporting.notification_bullet_4")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("reporting.notification_bullet_5")}
+          </Typography>
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t.rich("reporting.response", {
+            label: (chunks) => chunks,
+          })}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("counter_notification.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("counter_notification.intro")}
+        </Typography>
+        <Typography className="my-0 mt-2 list-decimal" variant="ul">
+          <Typography variant="p" as="li">
+            {t("counter_notification.item_1")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("counter_notification.item_2")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("counter_notification.item_3")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("counter_notification.item_4")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("waiver_of_jury_trial.title")}
+          {t("consequences.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("waiver_of_jury_trial.description")}
+          {t("consequences.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("opt_out_provision.title")}
+          {t("modifications.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("opt_out_provision.description")}
+          {t("modifications.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("changes.title")}
+          {t("contact.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("changes.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("governing_law.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("governing_law.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("contact_information.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t.rich("contact_information.description", {
+          {t.rich("contact.description", {
             email: (chunks) => (
               <Link
                 className="text-interactive! no-underline! hover:underline!"
@@ -114,4 +125,4 @@ const DisputeResolutionAgreement = ({ value }: Props) => {
   )
 }
 
-export default DisputeResolutionAgreement
+export default IntellectualPropertyPolicy

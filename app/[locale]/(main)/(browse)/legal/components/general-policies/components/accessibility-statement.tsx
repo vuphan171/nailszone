@@ -11,93 +11,64 @@ type Props = {
   value: string
 }
 
-const CommunityGuidelines = ({ value }: Props) => {
-  const t = useTranslations("community_guidelines_page")
+const AccessibilityStatement = ({ value }: Props) => {
+  const t = useTranslations("accessibility_statement_page")
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight text-primary **:data-[slot=accordion-trigger-icon]:size-4.5">
+      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>
-        <Typography variant="h6">{t("introduction.title")}</Typography>
+        <Typography variant="h6">{t("commitment.title")}</Typography>
         <Typography className="mt-2" variant="p">
-          {t("introduction.description")}
+          {t("commitment.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("respectful_interaction.title")}
+          {t("efforts_to_support.title")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("respectful_interaction.courtesy")}
+            {t("efforts_to_support.standards_compliance")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("respectful_interaction.no_harassment")}
+            {t("efforts_to_support.training")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("efforts_to_support.feedback")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("efforts_to_support.accessibility_audit")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("content_standards.title")}
+          {t("technical_information.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("technical_information.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("known_limitations.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("known_limitations.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("feedback_and_contact.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("feedback_and_contact.intro")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("content_standards.relevant")}
+            {t("feedback_and_contact.phone")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("content_standards.no_hate")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("content_standards.safe_legal")}
-          </Typography>
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("intellectual_property.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("intellectual_property.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("privacy_and_confidentiality.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("privacy_and_confidentiality.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("engagement_and_interaction.title")}
-        </Typography>
-        <Typography className="my-0 list-decimal" variant="ul">
-          <Typography variant="p" as="li">
-            {t("engagement_and_interaction.positive")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("engagement_and_interaction.reporting")}
-          </Typography>
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("enforcement_and_consequences.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("enforcement_and_consequences.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("amendments.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("amendments.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("contact_us.title")}
-        </Typography>
-        <Typography className="my-0 list-decimal" variant="ul">
-          <Typography variant="p" as="li">
-            {t.rich("contact_us.description", {
+            {t.rich("feedback_and_contact.email", {
               email: (chunks) => (
                 <Link
                   className="text-interactive! no-underline! hover:underline!"
@@ -108,10 +79,42 @@ const CommunityGuidelines = ({ value }: Props) => {
               ),
             })}
           </Typography>
+          <Typography variant="p" as="li">
+            {t("feedback_and_contact.postal")}
+          </Typography>
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("enforcement_procedure.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("enforcement_procedure.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("external_links.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("external_links.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("additional_information.title")}
+        </Typography>
+        <Typography className="mt-2" variant="p">
+          {t("additional_information.description")}
+        </Typography>
+        <Typography className="my-0 list-decimal" variant="ul">
+          <Typography variant="p" as="li">
+            {t("additional_information.features")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("additional_information.date_statement")}
+          </Typography>
         </Typography>
       </AccordionContent>
     </AccordionItem>
   )
 }
 
-export default CommunityGuidelines
+export default AccessibilityStatement

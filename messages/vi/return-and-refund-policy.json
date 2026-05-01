@@ -1,0 +1,48 @@
+{
+  "return_and_refund_policy_page": {
+    "metadata": {
+      "title": "Return and Refund Policy - NailsZone",
+      "description": "Conditions and process for returns and refunds on NailsZone."
+    },
+    "title": "Return and Refund Policy",
+    "overview": {
+      "title": "Policy Overview",
+      "description": "Our policy ensures that customers can return physical goods under certain conditions and outlines the process for initiating returns and refunds. This policy is applicable for buyers from all countries we operate in."
+    },
+    "conditions": {
+      "title": "Conditions for Returns and Refunds",
+      "within_window": "Returns and refunds are accepted if the request is made within 30 days from the shipment receipt.",
+      "accepted_reasons": "Accepted reasons for returns include: wrong items received, defective items, items significantly different from the description, or items no longer wanted by the buyer.",
+      "item_state": "The item must be unopened, unused, or in the condition it was received to be eligible for a return."
+    },
+    "initiating": {
+      "title": "Initiating a Return",
+      "via_menu": "Buyers can initiate a return or refund request via the Return - Refund submenu under Customer Service.",
+      "provide_details": "Upon request, buyers must provide details regarding the order and reason for return, including any supporting documents or images."
+    },
+    "return_process": {
+      "title": "Return Process",
+      "seller_review": "Once a return request is submitted, the seller reviews it and decides to approve or reject the return within one week.",
+      "send_back": "If the return is approved, the buyer must send the item back within 30 days, following the return tracking information provided.",
+      "inspection": "Upon receiving and inspecting the return items, the seller decides on the refund eligibility within one week."
+    },
+    "refund_calculation": {
+      "title": "Refund Calculation",
+      "amount_basis": "Refund amounts are calculated based on the subtotal of items, applicable shipping fees, and any restocking fee as per NailsZone's terms.",
+      "fee_responsibility": "For returns initiated due to buyer's reasons (e.g., no longer wanted), the buyer bears the shipping and return fees. If the return is due to seller's error, these fees are not applied."
+    },
+    "refund_issuance": {
+      "title": "Refund Issuance",
+      "after_approval": "Refunds are processed and released to the buyer after the return items are received and approved by the seller.",
+      "disputes": "In case of a dispute, the buyer can contact customer service for assistance."
+    },
+    "restocking_fee": {
+      "title": "Restocking Fee",
+      "description": "A restocking fee is applied for returns based on NailsZone's standard terms. This fee is automatically calculated and reflected in the refund amount."
+    },
+    "exceptions": {
+      "title": "Exceptions",
+      "lost_in_transit": "If return items are lost during delivery, it is the buyer's responsibility to resolve the issue with the carrier. In such cases, the buyer should cancel their return request."
+    }
+  }
+}

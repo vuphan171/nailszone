@@ -4,6 +4,7 @@
             "title": "Terms and Conditions - NailsZone",
             "description": "Terms and Conditions - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
         },
+        "title": "Terms and Conditions for NailsZone",
         "introduction": {
             "title": "Introduction",
             "description": "Welcome to NailsZone, a community dedicated to nail care enthusiasts and professionals. These Terms and Conditions govern your access to and use of the NailsZone website, services, and applications. By accessing or using NailsZone, you agree to be bound by these terms, which include our Privacy Policy, Cookie Policy, Return and Refund Policy, and other policies linked herein."
@@ -13,6 +14,42 @@
             "eligibility": "Eligibility: You must be at least 18 years old to use our services or the age of majority in your jurisdiction.",
             "account_registration": "Account Registration: You may need to register an account to access certain features. Keep your account information accurate and confidential.",
             "content": "Content :You are responsible for the content you post on NailsZone and must comply with our Community Guidelines."
+        },
+        "privacy_and_data_protection": {
+            "title": "Privacy and Data Protection",
+            "description": "Your privacy is paramount to us. Our <link>the guidelines</link> outlines how we collect, use, and protect your personal data, in compliance with GDPR, CCPA/CPRA, PIPEDA, and other applicable laws."
+        },
+        "intellectual_property": {
+            "title": "Intellectual Property",
+            "nailszone_content": "NailsZone Content: The NailsZone website and its contents are protected by intellectual property laws. Use of our content is only permitted as explicitly authorized by these Terms.",
+            "user_content": "User Content :You retain rights to the content you submit to NailsZone but grant us a license to use, modify, and display it as part of our services."
+        },
+        "purchases_returns_and_refunds": {
+            "title": "Purchases Returns and Refunds",
+            "purchases": "Purchases: When you make a purchase on NailsZone, you agree to our <link>Return and Refund Policy</link>, which outlines the conditions under which returns and refunds are accepted.",
+            "shipping": "Shipping: Our <link>Shipping Policy</link> provides detailed information on shipping methods, costs, and estimated delivery times."
+        },
+        "cookies_and_data_security": {
+            "title": "Cookies and Data Security",
+            "cookies": "Cookies: We use cookies to enhance your experience. <link>Our Cookie Policy</link> details the types of cookies we use and how you can manage your preferences.",
+            "data_security": "Data Security: We are committed to protecting your personal data. Our <link>Data Security Policy</link> describes the measures we take to safeguard your information against unauthorized access and other threats."
+        },
+        "dispute_resolution": {
+            "title": "Dispute Resolution",
+            "governing_law": "Governing Law: These Terms are governed by the laws of the jurisdiction in which NailsZone operates.",
+            "dispute_resolution_process": "Dispute Resolution Process: We aim to resolve disputes amicably. Failing which, disputes will be resolved through arbitration in accordance with our <link>Dispute Resolution and Arbitration Agreement</link>."
+        },
+        "accessibility": {
+            "title": "Accessibility",
+            "description": "NailsZone is committed to ensuring accessibility for all users, including those with disabilities. Our <link>Accessibility Statement</link> details our efforts and measures taken to achieve this goal"
+        },
+        "modifications_to_terms": {
+            "title": "Modifications to Terms",
+            "description": "NailsZone reserves the right to modify these Terms at any time. We will provide notice of significant changes, and your continued use of the services constitutes acceptance of the new terms."
+        },
+        "contact_us": {
+            "title": "Contact Us",
+            "description": "For questions about these Terms and Conditions or any of our policies, please contact us at <email>teamnz@levincigroup.com</email>."
         }
     }
 }

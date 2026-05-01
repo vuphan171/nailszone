@@ -16,7 +16,7 @@ const DataSecurityPolicy = ({ value }: Props) => {
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight text-primary **:data-[slot=accordion-trigger-icon]:size-4.5">
+      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>

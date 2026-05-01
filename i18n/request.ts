@@ -27,6 +27,16 @@ export default getRequestConfig(async ({ requestLocale }) => {
         .default,
       ...(await import(`../messages/${locale}/dispute-resolution-agreement.json`))
         .default,
+      ...(await import(`../messages/${locale}/community-participation-agreement.json`))
+        .default,
+      ...(await import(`../messages/${locale}/sellers-common-agreement.json`))
+        .default,
+      ...(await import(`../messages/${locale}/buyer-agreement.json`)).default,
+      ...(await import(`../messages/${locale}/return-and-refund-policy.json`))
+        .default,
+      ...(await import(`../messages/${locale}/shipping-policy.json`)).default,
+      ...(await import(`../messages/${locale}/intellectual-property-policy.json`))
+        .default,
     },
   }
 })

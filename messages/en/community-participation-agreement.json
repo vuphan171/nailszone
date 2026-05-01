@@ -1,0 +1,50 @@
+{
+  "community_participation_agreement_page": {
+    "metadata": {
+      "title": "Community Participation Agreement - NailsZone",
+      "description": "Terms for engaging with the NailsZone platform and community as a member or buyer."
+    },
+    "title": "Community Participation Agreement",
+    "introduction": {
+      "title": "Introduction",
+      "description": "Welcome to NailsZone, a vibrant community dedicated to the beauty and artistry of nail care. This Community Participation Agreement outlines the terms under which you engage with the NailsZone platform and community as an authenticated member or buyer. By registering on NailsZone, you agree to these terms, designed to ensure a respectful, safe, and enjoyable experience for all members."
+    },
+    "acceptance": {
+      "title": "Acceptance of Agreement",
+      "acknowledgment": "<label>Acknowledgment :</label> By creating an account, you acknowledge that you have read, understood, and agreed to abide by this Participation Agreement, along with NailsZone's <terms>Terms and Conditions</terms>, <privacy>Privacy Policy</privacy>, and <cookies>Cookie Policy</cookies>.",
+      "amendments": "<label>Amendments :</label> We reserve the right to update or modify this Agreement at any time. Your continued use of NailsZone after any such changes constitutes your acceptance of the new terms."
+    },
+    "community_conduct": {
+      "title": "Community Conduct",
+      "respectful_behavior": "<label>Respectful Behavior :</label> Treat all members with respect, kindness, and consideration. Harassment, bullying, discrimination, or any form of abuse will not be tolerated.",
+      "compliance": "<label>Compliance :</label> You agree to comply with all local, state, national, and international laws and regulations applicable to your use of NailsZone.",
+      "content_responsibility": "<label>Content Responsibility :</label> You are responsible for the content you post, including its legality, reliability, and appropriateness. NailsZone reserves the right to remove any content that violates this Agreement or is deemed harmful to the community."
+    },
+    "transactions": {
+      "title": "Transactions and Interactions",
+      "buyer_seller": "<label>Buyer and Seller Conduct :</label> As a platform facilitating transactions between buyers and sellers, NailsZone expects all parties to engage in fair and honest dealings.",
+      "disputes": "<label>Disputes :</label> NailsZone provides a dispute resolution process to address concerns between members. We strive to mediate and resolve conflicts fairly, though we are not responsible for the actions of any member."
+    },
+    "limitation_of_liability": {
+      "title": "Limitation of Liability",
+      "acknowledgment_of_risk": "<label>Acknowledgment of Risk:</label> You acknowledge that you voluntarily engage in activities on NailsZone and assume the risks associated with those activities. NailsZone is not liable for the actions of any member, nor for any unauthorized access to or use of our servers and/or any personal information stored therein.",
+      "exemption": "<label>Exemption from Liability:</label> To the fullest extent permitted by law, NailsZone, its affiliates, officers, directors, employees, agents, and licensors are exempt from liability for any indirect, incidental, special, consequential or punitive damages arising out of or related to your use of the platform, whether based on warranty, contract, tort (including negligence), or any other legal theory."
+    },
+    "indemnification": {
+      "title": "Indemnification",
+      "description": "You agree to indemnify and hold harmless NailsZone and its affiliates, officers, agents, and employees from any claim or demand made by any third party due to or arising out of your breach of this Agreement, your improper use of NailsZone's services, or your breach of any law or the rights of a third party."
+    },
+    "governing_law": {
+      "title": "Governing Law",
+      "description": "This Agreement and your use of NailsZone are governed by the laws of the jurisdiction in which our company is established, without regard to its conflict of law provisions."
+    },
+    "dispute_resolution": {
+      "title": "Dispute Resolution",
+      "description": "In the event of a dispute, parties agree first to attempt to resolve the conflict informally. If resolution cannot be reached, disputes will be resolved through binding arbitration, rather than in court."
+    },
+    "contact_us": {
+      "title": "Contact Us",
+      "description": "For questions regarding this Community Participation Agreement or any policies mentioned herein, please contact NailsZone at <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

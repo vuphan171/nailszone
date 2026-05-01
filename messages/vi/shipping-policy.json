@@ -1,0 +1,45 @@
+{
+  "shipping_policy_page": {
+    "metadata": {
+      "title": "Shipping Policy - NailsZone",
+      "description": "How orders are shipped, delivery times, costs, and international shipping on NailsZone."
+    },
+    "title": "Shipping Policy",
+    "overview": {
+      "title": "Overview",
+      "description": "Our shipping policy outlines how purchases are shipped to customers, including available shipping methods, estimated delivery times, and costs. Special considerations for international shipping are also covered."
+    },
+    "methods": {
+      "title": "Shipping Methods",
+      "carriers": "We offer a variety of shipping methods to meet different needs, including standard and expedited options through carriers such as UPS, USPS, and FedEx.",
+      "seller_options": "Sellers can configure shipping options including Free Shipping for orders that reach a defined amount, and Flat Rate shipping for orders below that threshold.",
+      "international_options": "For international shipping, options include FedEx, with specific packaging types like FedEx Envelope, Pak, Box, Tube, and more, with Regular Pickup or Request Courier as pickup methods."
+    },
+    "addresses": {
+      "title": "Shipping Addresses",
+      "checkout": "Customers can choose their shipping address at checkout from saved addresses or add a new one. Address details must include first and last name, phone number, email, country, state, city, street address, and zip code."
+    },
+    "delivery_times": {
+      "title": "Estimated Delivery Times",
+      "description": "Delivery times vary based on the shipping method selected and the destination. We strive to provide accurate estimates during checkout and will notify customers of any delays as soon as possible."
+    },
+    "costs": {
+      "title": "Shipping Costs",
+      "basis": "Costs are determined by the shipping method chosen, the order's total weight, and the destination. We offer Free Shipping on orders that reach a specified total and Flat Rate shipping for others.",
+      "handling": "Handling fees may apply, calculated as a fixed amount or percentage of the order, applied per order or package, based on the carrier and method selected."
+    },
+    "tracking": {
+      "title": "Order Tracking",
+      "description": "Once an order is shipped, a tracking number will be provided. Customers can track their shipment through our platform or directly with the carrier. Notifications will be sent for any status updates."
+    },
+    "international": {
+      "title": "International Shipping",
+      "guidelines": "We offer international shipping options with detailed guidelines for packaging, dropoff, and weight limits based on the carrier's policies.",
+      "restrictions": "Handling fees, packaging types, and shipping methods are specified for international orders. Customers from non-applicable countries might have restricted access to certain shipping methods."
+    },
+    "special": {
+      "title": "Special Considerations",
+      "description": "For bulky or special items, additional shipping considerations and costs may apply. We will communicate any specific requirements or restrictions at checkout or through customer service."
+    }
+  }
+}

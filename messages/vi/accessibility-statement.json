@@ -1,49 +1,49 @@
 {
   "accessibility_statement_page": {
     "metadata": {
-      "title": "Tuyên bố khả năng tiếp cận - NailsZone",
-      "description": "Cam kết của NailsZone về khả năng tiếp cận kỹ thuật số và thực hành phù hợp WCAG."
+      "title": "Accessibility Statement - NailsZone",
+      "description": "NailsZone’s commitment to digital accessibility and WCAG-aligned practices."
     },
-    "title": "Tuyên bố khả năng tiếp cận cho NailsZone",
+    "title": "Accessibility Statement for NailsZone",
     "commitment": {
-      "title": "Cam kết về khả năng tiếp cận",
-      "description": "NailsZone cam kết đảm bảo khả năng tiếp cận kỹ thuật số cho người khuyết tật. Chúng tôi không ngừng cải thiện trải nghiệm người dùng cho mọi người và áp dụng các tiêu chuẩn tiếp cận liên quan để đảm bảo quyền truy cập bình đẳng cho mọi người dùng."
+      "title": "Commitment to Accessibility",
+      "description": "NailsZone is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to ensure we provide equal access to all users."
     },
     "efforts_to_support": {
-      "title": "Nỗ lực hỗ trợ khả năng tiếp cận",
-      "standards_compliance": "Tuân thủ tiêu chuẩn: Triển khai nội dung phù hợp Hướng dẫn về khả năng tiếp cận nội dung web (WCAG) 2.1 mức AA tối thiểu.",
-      "training": "Đào tạo: Đào tạo nhân viên về khả năng tiếp cận và luật, hướng dẫn liên quan.",
-      "feedback": "Phản hồi: Lắng nghe phản hồi của người dùng và xử lý các khía cạnh có thể cải thiện khả năng tiếp cận.",
-      "accessibility_audit": "Kiểm tra khả năng tiếp cận: Thực hiện kiểm tra định kỳ trên trang web và khắc phục các vấn đề được phát hiện."
+      "title": "Efforts to Support Accessibility",
+      "standards_compliance": "Standards Compliance: Implementing content that conforms to the Web Content Accessibility Guidelines (WCAG) 2.1 level AA as a minimum standard.",
+      "training": "Training: Providing training for our staff on accessibility and relevant laws and guidelines.",
+      "feedback": "Feedback: Listening to feedback from our users and addressing areas where accessibility can be improved.",
+      "accessibility_audit": "Accessibility Audit: Conducting regular accessibility audits of our website and fixing any issues that are identified."
     },
     "technical_information": {
-      "title": "Thông tin kỹ thuật",
-      "description": "NailsZone nỗ lực tuân theo hướng dẫn và tiêu chuẩn được chấp nhận về khả năng tiếp cận và khả năng sử dụng. Dù vậy, trang web NailsZone vẫn có thể còn hạn chế. Các nỗ lực của chúng tôi đang được tiếp tục."
+      "title": "Technical Information",
+      "description": "NailsZone strives to adhere to the accepted guidelines and standards for accessibility and usability. Despite our efforts to ensure accessibility of the NailsZone website, there may be some limitations. Please be aware that our efforts are ongoing."
     },
     "known_limitations": {
-      "title": "Hạn chế đã biết",
-      "description": "Chúng tôi nhận thức một số khu vực trên trang web cần cải thiện và đang tích cực làm việc hướng tới mục tiêu đó. Nếu bạn phát hiện vấn đề, vui lòng liên hệ chúng tôi."
+      "title": "Known Limitations",
+      "description": "We are aware of some areas on the website that may require improvement. We are actively working to achieve this. If you find any issue, please contact us."
     },
     "feedback_and_contact": {
-      "title": "Phản hồi và liên hệ",
-      "intro": "Chúng tôi hoan nghênh phản hồi của bạn về khả năng tiếp cận của NailsZone. Vui lòng cho chúng tôi biết nếu bạn gặp rào cản tiếp cận:",
-      "phone": "Điện thoại: [Insert phone number]",
+      "title": "Feedback and Contact",
+      "intro": "We welcome your feedback on the accessibility of NailsZone. Please let us know if you encounter accessibility barriers:",
+      "phone": "Phone: [Insert phone number]",
       "email": "E-mail: <email>teamnz@levincigroup.com</email>",
-      "postal": "Địa chỉ bưu điện: [Insert postal address]"
+      "postal": "Postal address: [Insert postal address]"
     },
     "enforcement_procedure": {
-      "title": "Quy trình khiếu nại",
-      "description": "NailsZone nhằm phản hồi các ý kiến về khả năng tiếp cận kịp thời và đề xuất giải pháp. Nếu bạn không hài lòng với phản hồi của chúng tôi, bạn có thể dùng cơ chế phản hồi của Sáng kiến Khả năng tiếp cận Web (WAI)."
+      "title": "Enforcement Procedure",
+      "description": "NailsZone aims to respond to accessibility feedback promptly and to propose a solution. If you are not satisfied with our response, you may use the Web Accessibility Initiative (WAI) feedback mechanism."
     },
     "external_links": {
-      "title": "Liên kết bên ngoài",
-      "description": "NailsZone có liên kết tới các trang bên ngoài. Chúng tôi không thể đảm bảo khả năng tiếp cận của các trang đó và không chịu trách nhiệm về nội dung hoặc tính năng tiếp cận của các trang đó."
+      "title": "External Links",
+      "description": "NailsZone includes links to external sites. We cannot guarantee the accessibility of external sites and are not responsible for the content or accessibility features of these sites."
     },
     "additional_information": {
-      "title": "Thông tin bổ sung",
-      "description": "Chúng tôi cam kết cải tiến liên tục và tuân theo thực hành tốt nhất về khả năng tiếp cận. Khi công nghệ và tiêu chuẩn tiếp cận phát triển, nỗ lực của chúng tôi cũng sẽ phát triển để đảm bảo trang web tiếp cận được với mọi người.",
-      "features": "Tính năng tiếp cận: Chúng tôi đã triển khai các tính năng như điều hướng bằng bàn phím, văn bản thay thế cho hình ảnh và độ tương phản màu đủ để cải thiện khả năng tiếp cận cho người dùng có nhiều dạng khuyết tật.",
-      "date_statement": "Ngày: Tuyên bố khả năng tiếp cận này được lập vào [Insert Date] và sẽ được cập nhật định kỳ để phản ánh cam kết liên tục của NailsZone về khả năng tiếp cận."
+      "title": "Additional Information",
+      "description": "We are committed to continuous improvement and following best practices for accessibility. As technology and accessibility standards evolve, so will our efforts to ensure our website is accessible to everyone.",
+      "features": "Accessibility Features: We have implemented features such as keyboard navigation, text alternatives for images, and sufficient color contrast to improve accessibility for users with various disabilities.",
+      "date_statement": "Date: This Accessibility Statement was created on [Insert Date] and will be updated regularly to reflect NailsZone's ongoing commitment to accessibility."
     }
   }
 }

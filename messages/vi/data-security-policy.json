@@ -1,56 +1,56 @@
 {
   "data_security_policy_page": {
     "metadata": {
-      "title": "Chính sách bảo mật dữ liệu - NailsZone",
-      "description": "Cách NailsZone bảo vệ thông tin cá nhân của bạn và tuân thủ các quy định về bảo vệ dữ liệu."
+      "title": "Data Security Policy - NailsZone",
+      "description": "How NailsZone protects your personal information and complies with data protection regulations."
     },
-    "title": "Chính sách bảo mật dữ liệu cho NailsZone",
+    "title": "Data Security Policy for NailsZone",
     "introduction": {
-      "title": "Giới thiệu",
-      "description": "Tại NailsZone, bảo vệ an ninh và quyền riêng tư cho thông tin cá nhân của bạn là ưu tiên hàng đầu. Chính sách bảo mật dữ liệu này nêu các biện pháp chúng tôi áp dụng để bảo vệ dữ liệu của bạn khỏi truy cập trái phép, tiết lộ, thay đổi và phá hủy. Cam kết bảo mật dữ liệu của chúng tôi tuân thủ Quy định chung về bảo vệ dữ liệu (GDPR), Đạo luật quyền riêng tư người tiêu dùng California (CCPA)/Đạo luật quyền riêng tư California (CPRA), Đạo luật bảo vệ thông tin cá nhân và tài liệu điện tử (PIPEDA) và các quy định bảo vệ dữ liệu liên quan khác."
+      "title": "Introduction",
+      "description": "At NailsZone, safeguarding the security and privacy of your personal information is our top priority. This Data Security Policy outlines the measures we implement to protect your data against unauthorized access, disclosure, alteration, and destruction. Our commitment to data security is in compliance with the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA)/California Privacy Rights Act (CPRA), Personal Information Protection and Electronic Documents Act (PIPEDA), and other relevant data protection regulations."
     },
     "scope": {
-      "title": "Phạm vi",
-      "description": "Chính sách này áp dụng cho mọi hình thức dữ liệu mà NailsZone thu thập, bao gồm định dạng kỹ thuật số và vật lý, trên mọi nền tảng mà NailsZone hoạt động."
+      "title": "Scope",
+      "description": "This policy applies to all forms of data collected by NailsZone, including digital and physical formats, across all platforms where NailsZone operates."
     },
     "data_collection_and_use": {
-      "title": "Thu thập và sử dụng dữ liệu",
-      "collection": "Thu thập: Chúng tôi thu thập thông tin cá nhân cần thiết để cung cấp và cải thiện dịch vụ của mình, như mô tả trong <link>Chính sách quyền riêng tư</link>.",
-      "use": "Sử dụng: Dữ liệu chỉ được sử dụng đúng với mục đích thu thập, bao gồm cung cấp dịch vụ, liên lạc và cải thiện."
+      "title": "Data Collection and Use",
+      "collection": "Collection: We collect personal information necessary for providing and improving our services, as outlined in our <link>Privacy Policy</link>.",
+      "use": "Use: Data is strictly used in accordance with the purposes for which it was collected, including service provision, communication, and improvement."
     },
     "data_protection_measures": {
-      "title": "Biện pháp bảo vệ dữ liệu",
-      "encryption": "Mã hóa: Dữ liệu cá nhân được mã hóa khi truyền và khi lưu trữ trên máy chủ của chúng tôi.",
-      "access_control": "Kiểm soát truy cập: Quyền truy cập dữ liệu cá nhân chỉ dành cho nhân sự được ủy quyền và phải tuân thủ nghĩa vụ bảo mật nghiêm ngặt.",
-      "regular_audits": "Kiểm toán định kỳ: Chúng tôi tiến hành kiểm toán và đánh giá định kỳ để đảm bảo tuân thủ tiêu chuẩn bảo mật dữ liệu và phát hiện, giảm thiểu các lỗ hổng tiềm ẩn."
+      "title": "Data Protection Measures",
+      "encryption": "Encryption: Personal data is encrypted during transmission and when stored on our servers.",
+      "access_control": "Access Control: Access to personal data is limited to authorized personnel who are required to adhere to strict confidentiality obligations.",
+      "regular_audits": "Regular Audits: We conduct regular audits and assessments to ensure compliance with our data security standards and to identify and mitigate potential vulnerabilities."
     },
     "data_breach_response": {
-      "title": "Ứng phó sự cố rò rỉ dữ liệu",
-      "notification": "Thông báo: Trong trường hợp xảy ra sự cố rò rỉ dữ liệu, chúng tôi sẽ thông báo cho các cá nhân bị ảnh hưởng và cơ quan có thẩm quyền theo yêu cầu của pháp luật, không chậm trễ không cần thiết.",
-      "investigation": "Điều tra và giảm thiểu: Chúng tôi sẽ điều tra kịp thời mọi sự cố và thực hiện các bước cần thiết để giảm thiểu tác động và ngăn ngừa tái diễn."
+      "title": "Data Breach Response",
+      "notification": "Notification: In the event of a data breach, we will notify affected individuals and relevant authorities as required by law, without undue delay.",
+      "investigation": "Investigation and Mitigation: We will promptly investigate any breach and take necessary steps to mitigate its impact and prevent future occurrences."
     },
     "compliance_and_training": {
-      "title": "Tuân thủ và đào tạo",
-      "legal_compliance": "Tuân thủ pháp luật: Chúng tôi thường xuyên xem xét và cập nhật thực hành bảo mật dữ liệu để đảm bảo tuân thủ các luật bảo vệ dữ liệu hiện hành.",
-      "employee_training": "Đào tạo nhân viên: Mọi nhân viên đều được đào tạo về bảo vệ dữ liệu và thực hành bảo mật khi onboarding và định kỳ sau đó."
+      "title": "Compliance and Training",
+      "legal_compliance": "Legal Compliance: We regularly review and update our data security practices to ensure compliance with current data protection laws.",
+      "employee_training": "Employee Training: All employees receive training on data protection and security practices as part of their onboarding and on a regular basis thereafter."
     },
     "third_party_service_providers": {
-      "title": "Nhà cung cấp dịch vụ bên thứ ba",
-      "contracts": "Hợp đồng: Chúng tôi chỉ hợp tác với nhà cung cấp dịch vụ bên thứ ba cam kết tuân thủ tiêu chuẩn bảo mật dữ liệu và luật bảo vệ dữ liệu của chúng tôi.",
-      "monitoring": "Giám sát: Chúng tôi giám sát việc nhà cung cấp dịch vụ bên thứ ba tuân thủ nghĩa vụ bảo vệ dữ liệu."
+      "title": "Third-Party Service Providers",
+      "contracts": "Contracts: We only engage with third-party service providers who commit to comply with our data security standards and data protection laws.",
+      "monitoring": "Monitoring: We monitor the compliance of third-party service providers with data protection obligations."
     },
     "user_rights_and_data_management": {
-      "title": "Quyền người dùng và quản lý dữ liệu",
-      "user_rights": "Quyền người dùng: Chúng tôi tôn trọng quyền truy cập, chỉnh sửa, xóa và quản lý dữ liệu cá nhân của bạn như mô tả trong <link>Chính sách quyền riêng tư</link>.",
-      "data_retention": "Lưu trữ dữ liệu: Dữ liệu cá nhân chỉ được lưu trong thời gian cần thiết để thực hiện mục đích thu thập, phù hợp với chính sách lưu trữ dữ liệu của chúng tôi."
+      "title": "User Rights and Data Management",
+      "user_rights": "User Rights: We respect your rights to access, correct, delete, and manage your personal data as detailed in our <link>Privacy Policy</link>.",
+      "data_retention": "Data Retention: Personal data is retained only for as long as necessary to fulfill the purposes for which it was collected, in accordance with our data retention policy."
     },
     "policy_updates": {
-      "title": "Cập nhật chính sách",
-      "description": "Chính sách bảo mật dữ liệu này có thể được cập nhật định kỳ để phản ánh thay đổi trong thực hành hoặc yêu cầu quy định. Chúng tôi sẽ thông báo cho người dùng về các thay đổi quan trọng qua trang web hoặc liên lạc trực tiếp."
+      "title": "Policy Updates",
+      "description": "This Data Security Policy may be updated periodically to reflect changes in our practices or regulatory requirements. We will notify users of significant changes through our website or through direct communication."
     },
     "contact_information": {
-      "title": "Thông tin liên hệ",
-      "description": "Mọi thắc mắc hoặc lo ngại về Chính sách bảo mật dữ liệu hoặc an ninh thông tin cá nhân của bạn, vui lòng liên hệ <email>teamnz@levincigroup.com</email>."
+      "title": "Contact Information",
+      "description": "For any questions or concerns about our Data Security Policy or the security of your personal information, please contact us at <email>teamnz@levincigroup.com</email>."
     }
   }
 }

@@ -1,0 +1,49 @@
+{
+  "intellectual_property_policy_page": {
+    "metadata": {
+      "title": "Intellectual Property Policy - NailsZone",
+      "description": "How NailsZone handles intellectual property and user obligations on the platform."
+    },
+    "title": "Intellectual Property (IP) Policy",
+    "introduction": {
+      "title": "Introduction",
+      "description": "NailsZone respects the intellectual property rights of all creators and expects its users to do the same. This Intellectual Property (IP) Policy outlines our approach to handling IP issues on our platform and provides guidance for users on respecting intellectual property rights."
+    },
+    "respect": {
+      "title": "IP Rights Respect",
+      "user_content": "<label>User Content :</label> Users are responsible for ensuring that the content they upload, post, or share on NailsZone does not infringe on the intellectual property rights of others. This includes, but is not limited to, images, videos, articles, and comments.",
+      "attribution": "<label>Attribution :</label> When sharing content that is not your own, always provide appropriate credit to the original creator, unless you have explicit permission to use the content without attribution."
+    },
+    "reporting": {
+      "title": "Reporting Infringement",
+      "notification_label": "Notification :",
+      "notification_intro": "If you believe that your intellectual property rights have been infringed upon by content on the NailsZone platform, please notify us in writing. Your notification should include:",
+      "notification_bullet_1": "A description of the copyrighted work or other intellectual property that you claim has been infringed.",
+      "notification_bullet_2": "A description of where the material you claim is infringing is located on the NailsZone platform.",
+      "notification_bullet_3": "Your contact information, including address, telephone number, and email address.",
+      "notification_bullet_4": "A statement by you that you have a good faith belief that the disputed use is not authorized by the intellectual property owner, its agent, or the law.",
+      "notification_bullet_5": "A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the intellectual property owner or authorized to act on the intellectual property owner's behalf.",
+      "response": "<label>Response :</label> Upon receiving a valid infringement notification, NailsZone will take appropriate action, such as removing the infringing material or disabling access to it. The user who posted the content will be notified of the action taken."
+    },
+    "counter_notification": {
+      "title": "Counter-Notification",
+      "intro": "If you believe that your content was removed or access to it was disabled by mistake or misidentification, you may send us a counter-notification containing:",
+      "item_1": "Your physical or electronic signature.",
+      "item_2": "Identification of the content that has been removed or to which access has been disabled and the location at which the content appeared before it was removed or access disabled.",
+      "item_3": "A statement under penalty of perjury that you have a good faith belief that the content was removed or disabled as a result of mistake or misidentification.",
+      "item_4": "Your name, address, telephone number, and a statement that you consent to the jurisdiction of the federal court in your jurisdiction, and a statement that you will accept service of process from the person who provided notification of the alleged infringement."
+    },
+    "consequences": {
+      "title": "Consequences of Infringement",
+      "description": "Users found to be repeatedly infringing on the intellectual property rights of others may face account termination in accordance with NailsZone's policies."
+    },
+    "modifications": {
+      "title": "Modifications to This Policy",
+      "description": "NailsZone reserves the right to modify this IP Policy at any time. We will provide notice of significant changes to our users in an appropriate manner."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "description": "For questions about this IP Policy or to submit a notification of infringement, please contact NailsZone at <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}
