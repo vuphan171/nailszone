@@ -4,6 +4,7 @@ import { Typography } from "@/components/ui/typography"
 import { Button } from "@/components/ui/button"
 import { getTranslations } from "next-intl/server"
 import { MasterClassCard } from "@/components/common/master-class-card"
+import { VoteCard } from "@/components/common/vote-card"
 
 const RightSidebar = async () => {
   const t = await getTranslations("home_page")
@@ -32,7 +33,7 @@ const RightSidebar = async () => {
           </Button>
         </div>
         <div className="mt-4.25 flex flex-col gap-y-5">
-          <MasterClassCard />
+          <VoteCard />
           <MasterClassCard />
           <MasterClassCard />
           <MasterClassCard />
