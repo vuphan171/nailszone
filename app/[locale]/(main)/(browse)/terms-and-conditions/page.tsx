@@ -1,7 +1,8 @@
 import PolicyCard from "./components/policy-card"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { BadgeDollarSignIcon, FileSignatureIcon, ScaleIcon } from "lucide-react"
 import { routing } from "@/i18n/routing"
+import { Typography } from "@/components/ui/typography"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -16,27 +17,29 @@ const Page = async ({ params }: Props) => {
 
   setRequestLocale(locale)
 
+  const t = await getTranslations("terms_and_conditions_page")
+
   return (
     <div className="px-8 pt-6">
-      <h3 className="text-2xl font-bold">Terms and Conditions</h3>
+      <Typography variant="h3">{t("title")}</Typography>
       <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-4">
         <PolicyCard
           slug="general-policies"
           icon={<FileSignatureIcon className="size-6" />}
-          title="General Policies"
-          description="General policies for NailsZone"
+          title={t("general_policies.title")}
+          description={t("general_policies.description")}
         />
         <PolicyCard
           slug="specific-agreements"
           icon={<ScaleIcon className="size-6" />}
-          title="Specific Agreements"
-          description="Specific agreements for NailsZone"
+          title={t("specific_agreements.title")}
+          description={t("specific_agreements.description")}
         />
         <PolicyCard
           slug="transactions-and-content"
           icon={<BadgeDollarSignIcon className="size-6" />}
-          title="Policies for Transactions and Content"
-          description="Transactions & content for NailsZone"
+          title={t("transactions_and_content.title")}
+          description={t("transactions_and_content.description")}
         />
       </div>
     </div>

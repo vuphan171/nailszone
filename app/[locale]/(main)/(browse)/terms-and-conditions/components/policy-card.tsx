@@ -10,10 +10,12 @@ type Props = {
 }
 
 const PolicyCard: React.FC<Props> = ({ slug, icon, title, description }) => {
-  const t = useTranslations("Common")
+  const t = useTranslations("terms_and_conditions_page")
+
   return (
     <Link
       href={`/terms-and-conditions/${slug}`}
+      prefetch
       className={cn(
         "group relative flex flex-col rounded-xl bg-card p-6 shadow-sm transition-all",
         "hover:-translate-y-0.5 hover:border-foreground/15 hover:shadow-md",
@@ -33,7 +35,7 @@ const PolicyCard: React.FC<Props> = ({ slug, icon, title, description }) => {
         {description}
       </p>
       <span className="mt-4 text-sm font-medium text-primary group-hover:underline">
-        {t("Navigation.home")}
+        {t("view_policy")}
       </span>
     </Link>
   )

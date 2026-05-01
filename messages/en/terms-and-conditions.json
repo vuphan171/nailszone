@@ -1,0 +1,22 @@
+{
+    "terms_and_conditions_page": {
+        "metadata": {
+            "title": "Terms and Conditions - NailsZone",
+            "description": "Terms and Conditions - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
+        },
+        "title": "Terms and Conditions",
+        "view_policy": "View Policy",
+        "general_policies": {
+            "title": "General Policies",
+            "description": "General policies for NailsZone"
+        },
+        "specific_agreements": {
+            "title": "Specific Agreements",
+            "description": "Specific agreements for NailsZone"
+        },
+        "transactions_and_content": {
+            "title": "Transactions and Content",
+            "description": "Transactions and content for NailsZone"
+        }
+    }
+}
