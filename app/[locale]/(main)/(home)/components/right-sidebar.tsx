@@ -5,6 +5,48 @@ import { Button } from "@/components/ui/button"
 import { getTranslations } from "next-intl/server"
 import { MasterClassCard } from "@/components/common/master-class-card"
 import { VoteCard } from "@/components/common/vote-card"
+import { AdsCard } from "@/components/common/ads-card"
+import {
+  Advertisement,
+  ADVERTISEMENT_STATUSES,
+  ADVERTISEMENT_TYPES,
+} from "@/types/advertisement"
+
+const adsData: Advertisement = {
+  advertisement_id: 1,
+  type: ADVERTISEMENT_TYPES.FOR_SALES,
+  status: ADVERTISEMENT_STATUSES.PUBLISHED,
+  enable: 1,
+  customer_id: "1",
+  title: "New Nails Master Class Live 2024 WITH Jennifer Pham",
+  salon_address: "123 Main St, Anytown, USA",
+  postal_code: "12345",
+  country: "USA",
+  city: "Anytown",
+  state: "CA",
+  salary: {
+    split_fixed_salary: 100000,
+    negotiation: 100000,
+  },
+  price: {
+    price: "100000",
+    negotiation: true,
+  },
+  description: "New Nails Master Class Live 2024 WITH Jennifer Pham",
+  created_at: "2024-01-01",
+  lat: "123.456789",
+  lng: "123.456789",
+  gallery: [
+    {
+      image: "/images/master-class-card-bg.jpg",
+      image_url: "/images/master-class-card-bg.jpg",
+    },
+  ],
+  customer: { email: "test@test.com", firstname: "Test", lastname: "Test" },
+  contact: "test@test.com",
+  favorites_id: 1,
+  url_key: "new-nails-master-class-live-2024-with-jennifer-pham",
+}
 
 const RightSidebar = async () => {
   const t = await getTranslations("home_page")
@@ -33,6 +75,7 @@ const RightSidebar = async () => {
           </Button>
         </div>
         <div className="mt-4.25 flex flex-col gap-y-5">
+          <AdsCard data={adsData} />
           <VoteCard />
           <MasterClassCard />
           <MasterClassCard />

@@ -21,12 +21,18 @@ const typographyVariants = cva("text-foreground", {
         "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
       lead: "text-xl text-muted-foreground",
       largeText: "text-lg font-semibold",
+      mediumText: "text-base font-medium",
       smallText: "text-sm leading-none font-medium",
       mutedText: "text-sm text-muted-foreground",
+    },
+    gradient: {
+      true: "bg-gradient-to-r from-primary to-interactive bg-clip-text text-transparent",
+      false: "",
     },
   },
   defaultVariants: {
     variant: "p",
+    gradient: false,
   },
 })
 
@@ -46,6 +52,7 @@ const variantElementMap: Record<
   blockquote: "blockquote",
   inlineCode: "code",
   largeText: "div",
+  mediumText: "p",
   smallText: "small",
   lead: "p",
   mutedText: "p",
@@ -61,7 +68,7 @@ export interface TypographyProps
 }
 
 const Typography = React.forwardRef<HTMLElement, TypographyProps>(
-  ({ className, variant, as, asChild, ...props }, ref) => {
+  ({ className, variant, as, asChild, gradient, ...props }, ref) => {
     const Comp = asChild
       ? Slot.Root
       : (as ?? (variant ? variantElementMap[variant] : undefined) ?? "div")
@@ -71,7 +78,7 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps>(
         ref={ref}
         data-slot="typography"
         data-variant={variant}
-        className={cn(typographyVariants({ variant, className }))}
+        className={cn(typographyVariants({ variant, className, gradient }))}
         {...props}
       />
     )
