@@ -1,0 +1,18 @@
+{
+    "terms_and_conditions_page": {
+        "metadata": {
+            "title": "Terms and Conditions - NailsZone",
+            "description": "Terms and Conditions - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
+        },
+        "introduction": {
+            "title": "Introduction",
+            "description": "Welcome to NailsZone, a community dedicated to nail care enthusiasts and professionals. These Terms and Conditions govern your access to and use of the NailsZone website, services, and applications. By accessing or using NailsZone, you agree to be bound by these terms, which include our Privacy Policy, Cookie Policy, Return and Refund Policy, and other policies linked herein."
+        },
+        "use_of_services": {
+            "title": "Use Of Services",
+            "eligibility": "Eligibility: You must be at least 18 years old to use our services or the age of majority in your jurisdiction.",
+            "account_registration": "Account Registration: You may need to register an account to access certain features. Keep your account information accurate and confidential.",
+            "content": "Content :You are responsible for the content you post on NailsZone and must comply with our Community Guidelines."
+        }
+    }
+}
