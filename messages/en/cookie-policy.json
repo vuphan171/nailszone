@@ -1,0 +1,42 @@
+{
+  "cookie_policy_page": {
+    "metadata": {
+      "title": "Cookie Policy - NailsZone",
+      "description": "How NailsZone uses cookies and similar technologies on our website."
+    },
+    "title": "Cookie Policy for NailsZone",
+    "introduction": {
+      "title": "Introduction",
+      "description": "NailsZone uses cookies and similar technologies to enhance your experience on our website, understand how our site is used, and provide customized content and advertising. This Cookie Policy explains what cookies are, how we use them, the types of cookies we use, how third parties we may partner with may use cookies on the website, your choices regarding cookies, and further information about cookies."
+    },
+    "what_are_cookies": {
+      "title": "What are Cookies?",
+      "description": "Cookies are small text files that are stored on your computer or mobile device when you visit a website. They allow the website to remember your actions and preferences over a period, so you don't have to keep re-entering them whenever you come back to the site or browse from one page to another."
+    },
+    "how_we_use_cookies": {
+      "title": "How We Use Cookies",
+      "essential": "Essential Cookies: These cookies are essential to provide you with services available through our website and to enable you to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these cookies, the services that you have asked for cannot be provided.",
+      "performance_analytics": "Performance and Analytics Cookies: These cookies collect information about traffic to our site and how users use our website. The information gathered does not identify any individual visitor. It includes the number of visitors to our website, the websites that referred them to our website, the pages they visited on our website, what time of day they visited our website, whether they have visited our website before, and other similar information.",
+      "functionality": "Functionality Cookies: These are used to recognize you when you return to our website. This enables us to personalize our content for you, greet you by name, and remember your preferences (for example, your choice of language or region).",
+      "advertising": "Advertising Cookies: These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed for advertisers, and in some cases selecting advertisements that are based on your interests."
+    },
+    "third_party_cookies": {
+      "title": "Third-Party Cookies",
+      "description": "In some special cases, we also use cookies provided by trusted third parties. The following section details which third-party cookies you might encounter through this site.",
+      "analytics_providers": "Analytics providers like Google Analytics: These cookies are used to track and measure usage of this site so that we can continue to produce engaging content.",
+      "social_media": "Social media sites: These may use cookies to personalize and enhance your experience on their platforms when you share content from our website."
+    },
+    "managing_your_cookies": {
+      "title": "Managing Your Cookies",
+      "description": "You have the right to decide whether to accept or reject cookies. You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted."
+    },
+    "changes": {
+      "title": "Changes to Our Cookie Policy",
+      "description": "We may update this Cookie Policy to reflect changes to our cookie practices. If we make any material changes, we will notify you by means of a notice on our website prior to the change becoming effective."
+    },
+    "contact_us": {
+      "title": "Contact Us",
+      "description": "For questions about this Cookie Policy or any of our policies, please contact us at <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

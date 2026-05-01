@@ -11,8 +11,8 @@ type Props = {
   value: string
 }
 
-const PrivacyPolicy = ({ value }: Props) => {
-  const t = useTranslations("privacy_policy_page")
+const CookiePolicy = ({ value }: Props) => {
+  const t = useTranslations("cookie_policy_page")
 
   return (
     <AccordionItem value={value}>
@@ -24,89 +24,49 @@ const PrivacyPolicy = ({ value }: Props) => {
         <Typography className="mt-2" variant="p">
           {t("introduction.description")}
         </Typography>
-        <Typography variant="h6">
-          {t("information_we_collect.title")}
+        <Typography variant="h6">{t("what_are_cookies.title")}</Typography>
+        <Typography className="mt-2" variant="p">
+          {t("what_are_cookies.description")}
+        </Typography>
+
+        <Typography className="mt-4" variant="h6">
+          {t("how_we_use_cookies.title")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("information_we_collect.personal_identification")}
+            {t("how_we_use_cookies.essential")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("information_we_collect.payment")}
+            {t("how_we_use_cookies.performance_analytics")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("information_we_collect.browsing")}
+            {t("how_we_use_cookies.functionality")}
+          </Typography>
+          <Typography variant="p" as="li">
+            {t("how_we_use_cookies.advertising")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("how_we_use_information.title")}
+          {t("third_party_cookies.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("how_we_use_information.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("sharing_of_information.title")}
+          {t("third_party_cookies.description")}
         </Typography>
         <Typography className="my-0 list-decimal" variant="ul">
           <Typography variant="p" as="li">
-            {t("sharing_of_information.service_providers")}
+            {t("third_party_cookies.analytics_providers")}
           </Typography>
           <Typography variant="p" as="li">
-            {t("sharing_of_information.legal_requirements")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("sharing_of_information.consent")}
+            {t("third_party_cookies.social_media")}
           </Typography>
         </Typography>
 
         <Typography className="mt-4" variant="h6">
-          {t("data_protection.title")}
+          {t("managing_your_cookies.title")}
         </Typography>
         <Typography className="mt-2" variant="p">
-          {t("data_protection.description")}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("your_rights.title")}
-        </Typography>
-        <Typography className="my-0 list-decimal" variant="ul">
-          <Typography variant="p" as="li">
-            {t("your_rights.access_correction")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("your_rights.deletion")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("your_rights.consent_withdrawal")}
-          </Typography>
-          <Typography variant="p" as="li">
-            {t("your_rights.data_portability")}
-          </Typography>
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("cookies_and_tracking.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t.rich("cookies_and_tracking.description", {
-            link: (chunks) => (
-              <Link
-                className="text-interactive! no-underline! hover:underline!"
-                href="/legal/cookie-policy"
-              >
-                {chunks}
-              </Link>
-            ),
-          })}
-        </Typography>
-
-        <Typography className="mt-4" variant="h6">
-          {t("international_transfers.title")}
-        </Typography>
-        <Typography className="mt-2" variant="p">
-          {t("international_transfers.description")}
+          {t("managing_your_cookies.description")}
         </Typography>
 
         <Typography className="mt-4" variant="h6">
@@ -138,4 +98,4 @@ const PrivacyPolicy = ({ value }: Props) => {
   )
 }
 
-export default PrivacyPolicy
+export default CookiePolicy

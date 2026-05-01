@@ -1,0 +1,49 @@
+{
+  "community_guidelines_page": {
+    "metadata": {
+      "title": "Nguyên tắc cộng đồng - NailsZone",
+      "description": "Quy tắc và kỳ vọng khi tham gia cộng đồng NailsZone."
+    },
+    "title": "Nguyên tắc cộng đồng cho NailsZone",
+    "introduction": {
+      "title": "Giới thiệu",
+      "description": "Chào mừng đến với cộng đồng NailsZone! Nền tảng của chúng tôi dành cho mọi thứ liên quan đến chăm sóc móng, là không gian để người đam mê, chuyên gia và người mới cùng chia sẻ, học hỏi và kết nối. Nguyên tắc cộng đồng này nhằm đảm bảo môi trường tích cực và tôn trọng cho mọi thành viên. Khi tham gia cộng đồng NailsZone, bạn đồng ý với các nguyên tắc này."
+    },
+    "respectful_interaction": {
+      "title": "Tương tác tôn trọng",
+      "courtesy": "Lịch sự và tôn trọng: Đối xử với mọi thành viên bằng sự tôn trọng, nhã nhặn và kiên nhẫn. Tôn trọng ranh giới và sự đồng ý của người khác.",
+      "no_harassment": "Không quấy rối hay bắt nạt: Quấy rối, bắt nạt hoặc đe dọa người dùng khác bị nghiêm cấm, bao gồm mọi hình thức đe dọa, hung hăng hoặc ép buộc."
+    },
+    "content_standards": {
+      "title": "Tiêu chuẩn nội dung",
+      "relevant": "Nội dung liên quan và mang tính xây dựng: Đảm bảo đóng góp của bạn phù hợp chủ đề và góp giá trị cho cuộc thảo luận.",
+      "no_hate": "Không ngôn từ thù hận hay phân biệt: Không chấp nhận nội dung xúi giục thù hận hoặc phân biệt đối với cá nhân hoặc nhóm dựa trên chủng tộc, tôn giáo, giới tính, xu hướng tính dục, khuyết tật hoặc đặc điểm khác.",
+      "safe_legal": "Nội dung an toàn và hợp pháp: Không đăng nội dung khiêu dâm, khai thác tình dục rõ ràng, bất hợp pháp hoặc khuyến khích thực hành không an toàn."
+    },
+    "intellectual_property": {
+      "title": "Quyền sở hữu trí tuệ",
+      "description": "Tôn trọng bản quyền và nhãn hiệu: Chỉ chia sẻ nội dung mà bạn có quyền chia sẻ. Không đăng nội dung xâm phạm quyền sở hữu trí tuệ của người khác. Ghi nhận tác giả gốc: Khi chia sẻ tác phẩm hoặc nội dung của người khác, hãy ghi công đầy đủ."
+    },
+    "privacy_and_confidentiality": {
+      "title": "Quyền riêng tư và bảo mật",
+      "description": "Thông tin cá nhân: Không chia sẻ thông tin cá nhân của người khác nếu không có sự đồng ý rõ ràng, gồm cuộc trò chuyện riêng, thông tin liên hệ và dữ liệu nhạy cảm. Không giả mạo: Không được giả làm người dùng khác, nhân vật công chúng hoặc đại diện NailsZone."
+    },
+    "engagement_and_interaction": {
+      "title": "Tương tác và gắn kết",
+      "positive": "Tương tác tích cực: Khuyến khích tương tác tích cực, chia sẻ kiến thức và giúp đỡ người khác khi có thể.",
+      "reporting": "Báo cáo vi phạm: Nếu gặp nội dung hoặc hành vi vi phạm các nguyên tắc này, vui lòng báo cáo để đội ngũ chúng tôi xem xét."
+    },
+    "enforcement_and_consequences": {
+      "title": "Thực thi và hậu quả",
+      "description": "Vi phạm Nguyên tắc cộng đồng có thể dẫn đến gỡ nội dung, cấm tạm thời hoặc chấm dứt tài khoản vĩnh viễn, tùy mức độ vi phạm."
+    },
+    "amendments": {
+      "title": "Sửa đổi nguyên tắc",
+      "description": "NailsZone có quyền sửa đổi Nguyên tắc cộng đồng bất cứ lúc nào để duy trì an toàn và toàn vẹn của cộng đồng. Thay đổi sẽ được thông báo phù hợp tới cộng đồng."
+    },
+    "contact_us": {
+      "title": "Liên hệ",
+      "description": "Nếu có thắc mắc về Nguyên tắc cộng đồng này hoặc các chính sách của chúng tôi, vui lòng liên hệ <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

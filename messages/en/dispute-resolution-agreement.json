@@ -1,0 +1,54 @@
+{
+  "dispute_resolution_agreement_page": {
+    "metadata": {
+      "title": "Dispute Resolution and Arbitration Agreement - NailsZone",
+      "description": "How disputes related to NailsZone are resolved through arbitration or small claims court."
+    },
+    "title": "Dispute Resolution and Arbitration Agreement for NailsZone",
+    "introduction": {
+      "title": "Introduction",
+      "description": "This Dispute Resolution and Arbitration Agreement (\"Agreement\") applies to all users of the NailsZone platform, including guests, members, buyers, sellers, and any other users engaging with the NailsZone services. By using the NailsZone platform, you agree to resolve any disputes through binding arbitration or a small claims court, as outlined below, instead of in courts of general jurisdiction."
+    },
+    "purpose": {
+      "title": "Purpose",
+      "description": "The purpose of this Agreement is to streamline the resolution of disputes between users and NailsZone in an efficient, timely, and cost-effective manner."
+    },
+    "scope": {
+      "title": "Scope",
+      "description": "This Agreement applies to any and all disputes, claims, or controversies arising out of or relating to your use of the NailsZone platform, the services provided by NailsZone, any transactions or interactions with other users, or your relationship with NailsZone."
+    },
+    "arbitration_process": {
+      "title": "Arbitration Process",
+      "initiation": "Initiation of Arbitration: To initiate arbitration, a party must send a written Notice of Dispute to the other party, outlining the nature of the dispute and the desired resolution. If the dispute cannot be resolved informally, either party may submit the dispute to binding arbitration.",
+      "provider": "Arbitration Provider: The arbitration will be administered by the American Arbitration Association (AAA) or another established alternative dispute resolution (ADR) provider mutually agreed upon by the parties.",
+      "rules": "Rules of Arbitration: The arbitration will be conducted according to the Commercial Arbitration Rules and the Supplementary Procedures for Consumer Related Disputes of the AAA, except as modified by this Agreement.",
+      "location": "Location: The arbitration will take place in the jurisdiction where NailsZone is headquartered, unless another location is mutually agreed upon.",
+      "arbitrator_decision": "Arbitrator's Decision: The arbitrator's decision will be final and binding on all parties, and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof."
+    },
+    "exceptions_to_arbitration": {
+      "title": "Exceptions to Arbitration",
+      "small_claims": "Small Claims Court: Either party may choose to pursue a dispute in small claims court where jurisdiction and venue over the parties otherwise qualify for such a court.",
+      "injunctive_relief": "Injunctive Relief: Either party may seek injunctive or other equitable relief in a court of competent jurisdiction to protect the party's intellectual property rights or to prevent irreparable harm."
+    },
+    "waiver_of_jury_trial": {
+      "title": "Waiver of Jury Trial",
+      "description": "By agreeing to this Agreement, both parties waive the right to a trial by jury for any dispute arising out of or related to the NailsZone platform or this Agreement."
+    },
+    "opt_out_provision": {
+      "title": "Opt-Out Provision",
+      "description": "You have the right to opt-out of the provisions of this Agreement by sending written notice of your decision to opt-out to NailsZone within 30 days of first using the platform or agreeing to these terms."
+    },
+    "changes": {
+      "title": "Changes to This Agreement",
+      "description": "NailsZone reserves the right to modify or amend this Agreement at any time. All changes will be effective immediately upon posting to the platform. Your continued use of the platform after any changes to this Agreement constitutes your acceptance of the new terms."
+    },
+    "governing_law": {
+      "title": "Governing Law",
+      "description": "This Agreement and any dispute or claim arising out of or in connection with it will be governed by the laws of the jurisdiction in which NailsZone is headquartered, without regard to its conflict of law provisions."
+    },
+    "contact_information": {
+      "title": "Contact Information",
+      "description": "For any questions or notices related to this Dispute Resolution and Arbitration Agreement, please contact NailsZone at <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

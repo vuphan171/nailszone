@@ -1,0 +1,49 @@
+{
+  "accessibility_statement_page": {
+    "metadata": {
+      "title": "Accessibility Statement - NailsZone",
+      "description": "NailsZone’s commitment to digital accessibility and WCAG-aligned practices."
+    },
+    "title": "Accessibility Statement for NailsZone",
+    "commitment": {
+      "title": "Commitment to Accessibility",
+      "description": "NailsZone is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to ensure we provide equal access to all users."
+    },
+    "efforts_to_support": {
+      "title": "Efforts to Support Accessibility",
+      "standards_compliance": "Standards Compliance: Implementing content that conforms to the Web Content Accessibility Guidelines (WCAG) 2.1 level AA as a minimum standard.",
+      "training": "Training: Providing training for our staff on accessibility and relevant laws and guidelines.",
+      "feedback": "Feedback: Listening to feedback from our users and addressing areas where accessibility can be improved.",
+      "accessibility_audit": "Accessibility Audit: Conducting regular accessibility audits of our website and fixing any issues that are identified."
+    },
+    "technical_information": {
+      "title": "Technical Information",
+      "description": "NailsZone strives to adhere to the accepted guidelines and standards for accessibility and usability. Despite our efforts to ensure accessibility of the NailsZone website, there may be some limitations. Please be aware that our efforts are ongoing."
+    },
+    "known_limitations": {
+      "title": "Known Limitations",
+      "description": "We are aware of some areas on the website that may require improvement. We are actively working to achieve this. If you find any issue, please contact us."
+    },
+    "feedback_and_contact": {
+      "title": "Feedback and Contact",
+      "intro": "We welcome your feedback on the accessibility of NailsZone. Please let us know if you encounter accessibility barriers:",
+      "phone": "Phone: [Insert phone number]",
+      "email": "E-mail: <email>teamnz@levincigroup.com</email>",
+      "postal": "Postal address: [Insert postal address]"
+    },
+    "enforcement_procedure": {
+      "title": "Enforcement Procedure",
+      "description": "NailsZone aims to respond to accessibility feedback promptly and to propose a solution. If you are not satisfied with our response, you may use the Web Accessibility Initiative (WAI) feedback mechanism."
+    },
+    "external_links": {
+      "title": "External Links",
+      "description": "NailsZone includes links to external sites. We cannot guarantee the accessibility of external sites and are not responsible for the content or accessibility features of these sites."
+    },
+    "additional_information": {
+      "title": "Additional Information",
+      "description": "We are committed to continuous improvement and following best practices for accessibility. As technology and accessibility standards evolve, so will our efforts to ensure our website is accessible to everyone.",
+      "features": "Accessibility Features: We have implemented features such as keyboard navigation, text alternatives for images, and sufficient color contrast to improve accessibility for users with various disabilities.",
+      "date_statement": "Date: This Accessibility Statement was created on [Insert Date] and will be updated regularly to reflect NailsZone's ongoing commitment to accessibility."
+    }
+  }
+}

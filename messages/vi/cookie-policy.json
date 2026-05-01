@@ -1,0 +1,42 @@
+{
+  "cookie_policy_page": {
+    "metadata": {
+      "title": "Chính sách cookie - NailsZone",
+      "description": "Cách NailsZone sử dụng cookie và công nghệ tương tự trên trang web."
+    },
+    "title": "Chính sách cookie cho NailsZone",
+    "introduction": {
+      "title": "Giới thiệu",
+      "description": "NailsZone sử dụng cookie và công nghệ tương tự để cải thiện trải nghiệm của bạn trên trang web, hiểu cách trang được sử dụng và cung cấp nội dung cùng quảng cáo phù hợp. Chính sách cookie này giải thích cookie là gì, chúng tôi sử dụng chúng ra sao, các loại cookie chúng tôi dùng, bên thứ ba có thể đối tác với chúng tôi có thể dùng cookie trên trang web như thế nào, lựa chọn của bạn đối với cookie và thông tin thêm về cookie."
+    },
+    "what_are_cookies": {
+      "title": "Cookie là gì?",
+      "description": "Cookie là các tệp văn bản nhỏ được lưu trên máy tính hoặc thiết bị di động của bạn khi bạn truy cập một trang web. Chúng giúp trang web ghi nhớ hành động và tùy chọn của bạn trong một khoảng thời gian, để bạn không phải nhập lại mỗi khi quay lại trang hoặc chuyển từ trang này sang trang khác."
+    },
+    "how_we_use_cookies": {
+      "title": "Cách chúng tôi sử dụng cookie",
+      "essential": "Cookie thiết yếu: Các cookie này cần thiết để cung cấp cho bạn các dịch vụ có trên trang web của chúng tôi và cho phép bạn sử dụng một số tính năng. Chúng giúp xác thực người dùng và ngăn sử dụng gian lận tài khoản. Không có các cookie này, các dịch vụ bạn yêu cầu không thể được cung cấp.",
+      "performance_analytics": "Cookie hiệu suất và phân tích: Các cookie này thu thập thông tin về lưu lượng truy cập trang và cách người dùng sử dụng trang web. Thông tin thu được không xác định từng khách truy cập. Thông tin gồm số lượt truy cập, trang web giới thiệu, các trang đã xem, thời điểm truy cập, đã từng truy cập trước đó hay chưa và thông tin tương tự.",
+      "functionality": "Cookie chức năng: Dùng để nhận ra bạn khi bạn quay lại trang web. Điều này cho phép chúng tôi cá nhân hóa nội dung, chào bạn theo tên và ghi nhớ tùy chọn của bạn (ví dụ ngôn ngữ hoặc khu vực).",
+      "advertising": "Cookie quảng cáo: Các cookie này giúp thông điệp quảng cáo phù hợp hơn với bạn. Chúng thực hiện chức năng như tránh lặp lại cùng một quảng cáo, đảm bảo quảng cáo hiển thị đúng cho nhà quảng cáo và trong một số trường hợp chọn quảng cáo dựa trên sở thích của bạn."
+    },
+    "third_party_cookies": {
+      "title": "Cookie bên thứ ba",
+      "description": "Trong một số trường hợp đặc biệt, chúng tôi cũng sử dụng cookie do các bên thứ ba đáng tin cậy cung cấp. Phần sau mô tả các cookie bên thứ ba bạn có thể gặp trên trang này.",
+      "analytics_providers": "Nhà cung cấp phân tích như Google Analytics: Các cookie này dùng để theo dõi và đo lường mức sử dụng trang này để chúng tôi tiếp tục tạo nội dung hấp dẫn.",
+      "social_media": "Mạng xã hội: Các nền tảng này có thể dùng cookie để cá nhân hóa và nâng cao trải nghiệm của bạn khi bạn chia sẻ nội dung từ trang web của chúng tôi."
+    },
+    "managing_your_cookies": {
+      "title": "Quản lý cookie của bạn",
+      "description": "Bạn có quyền quyết định chấp nhận hay từ chối cookie. Bạn có thể cài đặt hoặc thay đổi điều khiển trình duyệt để chấp nhận hoặc từ chối cookie. Nếu bạn từ chối cookie, bạn vẫn có thể sử dụng trang web nhưng quyền truy cập một số chức năng và khu vực có thể bị hạn chế."
+    },
+    "changes": {
+      "title": "Thay đổi Chính sách cookie",
+      "description": "Chúng tôi có thể cập nhật Chính sách cookie này để phản ánh thay đổi trong thực hành cookie. Nếu có thay đổi quan trọng, chúng tôi sẽ thông báo trên trang web trước khi thay đổi có hiệu lực."
+    },
+    "contact_us": {
+      "title": "Liên hệ",
+      "description": "Nếu có thắc mắc về Chính sách cookie này hoặc các chính sách của chúng tôi, vui lòng liên hệ <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

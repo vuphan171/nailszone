@@ -1,0 +1,49 @@
+{
+  "community_guidelines_page": {
+    "metadata": {
+      "title": "Community Guidelines - NailsZone",
+      "description": "Rules and expectations for participating in the NailsZone community."
+    },
+    "title": "Community Guidelines for NailsZone",
+    "introduction": {
+      "title": "Introduction",
+      "description": "Welcome to the NailsZone community! Our platform is dedicated to all things nail care, offering a space for enthusiasts, professionals, and novices alike to share, learn, and connect. These Community Guidelines are designed to ensure a positive and respectful environment for all members. By participating in the NailsZone community, you agree to these guidelines."
+    },
+    "respectful_interaction": {
+      "title": "Respectful Interaction",
+      "courtesy": "Courtesy and Respect: Treat all members with respect, kindness, and patience. Respect people’s boundaries and consent.",
+      "no_harassment": "No Harassment or Bullying: Harassing, bullying, or threatening other users is strictly prohibited. This includes any form of intimidation, aggression, or coercion."
+    },
+    "content_standards": {
+      "title": "Content Standards",
+      "relevant": "Relevant and Constructive Content: Please ensure your contributions are relevant to the topic at hand and aim to add value to the discussion.",
+      "no_hate": "No Hate Speech or Discrimination: Content that promotes hate or discrimination against individuals or groups based on race, ethnicity, religion, gender, sexual orientation, disability, or any other characteristic is not tolerated.",
+      "safe_legal": "Safe and Legal Content: Do not post content that is obscene, sexually explicit, illegal, or that promotes unsafe practices."
+    },
+    "intellectual_property": {
+      "title": "Intellectual Property Rights",
+      "description": "Respect Copyrights and Trademarks: Only share content that you have the right to share. Do not post content that infringes on the intellectual property rights of others. Credit Original Creators: When sharing someone else’s work or content, make sure to give proper credit."
+    },
+    "privacy_and_confidentiality": {
+      "title": "Privacy and Confidentiality",
+      "description": "Personal Information: Do not share personal information about others without their explicit consent. This includes private conversations, contact information, and any sensitive personal data. No Impersonation: Impersonating other users, public figures, or NailsZone representatives is not allowed."
+    },
+    "engagement_and_interaction": {
+      "title": "Engagement and Interaction",
+      "positive": "Positive Engagement: Encourage positive interactions, share knowledge, and help others when possible.",
+      "reporting": "Reporting Violations: If you encounter content or behavior that violates these guidelines, please report it to our team for review."
+    },
+    "enforcement_and_consequences": {
+      "title": "Enforcement and Consequences",
+      "description": "Failure to adhere to these Community Guidelines may result in content removal, temporary bans, or permanent account termination, depending on the severity of the violation."
+    },
+    "amendments": {
+      "title": "Amendments to Guidelines",
+      "description": "NailsZone reserves the right to modify these Community Guidelines at any time to ensure the continued safety and integrity of our community. Changes will be communicated to the community appropriately."
+    },
+    "contact_us": {
+      "title": "Contact Us",
+      "description": "For questions about these Community Guidelines or any of our policies, please contact us at <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}

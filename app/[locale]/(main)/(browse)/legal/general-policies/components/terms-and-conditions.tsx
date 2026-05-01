@@ -16,7 +16,7 @@ const TermsAndConditions = ({ value }: Props) => {
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="text-xl font-semibold tracking-tight text-primary">
+      <AccordionTrigger className="py-4 text-lg leading-none font-normal tracking-tight text-primary **:data-[slot=accordion-trigger-icon]:size-4.5">
         {t("title")}
       </AccordionTrigger>
       <AccordionContent>

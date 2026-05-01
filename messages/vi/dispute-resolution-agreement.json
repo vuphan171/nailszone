@@ -1,0 +1,54 @@
+{
+  "dispute_resolution_agreement_page": {
+    "metadata": {
+      "title": "Thỏa thuận giải quyết tranh chấp và trọng tài - NailsZone",
+      "description": "Cách giải quyết tranh chấp liên quan đến NailsZone qua trọng tài hoặc tòa án xử lý tranh chấp nhỏ."
+    },
+    "title": "Thỏa thuận giải quyết tranh chấp và trọng tài cho NailsZone",
+    "introduction": {
+      "title": "Giới thiệu",
+      "description": "Thỏa thuận Giải quyết tranh chấp và Trọng tài này (\"Thỏa thuận\") áp dụng cho mọi người dùng nền tảng NailsZone, gồm khách, thành viên, người mua, người bán và mọi người dùng khác tương tác với dịch vụ NailsZone. Khi sử dụng nền tảng NailsZone, bạn đồng ý giải quyết mọi tranh chấp thông qua trọng tài ràng buộc hoặc tòa án xử lý tranh chấp nhỏ, như mô tả dưới đây, thay vì tại tòa án có thẩm quyền chung."
+    },
+    "purpose": {
+      "title": "Mục đích",
+      "description": "Mục đích của Thỏa thuận này là thống nhất quy trình giải quyết tranh chấp giữa người dùng và NailsZone một cách hiệu quả, kịp thời và tiết kiệm chi phí."
+    },
+    "scope": {
+      "title": "Phạm vi",
+      "description": "Thỏa thuận này áp dụng cho mọi tranh chấp, khiếu nại hoặc tranh cãi phát sinh từ hoặc liên quan đến việc bạn sử dụng nền tảng NailsZone, dịch vụ do NailsZone cung cấp, mọi giao dịch hoặc tương tác với người dùng khác, hoặc mối quan hệ của bạn với NailsZone."
+    },
+    "arbitration_process": {
+      "title": "Quy trình trọng tài",
+      "initiation": "Khởi động trọng tài: Để khởi động trọng tài, một bên phải gửi Thông báo tranh chấp bằng văn bản cho bên kia, nêu bản chất tranh chấp và phương án mong muốn. Nếu không giải quyết được thoả đáng ngoài tố tụng, một trong hai bên có thể đưa tranh chấp ra trọng tài ràng buộc.",
+      "provider": "Tổ chức trọng tài: Trọng tài do Hiệp hội Trọng tài Hoa Kỳ (AAA) hoặc nhà cung cấp giải pháp tranh chấp thay thế (ADR) đã thành lập khác mà các bên thống nhất điều hành.",
+      "rules": "Quy tắc trọng tài: Trọng tài tiến hành theo Quy tắc Trọng tài Thương mại và Quy trình bổ sung cho tranh chấp liên quan người tiêu dùng của AAA, trừ khi Thỏa thuận này có quy định khác.",
+      "location": "Địa điểm: Trọng tài diễn ra tại khu vực pháp lý nơi NailsZone đặt trụ sở, trừ khi các bên thống nhất địa điểm khác.",
+      "arbitrator_decision": "Quyết định của trọng tài viên: Quyết định của trọng tài viên là chung thẩm và ràng buộc với mọi bên, và có thể được ghi nhận tại bất kỳ tòa án có thẩm quyền."
+    },
+    "exceptions_to_arbitration": {
+      "title": "Ngoại lệ không áp dụng trọng tài",
+      "small_claims": "Tòa tranh chấp nhỏ: Một trong hai bên có thể đưa tranh chấp ra tòa tranh chấp nhỏ khi thẩm quyền và địa điểm đối với các bên đủ điều kiện theo quy định của tòa đó.",
+      "injunctive_relief": "Biện pháp khẩn cấp: Một trong hai bên có thể yêu cầu biện pháp khẩn cấp hoặc biện pháp công bằng khác tại tòa có thẩm quyền để bảo vệ quyền sở hữu trí tuệ hoặc ngăn thiệt hại không thể khắc phục bằng tiền."
+    },
+    "waiver_of_jury_trial": {
+      "title": "Từ bỏ xét xử bồi thẩm đoàn",
+      "description": "Bằng việc chấp nhận Thỏa thuận này, các bên từ bỏ quyền được xét xử bởi bồi thẩm đoàn đối với mọi tranh chấp phát sinh từ hoặc liên quan đến nền tảng NailsZone hoặc Thỏa thuận này."
+    },
+    "opt_out_provision": {
+      "title": "Điều khoản từ chối",
+      "description": "Bạn có quyền từ chối các điều khoản của Thỏa thuận này bằng cách gửi thông báo bằng văn bản về quyết định từ chối tới NailsZone trong vòng 30 ngày kể từ lần đầu sử dụng nền tảng hoặc chấp nhận các điều khoản này."
+    },
+    "changes": {
+      "title": "Thay đổi Thỏa thuận này",
+      "description": "NailsZone có quyền sửa đổi hoặc bổ sung Thỏa thuận này bất cứ lúc nào. Mọi thay đổi có hiệu lực ngay khi đăng trên nền tảng. Việc bạn tiếp tục sử dụng sau khi thay đổi được coi là chấp nhận các điều khoản mới."
+    },
+    "governing_law": {
+      "title": "Luật điều chỉnh",
+      "description": "Thỏa thuận này và mọi tranh chấp hoặc khiếu nại phát sinh từ hoặc liên quan đến Thỏa thuận sẽ được điều chỉnh bởi pháp luật của khu vực pháp lý nơi NailsZone đặt trụ sở, không áp dụng các quy tắc xung đột pháp luật."
+    },
+    "contact_information": {
+      "title": "Thông tin liên hệ",
+      "description": "Mọi câu hỏi hoặc thông báo liên quan đến Thỏa thuận Giải quyết tranh chấp và Trọng tài này, vui lòng liên hệ NailsZone tại <email>teamnz@levincigroup.com</email>."
+    }
+  }
+}
