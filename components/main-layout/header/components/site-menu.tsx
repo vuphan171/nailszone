@@ -8,7 +8,7 @@ import IconMenu from "@/public/icons/ic-menu.svg"
 import IconArticle from "@/public/icons/ic-article.svg"
 import IconCalendar from "@/public/icons/ic-calendar.svg"
 import IconWorker from "@/public/icons/ic-worker.svg"
-import IconStore from "@/public/icons/ic-store.svg"
+import IconStore from "@/public/icons/ic-storefront.svg"
 import MenuItem from "./menu-item"
 import { Typography } from "@/components/ui/typography"
 
