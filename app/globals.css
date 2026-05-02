@@ -113,7 +113,7 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(0.8622 0.0068 286.26);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
   --chart-1: oklch(0.87 0 0);
@@ -144,5 +144,6 @@
 
   html {
     @apply font-sans;
+    scrollbar-gutter: stable;
   }
 }

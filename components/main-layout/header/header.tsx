@@ -1,10 +1,10 @@
 import IconBell from "@/public/icons/ic-bell.svg"
 import IconCart from "@/public/icons/ic-cart.svg"
-import IconMenu from "@/public/icons/ic-menu.svg"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import SiteMenu from "./components/site-menu"
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center gap-x-7.5">
-        <IconMenu className="size-10" />
+        <SiteMenu />
         <Button className="relative size-8 w-fit" variant="ghost" size="icon">
           <IconCart className="size-8" />
           <Badge className="absolute -top-2.5 -right-2.5 h-5 min-w-5 rounded-full px-1 tabular-nums">

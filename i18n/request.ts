@@ -17,26 +17,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(await import(`../messages/${locale}/legal.json`)).default,
       ...(await import(`../messages/${locale}/terms-and-conditions.json`))
         .default,
-      ...(await import(`../messages/${locale}/privacy-policy.json`)).default,
-      ...(await import(`../messages/${locale}/data-security-policy.json`))
-        .default,
-      ...(await import(`../messages/${locale}/cookie-policy.json`)).default,
-      ...(await import(`../messages/${locale}/community-guidelines.json`))
-        .default,
-      ...(await import(`../messages/${locale}/accessibility-statement.json`))
-        .default,
-      ...(await import(`../messages/${locale}/dispute-resolution-agreement.json`))
-        .default,
-      ...(await import(`../messages/${locale}/community-participation-agreement.json`))
-        .default,
-      ...(await import(`../messages/${locale}/sellers-common-agreement.json`))
-        .default,
-      ...(await import(`../messages/${locale}/buyer-agreement.json`)).default,
-      ...(await import(`../messages/${locale}/return-and-refund-policy.json`))
-        .default,
-      ...(await import(`../messages/${locale}/shipping-policy.json`)).default,
-      ...(await import(`../messages/${locale}/intellectual-property-policy.json`))
-        .default,
     },
   }
 })
