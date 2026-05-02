@@ -3,7 +3,7 @@ import { Typography } from "@/components/ui/typography"
 import IconWorld from "@/public/icons/ic-world.svg"
 import SettingButton from "./components/setting-button"
 import PhotoGrid from "./components/photo-grid"
-import FeedActions from "./components/feed-actions"
+import { FeedActions } from "./components/feed-actions"
 
 const FeedCard = () => {
   return (
