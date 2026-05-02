@@ -48,6 +48,8 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --shadow-ads-card: 0px 4px 4px 0px #0000001a;
+  --color-feed-composer: #f4efff;
+  --shadow-feed-composer: 0 8px 16px 0 #48484a33;
 
   /* Feed reaction icon backgrounds */
   --color-react-heart: #ffeff9;
