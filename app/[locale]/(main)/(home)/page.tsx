@@ -1,18 +1,19 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { setRequestLocale } from "next-intl/server"
 import { Locale } from "next-intl"
 import RightSidebar from "./components/right-sidebar"
+import { FeedCard } from "@/components/common/feed-card"
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
-
-  const t = await getTranslations("Common.Metadata")
 
   setRequestLocale(locale as Locale)
 
   return (
     <>
       <div className="shrink grow bg-surface pt-16">
-        <div className="h-[5000px]">{t("title")}</div>
+        <div className="mx-auto mt-10 max-w-3xl px-8">
+          <FeedCard />
+        </div>
       </div>
       <RightSidebar />
     </>
