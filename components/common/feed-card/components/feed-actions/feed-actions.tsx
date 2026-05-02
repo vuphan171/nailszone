@@ -1,40 +1,44 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { Typography } from "@/components/ui/typography"
 import IconHeart from "@/public/icons/ic-heart.svg"
 import IconShareOutLine from "@/public/icons/ic-share-outline.svg"
 import IconChat from "@/public/icons/ic-chat.svg"
-import { Typography } from "@/components/ui/typography"
-import HeartIcon from "./heart-icon"
-import LikeIcon from "./like-icon"
-import {
-  ReactionIconStack,
-  type ReactionIconStackItem,
-} from "./reaction-icon-stack"
-
-const reactionPreview: ReactionIconStackItem[] = [
-  {
-    backgroundColor: "#FFEFF9",
-    sizeClassName: "size-9.5",
-    children: <HeartIcon />,
-  },
-  {
-    backgroundColor: "#EBF5FD",
-    sizeClassName: "size-9.5",
-    children: <LikeIcon />,
-  },
-  {
-    backgroundColor: "#FFF9E4",
-    sizeClassName: "size-8",
-  },
-]
+import heartAnimation from "@/public/lottie/heart.json"
+import likeAnimation from "@/public/lottie/like.json"
+import laughAnimation from "@/public/lottie/laugh.json"
+import wowAnimation from "@/public/lottie/wow.json"
+import cryAnimation from "@/public/lottie/cry.json"
+import angryAnimation from "@/public/lottie/angry.json"
+import LottieReactionIcon from "./lottie-reaction-icon"
+import ReactIcon from "./react-icon"
 
 const FeedActions = () => {
   return (
     <div className="flex flex-col gap-y-3 divide-y divide-border rounded-b-lg bg-white px-5 pt-3 pb-4">
       <div className="flex items-center justify-between gap-x-2 pb-3">
         <div className="flex items-center gap-2">
-          <ReactionIconStack items={reactionPreview} />
+          <div className="isolate flex -space-x-2.5">
+            <ReactIcon zIndex={6} type="heart">
+              <LottieReactionIcon animationData={heartAnimation} />
+            </ReactIcon>
+            <ReactIcon zIndex={5} type="like">
+              <LottieReactionIcon animationData={likeAnimation} />
+            </ReactIcon>
+            <ReactIcon zIndex={4} type="laugh">
+              <LottieReactionIcon animationData={laughAnimation} />
+            </ReactIcon>
+            <ReactIcon zIndex={3} type="wow">
+              <LottieReactionIcon animationData={wowAnimation} />
+            </ReactIcon>
+            <ReactIcon zIndex={2} type="cry">
+              <LottieReactionIcon animationData={cryAnimation} />
+            </ReactIcon>
+            <ReactIcon zIndex={1} type="angry">
+              <LottieReactionIcon animationData={angryAnimation} />
+            </ReactIcon>
+          </div>
           <Typography variant="smallText" className="font-normal">
             14
           </Typography>
