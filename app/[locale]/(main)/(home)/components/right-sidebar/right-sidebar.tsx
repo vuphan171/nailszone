@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
+import TabItems from "@/app/[locale]/(main)/(home)/components/right-sidebar/tab-items"
+
 import { Link } from "@/i18n/navigation"
 
 import { getNewHomePage } from "@/lib/api/home"
@@ -11,7 +13,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Typography } from "@/components/ui/typography"
 
 import { AdsCard } from "@/components/common/ads-card"
-import { Empty } from "@/components/common/empty"
 import { MasterClassCard } from "@/components/common/master-class-card"
 import { VoteCard } from "@/components/common/vote-card"
 
@@ -61,41 +62,41 @@ const RightSidebar = async () => {
             className="mt-4.25 flex flex-col gap-y-5"
             value="master_class"
           >
-            {event_list?.items?.length > 0 ? (
-              event_list?.items?.map((event) => (
-                <MasterClassCard key={event.event_id} />
-              ))
-            ) : (
-              <Empty title={t("no_master_class")} />
-            )}
+            <TabItems
+              items={event_list?.items}
+              emptyText={t("no_master_class")}
+              renderItem={(event) => (
+                <MasterClassCard key={event.event_id} data={event} />
+              )}
+            />
           </TabsContent>
           <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="jobs">
-            {jobs_list?.items?.length > 0 ? (
-              jobs_list?.items?.map((job) => (
+            <TabItems
+              items={jobs_list?.items}
+              emptyText={t("no_jobs")}
+              renderItem={(job) => (
                 <AdsCard key={job.advertisement_id} data={job} />
-              ))
-            ) : (
-              <Empty title={t("no_jobs")} />
-            )}
+              )}
+            />
           </TabsContent>
           <TabsContent
             className="mt-4.25 flex flex-col gap-y-5"
             value="for_sale"
           >
-            {forsales_list.items?.length > 0 ? (
-              forsales_list.items?.map((for_sale) => (
+            <TabItems
+              items={forsales_list?.items}
+              emptyText={t("no_for_sale")}
+              renderItem={(for_sale) => (
                 <AdsCard key={for_sale.advertisement_id} data={for_sale} />
-              ))
-            ) : (
-              <Empty title={t("no_for_sale")} />
-            )}
+              )}
+            />
           </TabsContent>
           <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="vote">
-            {votes_list.items?.length > 0 ? (
-              votes_list.items?.map((vote) => <VoteCard key={vote.id} />)
-            ) : (
-              <Empty title={t("no_vote")} />
-            )}
+            <TabItems
+              items={votes_list?.items}
+              emptyText={t("no_vote")}
+              renderItem={(vote) => <VoteCard key={vote.id} />}
+            />
           </TabsContent>
         </Tabs>
       </ScrollArea>

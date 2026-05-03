@@ -7,8 +7,7 @@ import { FeedCard } from "@/components/common/feed-card"
 import { FeedComposer } from "@/components/common/feed-composer"
 import { HeroBanner } from "@/components/common/hero-banner"
 
-import RightSidebar from "./components/right-sidebar"
-import RightSidebarSkeleton from "./components/right-sidebar-skeleton"
+import { RightSidebar, RightSidebarSkeleton } from "./components/right-sidebar"
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
