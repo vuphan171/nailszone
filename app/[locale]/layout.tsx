@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation"
+
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
+
 import { routing } from "@/i18n/routing"
 
 export function generateStaticParams() {

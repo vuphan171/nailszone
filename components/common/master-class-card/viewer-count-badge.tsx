@@ -1,5 +1,6 @@
-import { Typography } from "@/components/ui/typography"
 import IconEye from "@/public/icons/ic-eye.svg"
+
+import { Typography } from "@/components/ui/typography"
 
 const ViewerCountBadge = () => {
   return (

@@ -1,9 +1,12 @@
+import Image from "next/image"
+
 import IconBell from "@/public/icons/ic-bell.svg"
 import IconCart from "@/public/icons/ic-cart.svg"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+
 import SiteMenu from "./components/site-menu"
 
 const Header = () => {

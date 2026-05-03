@@ -1,16 +1,18 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Typography } from "@/components/ui/typography"
+import IconChat from "@/public/icons/ic-chat.svg"
 import IconHeart from "@/public/icons/ic-heart.svg"
 import IconShareOutLine from "@/public/icons/ic-share-outline.svg"
-import IconChat from "@/public/icons/ic-chat.svg"
-import heartAnimation from "@/public/lottie/heart.json"
-import likeAnimation from "@/public/lottie/like.json"
-import laughAnimation from "@/public/lottie/laugh.json"
-import wowAnimation from "@/public/lottie/wow.json"
-import cryAnimation from "@/public/lottie/cry.json"
 import angryAnimation from "@/public/lottie/angry.json"
+import cryAnimation from "@/public/lottie/cry.json"
+import heartAnimation from "@/public/lottie/heart.json"
+import laughAnimation from "@/public/lottie/laugh.json"
+import likeAnimation from "@/public/lottie/like.json"
+import wowAnimation from "@/public/lottie/wow.json"
+
+import { Button } from "@/components/ui/button"
+import { Typography } from "@/components/ui/typography"
+
 import LottieReactionIcon from "./lottie-reaction-icon"
 import ReactIcon from "./react-icon"
 

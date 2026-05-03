@@ -1,11 +1,13 @@
 import { useTranslations } from "next-intl"
+
+import { Link } from "@/i18n/navigation"
+
 import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion"
 import { Typography } from "@/components/ui/typography"
-import { Link } from "@/i18n/navigation"
 
 type Props = {
   value: string

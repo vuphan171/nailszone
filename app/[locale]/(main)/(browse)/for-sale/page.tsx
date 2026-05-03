@@ -1,8 +1,11 @@
-import { AdsCard } from "@/components/common/ads-card"
 import { Metadata } from "next"
+
 import { getTranslations } from "next-intl/server"
 import { setRequestLocale } from "next-intl/server"
+
 import { getForSales } from "@/lib/api/for-sales"
+
+import { AdsCard } from "@/components/common/ads-card"
 
 type Props = {
   params: Promise<{ locale: string }>

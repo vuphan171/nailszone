@@ -1,11 +1,13 @@
 "use server"
 
-import { getClient } from "@/lib/graphql/apollo-client"
-import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
+import CACHE_KEYS from "@/configs/cache-keys"
+import CACHE_TIMES from "@/configs/cache-times"
+
 import { Advertisement, ADVERTISEMENT_TYPES } from "@/types/advertisement"
 import { SORT_DIRECTIONS } from "@/types/sort-direction"
-import CACHE_TIMES from "@/configs/cache-times"
-import CACHE_KEYS from "@/configs/cache-keys"
+
+import { getClient } from "@/lib/graphql/apollo-client"
+import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
 
 const getForSales = async (
   pageSize: number = 10,

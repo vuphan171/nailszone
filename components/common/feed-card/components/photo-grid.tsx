@@ -1,5 +1,6 @@
-import { ImageFallback } from "@/components/common/image-fallback"
 import { Typography } from "@/components/ui/typography"
+
+import { ImageFallback } from "@/components/common/image-fallback"
 
 const PhotoGrid = () => {
   return (

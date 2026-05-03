@@ -1,8 +1,12 @@
 "use client"
 
 import React from "react"
-import Autoplay from "embla-carousel-autoplay"
+
 import Image from "next/image"
+
+import Autoplay from "embla-carousel-autoplay"
+
+import { cn } from "@/lib/utils"
 
 import {
   Carousel,
@@ -12,8 +16,6 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel"
-
-import { cn } from "@/lib/utils"
 
 import {
   DotButton,

@@ -1,9 +1,11 @@
-import { Typography } from "@/components/ui/typography"
+import { useTranslations } from "next-intl"
+
 import { Accordion } from "@/components/ui/accordion"
+import { Typography } from "@/components/ui/typography"
+
+import BuyerAgreement from "./components/buyer-agreement"
 import CommunityParticipationAgreement from "./components/community-participation-agreement"
 import SellersCommonAgreement from "./components/sellers-common-agreement"
-import BuyerAgreement from "./components/buyer-agreement"
-import { useTranslations } from "next-intl"
 
 const SpecificAgreements = () => {
   const t = useTranslations("legal_page")

@@ -1,9 +1,11 @@
+import IconWorld from "@/public/icons/ic-world.svg"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Typography } from "@/components/ui/typography"
-import IconWorld from "@/public/icons/ic-world.svg"
-import SettingButton from "./components/setting-button"
-import PhotoGrid from "./components/photo-grid"
+
 import { FeedActions } from "./components/feed-actions"
+import PhotoGrid from "./components/photo-grid"
+import SettingButton from "./components/setting-button"
 
 const FeedCard = () => {
   return (

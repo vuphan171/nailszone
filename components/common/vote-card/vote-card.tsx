@@ -1,5 +1,3 @@
-import { Typography } from "@/components/ui/typography"
-import { ImageFallback } from "../image-fallback"
 import {
   Avatar,
   AvatarFallback,
@@ -8,6 +6,9 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import { Typography } from "@/components/ui/typography"
+
+import { ImageFallback } from "../image-fallback"
 import TimeCountBadge from "./time-count-badge"
 import TotalVoteBadge from "./total-vote-badge"
 

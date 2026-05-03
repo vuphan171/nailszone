@@ -1,6 +1,9 @@
 import { ReactNode } from "react"
-import { clsx } from "clsx"
+
 import { Inter } from "next/font/google"
+
+import { clsx } from "clsx"
+
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })

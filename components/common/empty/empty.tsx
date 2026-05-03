@@ -1,5 +1,7 @@
 import React from "react"
+
 import IconEmpty from "@/public/icons/ic-empty.svg"
+
 import { Typography } from "@/components/ui/typography"
 
 type Props = {

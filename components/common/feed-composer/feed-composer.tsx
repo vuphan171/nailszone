@@ -1,6 +1,7 @@
+import IcMedia from "@/public/icons/ic-media.svg"
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Typography } from "@/components/ui/typography"
-import IcMedia from "@/public/icons/ic-media.svg"
 
 const FeedComposer = () => {
   return (

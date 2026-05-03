@@ -1,6 +1,7 @@
-import { Typography } from "@/components/ui/typography"
-import { ImageFallback } from "../image-fallback"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Typography } from "@/components/ui/typography"
+
+import { ImageFallback } from "../image-fallback"
 import LiveBadge from "./live-badge"
 import ViewerCountBadge from "./viewer-count-badge"
 

@@ -1,9 +1,10 @@
 "use server"
 
-import { getClient } from "@/lib/graphql/apollo-client"
-import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
 import { Advertisement, ADVERTISEMENT_TYPES } from "@/types/advertisement"
 import { SORT_DIRECTIONS } from "@/types/sort-direction"
+
+import { getClient } from "@/lib/graphql/apollo-client"
+import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
 
 const getJobs = async (
   pageSize: number = 10,

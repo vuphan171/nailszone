@@ -1,9 +1,11 @@
-import { Typography } from "@/components/ui/typography"
+import { useTranslations } from "next-intl"
+
 import { Accordion } from "@/components/ui/accordion"
+import { Typography } from "@/components/ui/typography"
+
+import IntellectualPropertyPolicy from "./components/intellectual-property-policy"
 import ReturnAndRefundPolicy from "./components/return-and-refund-policy"
 import ShippingPolicy from "./components/shipping-policy"
-import IntellectualPropertyPolicy from "./components/intellectual-property-policy"
-import { useTranslations } from "next-intl"
 
 const TransactionsContent = () => {
   const t = useTranslations("legal_page")

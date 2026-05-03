@@ -1,7 +1,9 @@
 import React from "react"
+
+import IconArrow from "@/public/icons/ic-arrow.svg"
+
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Typography } from "@/components/ui/typography"
-import IconArrow from "@/public/icons/ic-arrow.svg"
 
 type Props = {
   title: string

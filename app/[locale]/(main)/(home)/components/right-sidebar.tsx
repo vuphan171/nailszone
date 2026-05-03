@@ -1,15 +1,19 @@
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Link } from "@/i18n/navigation"
-import { Typography } from "@/components/ui/typography"
 import { getTranslations } from "next-intl/server"
+
+import { Link } from "@/i18n/navigation"
+
+import { getNewHomePage } from "@/lib/api/home"
+import { cn } from "@/lib/utils"
+
+import { buttonVariants } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Typography } from "@/components/ui/typography"
+
+import { AdsCard } from "@/components/common/ads-card"
+import { Empty } from "@/components/common/empty"
 import { MasterClassCard } from "@/components/common/master-class-card"
 import { VoteCard } from "@/components/common/vote-card"
-import { AdsCard } from "@/components/common/ads-card"
-import { getNewHomePage } from "@/lib/api/home"
-import { buttonVariants } from "@/components/ui/button"
-import { Empty } from "@/components/common/empty"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { cn } from "@/lib/utils"
 
 const hotTopicTabTrigger = cn(
   buttonVariants({ variant: "outline", size: "default" }),

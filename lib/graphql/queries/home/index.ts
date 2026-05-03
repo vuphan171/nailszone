@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client"
 import { TypedDocumentNode } from "@graphql-typed-document-node/core"
+
 import { GetNewHomePageResponse } from "@/lib/graphql/queries/home/types"
 
 const GET_NEW_HOMEPAGE_QUERY: TypedDocumentNode<GetNewHomePageResponse> = gql`

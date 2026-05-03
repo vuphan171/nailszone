@@ -1,9 +1,14 @@
-import { setRequestLocale } from "next-intl/server"
+import { Suspense } from "react"
+
 import { Locale } from "next-intl"
-import RightSidebar from "./components/right-sidebar"
+import { setRequestLocale } from "next-intl/server"
+
 import { FeedCard } from "@/components/common/feed-card"
-import { HeroBanner } from "@/components/common/hero-banner"
 import { FeedComposer } from "@/components/common/feed-composer"
+import { HeroBanner } from "@/components/common/hero-banner"
+
+import RightSidebar from "./components/right-sidebar"
+import RightSidebarSkeleton from "./components/right-sidebar-skeleton"
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params
@@ -23,7 +28,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
           <FeedCard />
         </div>
       </div>
-      <RightSidebar />
+      <Suspense fallback={<RightSidebarSkeleton />}>
+        <RightSidebar />
+      </Suspense>
     </>
   )
 }

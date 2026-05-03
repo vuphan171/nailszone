@@ -1,5 +1,6 @@
-import { Typography } from "@/components/ui/typography"
 import IconVote from "@/public/icons/ic-vote.svg"
+
+import { Typography } from "@/components/ui/typography"
 
 const TotalVoteBadge = () => {
   return (

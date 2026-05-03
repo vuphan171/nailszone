@@ -1,16 +1,19 @@
-import SideBarItem from "@/components/main-layout/sidebar/components/sidebar-item"
-import IconHome from "@/public/icons/ic-home.svg"
+import { getTranslations } from "next-intl/server"
+
 import IconBag from "@/public/icons/ic-bag.svg"
-import IconMasterClass from "@/public/icons/ic-masterclass.svg"
-import IconStore from "@/public/icons/ic-store.svg"
 import IconDocument from "@/public/icons/ic-document.svg"
-import IconHeadPhone from "@/public/icons/ic-headphone.svg"
 import IconFeedBack from "@/public/icons/ic-feedback.svg"
+import IconHeadPhone from "@/public/icons/ic-headphone.svg"
+import IconHome from "@/public/icons/ic-home.svg"
+import IconMasterClass from "@/public/icons/ic-masterclass.svg"
 import IconNailsZone from "@/public/icons/ic-nailszone.svg"
 import IconSmartPhone from "@/public/icons/ic-smart-phone.svg"
-import { SidebarMenuItem } from "@/components/main-layout/sidebar/types"
+import IconStore from "@/public/icons/ic-store.svg"
+
 import { APP_ROUTES } from "@/configs/routes"
-import { getTranslations } from "next-intl/server"
+
+import SideBarItem from "@/components/main-layout/sidebar/components/sidebar-item"
+import { SidebarMenuItem } from "@/components/main-layout/sidebar/types"
 
 const SideBar = async () => {
   const t = await getTranslations("Common.Navigation")

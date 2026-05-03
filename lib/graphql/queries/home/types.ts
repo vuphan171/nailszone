@@ -1,5 +1,5 @@
-import { MasterClass } from "@/types/master-class"
 import { Advertisement } from "@/types/advertisement"
+import { MasterClass } from "@/types/master-class"
 import { Vote } from "@/types/vote"
 
 interface GetNewHomePageResponse {

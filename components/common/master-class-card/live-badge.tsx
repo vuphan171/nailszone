@@ -1,5 +1,6 @@
-import { Typography } from "@/components/ui/typography"
 import IconLive from "@/public/icons/ic-live.svg"
+
+import { Typography } from "@/components/ui/typography"
 
 const LiveBadge = () => {
   return (

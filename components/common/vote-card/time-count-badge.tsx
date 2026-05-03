@@ -1,5 +1,6 @@
-import { Typography } from "@/components/ui/typography"
 import IconClock from "@/public/icons/ic-clock.svg"
+
+import { Typography } from "@/components/ui/typography"
 
 const TimeCountBadge = () => {
   return (

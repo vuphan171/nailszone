@@ -1,11 +1,17 @@
 import React from "react"
+
 import IconLocation from "@/public/icons/ic-location.svg"
-import { ImageFallback } from "@/components/common/image-fallback"
+
 import { Advertisement } from "@/types/advertisement"
+
 import { joinText } from "@/helpers/format-string"
 import { normalizeText } from "@/helpers/format-string"
+
 import { Typography } from "@/components/ui/typography"
+
 import ButtonShare from "@/components/common/ads-card/share-button"
+import { ImageFallback } from "@/components/common/image-fallback"
+
 import BookmarkButton from "./bookmark-button"
 
 type Props = {

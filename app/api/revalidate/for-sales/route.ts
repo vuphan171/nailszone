@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server"
 import { revalidateTag } from "next/cache"
+import { NextResponse } from "next/server"
+
 import CACHE_KEYS from "@/configs/cache-keys"
 
 export async function POST() {

@@ -1,13 +1,15 @@
-import { Typography } from "@/components/ui/typography"
-import { Accordion } from "@/components/ui/accordion"
-import TermsAndConditions from "./components/terms-and-conditions"
-import PrivacyPolicy from "./components/privacy-policy"
-import DataSecurityPolicy from "./components/data-security-policy"
-import CookiePolicy from "./components/cookie-policy"
-import CommunityGuidelines from "./components/community-guidelines"
-import AccessibilityStatement from "./components/accessibility-statement"
-import DisputeResolutionAgreement from "./components/dispute-resolution-agreement"
 import { useTranslations } from "next-intl"
+
+import { Accordion } from "@/components/ui/accordion"
+import { Typography } from "@/components/ui/typography"
+
+import AccessibilityStatement from "./components/accessibility-statement"
+import CommunityGuidelines from "./components/community-guidelines"
+import CookiePolicy from "./components/cookie-policy"
+import DataSecurityPolicy from "./components/data-security-policy"
+import DisputeResolutionAgreement from "./components/dispute-resolution-agreement"
+import PrivacyPolicy from "./components/privacy-policy"
+import TermsAndConditions from "./components/terms-and-conditions"
 
 const GeneralPolicies = () => {
   const t = useTranslations("legal_page")
