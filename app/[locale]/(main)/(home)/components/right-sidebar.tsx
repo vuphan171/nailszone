@@ -1,55 +1,32 @@
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Link } from "@/i18n/navigation"
 import { Typography } from "@/components/ui/typography"
-import { Button } from "@/components/ui/button"
 import { getTranslations } from "next-intl/server"
 import { MasterClassCard } from "@/components/common/master-class-card"
 import { VoteCard } from "@/components/common/vote-card"
 import { AdsCard } from "@/components/common/ads-card"
-import {
-  Advertisement,
-  ADVERTISEMENT_STATUSES,
-  ADVERTISEMENT_TYPES,
-} from "@/types/advertisement"
+import { getNewHomePage } from "@/lib/api/home"
+import { buttonVariants } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { cn } from "@/lib/utils"
 
-const adsData: Advertisement = {
-  advertisement_id: 1,
-  type: ADVERTISEMENT_TYPES.FOR_SALES,
-  status: ADVERTISEMENT_STATUSES.PUBLISHED,
-  enable: 1,
-  customer_id: "1",
-  title: "New Nails Master Class Live 2024 WITH Jennifer Pham",
-  salon_address: "123 Main St, Anytown, USA",
-  postal_code: "12345",
-  country: "USA",
-  city: "Anytown",
-  state: "CA",
-  salary: {
-    split_fixed_salary: 100000,
-    negotiation: 100000,
-  },
-  price: {
-    price: "100000",
-    negotiation: true,
-  },
-  description: "New Nails Master Class Live 2024 WITH Jennifer Pham",
-  created_at: "2024-01-01",
-  lat: "123.456789",
-  lng: "123.456789",
-  gallery: [
-    {
-      image: "/images/master-class-card-bg.jpg",
-      image_url: "/images/master-class-card-bg.jpg",
-    },
-  ],
-  customer: { email: "test@test.com", firstname: "Test", lastname: "Test" },
-  contact: "test@test.com",
-  favorites_id: 1,
-  url_key: "new-nails-master-class-live-2024-with-jennifer-pham",
-}
+const hotTopicTabTrigger = cn(
+  buttonVariants({ variant: "outline", size: "default" }),
+  "flex-none shrink-0 cursor-pointer rounded-md py-1.5 font-medium font-semibold text-muted-foreground shadow-none after:hidden",
+  "data-active:border-transparent data-active:bg-primary data-active:text-primary-foreground data-active:hover:bg-primary/90 data-active:hover:text-primary-foreground dark:data-active:bg-primary dark:data-active:text-primary-foreground"
+)
 
 const RightSidebar = async () => {
   const t = await getTranslations("home_page")
+
+  const data = await getNewHomePage()
+
+  const { event_list, jobs_list, forsales_list, votes_list } = data ?? {
+    event_list: { items: [] },
+    jobs_list: { items: [] },
+    forsales_list: { items: [] },
+    votes_list: { items: [] },
+  }
 
   return (
     <div className="sticky top-16 max-h-0 min-h-[calc(100dvh-64px)] shrink-0 basis-[396px] bg-white">
@@ -60,28 +37,48 @@ const RightSidebar = async () => {
             {t("view_more")}
           </Link>
         </div>
-        <div className="mt-3 flex gap-x-3">
-          <Button className="cursor-pointer rounded-md px-3">
-            {t("master_class")}
-          </Button>
-          <Button variant="outline" className="cursor-pointer rounded-md px-3">
-            {t("vote")}
-          </Button>
-          <Button variant="outline" className="cursor-pointer rounded-md px-3">
-            {t("jobs")}
-          </Button>
-          <Button variant="outline" className="cursor-pointer rounded-md px-3">
-            {t("for_sale")}
-          </Button>
-        </div>
-        <div className="mt-4.25 flex flex-col gap-y-5">
-          <AdsCard data={adsData} />
-          <VoteCard />
-          <MasterClassCard />
-          <MasterClassCard />
-          <MasterClassCard />
-          <MasterClassCard />
-        </div>
+        <Tabs defaultValue="master_class" className="mt-3">
+          <TabsList className="flex h-auto flex-wrap gap-2 bg-transparent p-0">
+            <TabsTrigger className={hotTopicTabTrigger} value="master_class">
+              {t("master_class")}
+            </TabsTrigger>
+            <TabsTrigger className={hotTopicTabTrigger} value="jobs">
+              {t("jobs")}
+            </TabsTrigger>
+            <TabsTrigger className={hotTopicTabTrigger} value="for_sale">
+              {t("for_sale")}
+            </TabsTrigger>
+            <TabsTrigger className={hotTopicTabTrigger} value="vote">
+              {t("vote")}
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent
+            className="mt-4.25 flex flex-col gap-y-5"
+            value="master_class"
+          >
+            {event_list?.items?.map((event) => (
+              <MasterClassCard key={event.event_id} />
+            ))}
+          </TabsContent>
+          <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="jobs">
+            {jobs_list?.items?.map((job) => (
+              <AdsCard key={job.advertisement_id} data={job} />
+            ))}
+          </TabsContent>
+          <TabsContent
+            className="mt-4.25 flex flex-col gap-y-5"
+            value="for_sale"
+          >
+            {forsales_list.items?.map((for_sale) => (
+              <AdsCard key={for_sale.advertisement_id} data={for_sale} />
+            ))}
+          </TabsContent>
+          <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="vote">
+            {votes_list.items?.map((vote) => (
+              <VoteCard key={vote.id} />
+            ))}
+          </TabsContent>
+        </Tabs>
       </ScrollArea>
     </div>
   )
