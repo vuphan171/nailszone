@@ -9,7 +9,7 @@ const link = new HttpLink({
   uri: process.env.NEXT_PUBLIC_API_URL,
   headers: {
     "app-version": "1.0",
-    authorization: `Bearer ${process.env.API_TOKEN}`,
+    // authorization: `Bearer ${process.env.API_TOKEN}`,
   },
   fetchOptions: {
     cache: "no-store",

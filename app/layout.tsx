@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 
 import { clsx } from "clsx"
 
+import { ApolloWrapper } from "./apollo-wrapper"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -15,7 +16,9 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html>
-      <body className={clsx(inter.className)}>{children}</body>
+      <body className={clsx(inter.className)}>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   )
 }
