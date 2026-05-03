@@ -37,11 +37,9 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
             currentPage: 1,
           }}
         >
-          {(queryRef) => (
-            <Suspense fallback={<>loading</>}>
-              <HomeFeeds queryRef={queryRef} />
-            </Suspense>
-          )}
+          <Suspense fallback={<>loading</>}>
+            <HomeFeeds />
+          </Suspense>
         </PreloadQuery>
       </div>
       <Suspense fallback={<RightSidebarSkeleton />}>

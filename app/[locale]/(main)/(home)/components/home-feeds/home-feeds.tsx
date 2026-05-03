@@ -1,50 +1,34 @@
 "use client"
 
-import { useCallback, useState } from "react"
+import { useCallback, useTransition } from "react"
 
-import { TransportedQueryRef } from "@apollo/client-integration-nextjs"
-import { useQueryRefHandlers, useReadQuery } from "@apollo/client/react"
+import { useSuspenseQuery } from "@apollo/client/react"
 import { useInView } from "react-intersection-observer"
 
-import type { HomePageItem } from "@/types/home"
-
-import {
-  GetHomePageResponse,
-  GetHomePageVariables,
-} from "@/lib/graphql/queries/home/types"
+import { GET_HOMEPAGE_QUERY } from "@/lib/graphql/queries/home"
 
 import { Typography } from "@/components/ui/typography"
 
 import { FeedCard } from "@/components/common/feed-card"
 
-type Props = {
-  queryRef: TransportedQueryRef<
-    NoInfer<GetHomePageResponse>,
-    NoInfer<GetHomePageVariables>
-  >
-}
-
-const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
-  const { data } = useReadQuery(queryRef)
-  const { fetchMore } = useQueryRefHandlers(queryRef)
+const HomeFeeds: React.FC = () => {
+  const { data, fetchMore } = useSuspenseQuery(GET_HOMEPAGE_QUERY, {
+    variables: { currentPage: 1 },
+  })
 
   const homepage = data?.getHomepage
-
-  const items: HomePageItem[] = homepage?.items ?? []
+  const items = homepage?.items ?? []
   const currentPage = homepage?.page_info.current_page ?? 1
   const totalPage = homepage?.page_info.total_page ?? 1
-
   const hasMore = currentPage < totalPage
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isPending, startTransition] = useTransition()
 
-  const loadMore = useCallback(async () => {
-    if (!hasMore || isLoading) return
+  const loadMore = useCallback(() => {
+    if (!hasMore || isPending) return
 
-    setIsLoading(true)
-
-    try {
-      await fetchMore({
+    startTransition(() => {
+      void fetchMore({
         variables: {
           currentPage: currentPage + 1,
         },
@@ -53,6 +37,7 @@ const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
 
           return {
             getHomepage: {
+              ...prev.getHomepage,
               ...fetchMoreResult.getHomepage,
               items: [
                 ...(prev.getHomepage?.items ?? []),
@@ -62,14 +47,12 @@ const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
           }
         },
       })
-    } finally {
-      setIsLoading(false)
-    }
-  }, [fetchMore, currentPage, hasMore, isLoading])
+    })
+  }, [fetchMore, currentPage, hasMore, isPending])
 
   const { ref } = useInView({
     onChange: (inView) => {
-      if (inView) void loadMore()
+      if (inView) loadMore()
     },
     rootMargin: "240px",
   })
@@ -84,9 +67,9 @@ const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
         <div
           ref={ref}
           className="flex min-h-12 items-center justify-center py-4"
-          aria-busy={isLoading}
+          aria-busy={isPending}
         >
-          {isLoading && (
+          {isPending && (
             <Typography variant="mutedText" className="text-sm">
               Loading…
             </Typography>
