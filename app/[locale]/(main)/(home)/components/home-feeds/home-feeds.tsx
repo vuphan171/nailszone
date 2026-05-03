@@ -2,27 +2,40 @@
 
 import { useCallback, useTransition } from "react"
 
-import { useSuspenseQuery } from "@apollo/client/react"
+import { TransportedQueryRef } from "@apollo/client-integration-nextjs"
+import { useQueryRefHandlers, useReadQuery } from "@apollo/client/react"
 import { useInView } from "react-intersection-observer"
 
-import { GET_HOMEPAGE_QUERY } from "@/lib/graphql/queries/home"
+import {
+  GetHomePageResponse,
+  GetHomePageVariables,
+} from "@/lib/graphql/queries/home/types"
 
 import { Typography } from "@/components/ui/typography"
 
 import { FeedCard } from "@/components/common/feed-card"
 
-const HomeFeeds: React.FC = () => {
-  const { data, fetchMore } = useSuspenseQuery(GET_HOMEPAGE_QUERY, {
-    variables: { currentPage: 1 },
-  })
+type Props = {
+  queryRef: TransportedQueryRef<GetHomePageResponse, GetHomePageVariables>
+}
 
-  const homepage = data?.getHomepage
-  const items = homepage?.items ?? []
-  const currentPage = homepage?.page_info.current_page ?? 1
-  const totalPage = homepage?.page_info.total_page ?? 1
-  const hasMore = currentPage < totalPage
+const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
+  const { fetchMore } = useQueryRefHandlers(queryRef)
+  const { data } = useReadQuery(queryRef)
 
   const [isPending, startTransition] = useTransition()
+
+  const { ref } = useInView({
+    onChange: (inView) => {
+      if (inView) loadMore()
+    },
+    rootMargin: "240px",
+  })
+
+  const items = data?.getHomepage?.items ?? []
+  const currentPage = data?.getHomepage?.page_info.current_page ?? 1
+  const totalPage = data?.getHomepage?.page_info.total_page ?? 1
+  const hasMore = currentPage < totalPage
 
   const loadMore = useCallback(() => {
     if (!hasMore || isPending) return
@@ -50,16 +63,9 @@ const HomeFeeds: React.FC = () => {
     })
   }, [fetchMore, currentPage, hasMore, isPending])
 
-  const { ref } = useInView({
-    onChange: (inView) => {
-      if (inView) loadMore()
-    },
-    rootMargin: "240px",
-  })
-
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-y-4">
-      {items.map((item, index) => (
+      {items.map((_item, index) => (
         <FeedCard key={index} />
       ))}
 
