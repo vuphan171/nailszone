@@ -35,72 +35,67 @@ const RightSidebar = async () => {
   }
 
   return (
-    <div className="sticky top-16 max-h-0 min-h-[calc(100dvh-64px)] shrink-0 basis-[396px] bg-white">
-      <ScrollArea className="h-full w-full px-6 pt-4">
-        <div className="flex items-center justify-between gap-x-2">
-          <Typography variant="h6">{t("hot_topic")}</Typography>
-          <Link className="text-sm font-medium text-interactive" href="/">
-            {t("view_more")}
-          </Link>
-        </div>
-        <Tabs defaultValue="master_class" className="mt-3">
-          <TabsList className="flex h-auto flex-wrap gap-2 bg-transparent p-0">
-            <TabsTrigger className={hotTopicTabTrigger} value="master_class">
-              {t("master_class")}
-            </TabsTrigger>
-            <TabsTrigger className={hotTopicTabTrigger} value="jobs">
-              {t("jobs")}
-            </TabsTrigger>
-            <TabsTrigger className={hotTopicTabTrigger} value="for_sale">
-              {t("for_sale")}
-            </TabsTrigger>
-            <TabsTrigger className={hotTopicTabTrigger} value="vote">
-              {t("vote")}
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent
-            className="mt-4.25 flex flex-col gap-y-5"
-            value="master_class"
-          >
-            <TabItems
-              items={event_list?.items}
-              emptyText={t("no_master_class")}
-              renderItem={(event) => (
-                <MasterClassCard key={event.event_id} data={event} />
-              )}
-            />
-          </TabsContent>
-          <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="jobs">
-            <TabItems
-              items={jobs_list?.items}
-              emptyText={t("no_jobs")}
-              renderItem={(job) => (
-                <AdsCard key={job.advertisement_id} data={job} />
-              )}
-            />
-          </TabsContent>
-          <TabsContent
-            className="mt-4.25 flex flex-col gap-y-5"
-            value="for_sale"
-          >
-            <TabItems
-              items={forsales_list?.items}
-              emptyText={t("no_for_sale")}
-              renderItem={(for_sale) => (
-                <AdsCard key={for_sale.advertisement_id} data={for_sale} />
-              )}
-            />
-          </TabsContent>
-          <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="vote">
-            <TabItems
-              items={votes_list?.items}
-              emptyText={t("no_vote")}
-              renderItem={(vote) => <VoteCard key={vote.id} />}
-            />
-          </TabsContent>
-        </Tabs>
-      </ScrollArea>
-    </div>
+    <ScrollArea className="h-full w-full px-6 pt-4">
+      <div className="flex items-center justify-between gap-x-2">
+        <Typography variant="h6">{t("hot_topic")}</Typography>
+        <Link className="text-sm font-medium text-interactive" href="/">
+          {t("view_more")}
+        </Link>
+      </div>
+      <Tabs defaultValue="master_class" className="mt-3">
+        <TabsList className="flex h-auto flex-wrap gap-2 bg-transparent p-0">
+          <TabsTrigger className={hotTopicTabTrigger} value="master_class">
+            {t("master_class")}
+          </TabsTrigger>
+          <TabsTrigger className={hotTopicTabTrigger} value="jobs">
+            {t("jobs")}
+          </TabsTrigger>
+          <TabsTrigger className={hotTopicTabTrigger} value="for_sale">
+            {t("for_sale")}
+          </TabsTrigger>
+          <TabsTrigger className={hotTopicTabTrigger} value="vote">
+            {t("vote")}
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent
+          className="mt-4.25 flex flex-col gap-y-5"
+          value="master_class"
+        >
+          <TabItems
+            items={event_list?.items}
+            emptyText={t("no_master_class")}
+            renderItem={(event) => (
+              <MasterClassCard key={event.event_id} data={event} />
+            )}
+          />
+        </TabsContent>
+        <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="jobs">
+          <TabItems
+            items={jobs_list?.items}
+            emptyText={t("no_jobs")}
+            renderItem={(job) => (
+              <AdsCard key={job.advertisement_id} data={job} />
+            )}
+          />
+        </TabsContent>
+        <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="for_sale">
+          <TabItems
+            items={forsales_list?.items}
+            emptyText={t("no_for_sale")}
+            renderItem={(for_sale) => (
+              <AdsCard key={for_sale.advertisement_id} data={for_sale} />
+            )}
+          />
+        </TabsContent>
+        <TabsContent className="mt-4.25 flex flex-col gap-y-5" value="vote">
+          <TabItems
+            items={votes_list?.items}
+            emptyText={t("no_vote")}
+            renderItem={(vote) => <VoteCard key={vote.id} />}
+          />
+        </TabsContent>
+      </Tabs>
+    </ScrollArea>
   )
 }
 

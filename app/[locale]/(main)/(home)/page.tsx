@@ -3,6 +3,9 @@ import { Suspense } from "react"
 import { Locale } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 
+import CACHE_KEYS from "@/configs/cache-keys"
+import CACHE_TIMES from "@/configs/cache-times"
+
 import { PreloadQuery } from "@/lib/graphql/apollo-client"
 import { GET_HOMEPAGE_QUERY } from "@/lib/graphql/queries/home"
 
@@ -32,8 +35,8 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
               fetchOptions: {
                 cache: "force-cache",
                 next: {
-                  revalidate: 60,
-                  tags: ["home_page"],
+                  revalidate: CACHE_TIMES.HOME_FEEDS,
+                  tags: [CACHE_KEYS.HOME_FEEDS],
                 },
               },
             }}
@@ -46,9 +49,11 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
           </PreloadQuery>
         </div>
       </div>
-      <Suspense fallback={<RightSidebarSkeleton />}>
-        <RightSidebar />
-      </Suspense>
+      <div className="sticky top-16 max-h-0 min-h-[calc(100dvh-64px)] shrink-0 basis-[396px] bg-white">
+        <Suspense fallback={<RightSidebarSkeleton />}>
+          <RightSidebar />
+        </Suspense>
+      </div>
     </>
   )
 }
