@@ -12,7 +12,7 @@ import { GET_HOMEPAGE_QUERY } from "@/lib/graphql/queries/home"
 import { FeedComposer } from "@/components/common/feed-composer"
 import { HeroBanner } from "@/components/common/hero-banner"
 
-import { HomeFeeds } from "./components/home-feeds"
+import { HomeFeeds, HomeFeedsSkeleton } from "./components/home-feeds"
 import { RightSidebar, RightSidebarSkeleton } from "./components/right-sidebar"
 
 const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
@@ -31,18 +31,20 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
       <div className="mt-4 flex shrink grow flex-col gap-y-4 bg-surface px-8 pt-16">
         <HeroBanner />
         <FeedComposer />
-        <PreloadQuery
-          query={GET_HOMEPAGE_QUERY}
-          variables={{
-            currentPage: 1,
-          }}
-        >
-          {(queryRef) => (
-            <Suspense fallback={<>Loading...</>}>
-              <HomeFeeds queryRef={queryRef} />
-            </Suspense>
-          )}
-        </PreloadQuery>
+        <div className="mx-auto w-full flex max-w-3xl flex-col gap-y-4">
+          <PreloadQuery
+            query={GET_HOMEPAGE_QUERY}
+            variables={{
+              currentPage: 1,
+            }}
+          >
+            {(queryRef) => (
+              <Suspense fallback={<HomeFeedsSkeleton />}>
+                <HomeFeeds queryRef={queryRef} />
+              </Suspense>
+            )}
+          </PreloadQuery>
+        </div>
       </div>
       <Suspense fallback={<RightSidebarSkeleton />}>
         <RightSidebar />

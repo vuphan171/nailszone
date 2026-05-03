@@ -9,7 +9,7 @@ const MasterClassCardSkeleton: React.FC = () => {
           <div className="h-6 w-20 shrink-0 animate-pulse rounded-2xl bg-foreground/18 dark:bg-white/25" />
           <div className="h-6 w-20 animate-pulse rounded-2xl bg-foreground/18 dark:bg-white/25" />
         </div>
-        <div className="flex flex-col gap-y-1.25 rounded-b-lg bg-linear-to-t from-black/55 to-transparent px-5 pt-6.25 pb-4.75">
+        <div className="flex flex-col gap-y-1.25 rounded-b-lg bg-linear-to-t from-black/30 to-transparent px-5 pt-6.25 pb-4.75">
           <div className="flex items-center gap-x-2">
             <div className="size-7 shrink-0 animate-pulse rounded-full bg-white/35" />
             <div className="h-4 w-28 animate-pulse rounded bg-white/35" />

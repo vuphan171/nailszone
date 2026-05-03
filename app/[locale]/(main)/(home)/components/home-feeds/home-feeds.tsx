@@ -11,9 +11,7 @@ import {
   GetHomePageVariables,
 } from "@/lib/graphql/queries/home/types"
 
-import { Typography } from "@/components/ui/typography"
-
-import { FeedCard } from "@/components/common/feed-card"
+import { FeedCard, FeedCardSkeleton } from "@/components/common/feed-card"
 
 type Props = {
   queryRef: TransportedQueryRef<GetHomePageResponse, GetHomePageVariables>
@@ -64,25 +62,17 @@ const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
   }, [fetchMore, currentPage, hasMore, isPending])
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-y-4">
+    <>
       {items.map((_item, index) => (
         <FeedCard key={index} />
       ))}
 
       {hasMore && (
-        <div
-          ref={ref}
-          className="flex min-h-12 items-center justify-center py-4"
-          aria-busy={isPending}
-        >
-          {isPending && (
-            <Typography variant="mutedText" className="text-sm">
-              Loading…
-            </Typography>
-          )}
+        <div ref={ref} aria-busy={isPending}>
+          {isPending && <FeedCardSkeleton />}
         </div>
       )}
-    </div>
+    </>
   )
 }
 
