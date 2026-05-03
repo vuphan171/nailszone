@@ -29,13 +29,22 @@ const Page = async ({ params }: { params: Promise<{ locale: string }> }) => {
   return (
     <>
       <div className="mt-4 flex shrink grow flex-col gap-y-4 bg-surface px-8 pt-16">
-        <HeroBanner />
+        {/* <HeroBanner /> */}
         <FeedComposer />
         <div className="mx-auto w-full flex max-w-3xl flex-col gap-y-4">
           <PreloadQuery
             query={GET_HOMEPAGE_QUERY}
             variables={{
               currentPage: 1,
+            }}
+            context={{
+              fetchOptions: {
+                cache: "force-cache",
+                next: {
+                  revalidate: 60,
+                  tags: ["home_page"],
+                },
+              },
             }}
           >
             {(queryRef) => (
