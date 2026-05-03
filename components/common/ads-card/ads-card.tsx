@@ -36,7 +36,7 @@ const AdsCard: React.FC<Props> = ({ data }) => {
       </div>
       <div className="mt-3 px-4.5 pb-4.75">
         <div className="flex items-center gap-x-1">
-          <IconLocation className="size-3.5 shrink-0" />
+          <IconLocation className="size-3.5 shrink-0 text-interactive" />
           <Typography
             variant="smallText"
             className="leading-none font-normal text-interactive"

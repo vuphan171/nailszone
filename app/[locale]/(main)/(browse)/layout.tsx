@@ -5,5 +5,9 @@ type Props = {
 }
 
 export default function Layout({ children }: Props) {
-  return <div className="shrink grow bg-surface pt-16">{children}</div>
+  return (
+    <div className="shrink grow bg-surface pt-16 overflow-hidden">
+      {children}
+    </div>
+  )
 }

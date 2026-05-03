@@ -7,6 +7,8 @@ import { getForSales } from "@/lib/api/for-sales"
 
 import { AdsCard } from "@/components/common/ads-card"
 
+import TopForSales from "./components/top-for-sales"
+
 type Props = {
   params: Promise<{ locale: string }>
 }
@@ -43,14 +45,17 @@ const Page = async ({ params }: Props) => {
   const forSales = await getForSales()
 
   return (
-    <div className="grid grid-cols-12 gap-x-6 gap-y-4 px-8 pt-6">
-      {forSales.map((item) => {
-        return (
-          <div key={item.advertisement_id} className="col-span-3">
-            <AdsCard data={item} />
-          </div>
-        )
-      })}
+    <div className="px-8 pt-6 flex flex-col gap-y-6">
+      <TopForSales topForSales={forSales} />
+      <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
+        {forSales.map((item) => {
+          return (
+            <div key={item.advertisement_id}>
+              <AdsCard data={item} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
