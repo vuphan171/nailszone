@@ -7,7 +7,7 @@ import { getForSales } from "@/lib/api/for-sales"
 
 import { AdsCard } from "@/components/common/ads-card"
 
-import TopForSales from "./components/top-for-sales"
+import { TopForSales } from "./components/top-for-sales"
 
 type Props = {
   params: Promise<{ locale: string }>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client"
 
 import * as React from "react"
@@ -5,7 +6,8 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+
+import IconArrow from "@/public/icons/ic-arrow.svg"
 
 import { cn } from "@/lib/utils"
 
@@ -176,10 +178,12 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 function CarouselPrevious({
   className,
   variant = "outline",
-  size = "icon-sm",
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+
+  if (!canScrollPrev) return null
 
   return (
     <Button
@@ -197,7 +201,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeftIcon />
+      <IconArrow className="size-8 text-primary-foreground rotate-180" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -206,10 +210,12 @@ function CarouselPrevious({
 function CarouselNext({
   className,
   variant = "outline",
-  size = "icon-sm",
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
+
+  if (!canScrollNext) return null
 
   return (
     <Button
@@ -227,7 +233,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRightIcon />
+      <IconArrow className="size-8 text-primary-foreground" />
       <span className="sr-only">Next slide</span>
     </Button>
   )
