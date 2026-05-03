@@ -9,6 +9,10 @@
         "master_class": "Master Class",
         "vote": "Vote",
         "jobs": "Jobs",
-        "for_sale": "For Sale"
+        "for_sale": "For Sale",
+        "no_master_class": "No Master Class",
+        "no_vote": "No Vote",
+        "no_jobs": "No Jobs",
+        "no_for_sale": "No For Sale"
     }
 }
