@@ -1,5 +1,7 @@
 import { Advertisement } from "./advertisement"
+import { Feed } from "./feed"
 import { MasterClass } from "./master-class"
+import { PageInfo } from "./page_info"
 import { Vote } from "./vote"
 
 type NewHomePage = {
@@ -17,4 +19,11 @@ type NewHomePage = {
   }
 }
 
-export type { NewHomePage }
+type HomePageResponse = {
+  items: HomePageItem[]
+  page_info: PageInfo
+}
+
+type HomePageItem = Feed | Advertisement
+
+export type { NewHomePage, HomePageItem, HomePageResponse }

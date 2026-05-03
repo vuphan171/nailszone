@@ -1,5 +1,7 @@
 import { Advertisement } from "@/types/advertisement"
+import { HomePageItem } from "@/types/home"
 import { MasterClass } from "@/types/master-class"
+import { PageInfo } from "@/types/page_info"
 import { Vote } from "@/types/vote"
 
 interface GetNewHomePageResponse {
@@ -19,4 +21,19 @@ interface GetNewHomePageResponse {
   }
 }
 
-export type { GetNewHomePageResponse }
+interface GetHomePageResponse {
+  getHomepage: {
+    items: HomePageItem[]
+    page_info: PageInfo
+  }
+}
+
+interface GetHomePageVariables {
+  currentPage: number
+}
+
+export type {
+  GetNewHomePageResponse,
+  GetHomePageResponse,
+  GetHomePageVariables,
+}

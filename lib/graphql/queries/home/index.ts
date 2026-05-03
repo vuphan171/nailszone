@@ -1,7 +1,11 @@
 import { gql } from "@apollo/client"
 import { TypedDocumentNode } from "@graphql-typed-document-node/core"
 
-import { GetNewHomePageResponse } from "@/lib/graphql/queries/home/types"
+import {
+  GetNewHomePageResponse,
+  GetHomePageResponse,
+  GetHomePageVariables,
+} from "@/lib/graphql/queries/home/types"
 
 const GET_NEW_HOMEPAGE_QUERY: TypedDocumentNode<GetNewHomePageResponse> = gql`
   query getNewHomepage {
@@ -158,4 +162,95 @@ const GET_NEW_HOMEPAGE_QUERY: TypedDocumentNode<GetNewHomePageResponse> = gql`
   }
 `
 
-export { GET_NEW_HOMEPAGE_QUERY }
+const GET_HOMEPAGE_QUERY: TypedDocumentNode<
+  GetHomePageResponse,
+  GetHomePageVariables
+> = gql`
+  query getHomepage($currentPage: Int!) {
+    getHomepage(currentPage: $currentPage) {
+      items {
+        feed_id
+        event_id
+        advertisement_id
+        created_at
+        type_event {
+          value
+          label
+        }
+        status
+        title
+        type_item
+        content
+        font
+        privacy
+        background
+        is_show_thumbnail
+        link
+        link_title
+        link_description
+        link_thumbnail
+        image_url
+        url_key
+        media_gallery {
+          id
+          media_type
+          video_url
+          path
+          video_thumbnail
+        }
+        products {
+          id
+          sku
+          name
+          price
+          qty
+          description
+          image {
+            name
+            url
+          }
+        }
+        customer {
+          id
+          customer_id
+          email
+          firstname
+          lastname
+          avatar
+          url_key
+          account_type
+        }
+        total_like
+        total_comment
+        time_start
+        time_end
+        state
+        city
+        salary {
+          split_fixed_salary {
+            split
+            fixed
+          }
+          negotiation
+        }
+        price {
+          price
+          negotiation
+        }
+        favorites_id
+        has_contacted
+        gallery {
+          image
+          image_url
+        }
+      }
+      page_info {
+        page_size
+        current_page
+        total_page
+      }
+    }
+  }
+`
+
+export { GET_NEW_HOMEPAGE_QUERY, GET_HOMEPAGE_QUERY }
