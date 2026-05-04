@@ -15,6 +15,7 @@ interface GetListAdvertisementVariables {
   }[]
   filter: {
     type: AdvertisementType
+    is_pinned?: boolean
   }
 }
 

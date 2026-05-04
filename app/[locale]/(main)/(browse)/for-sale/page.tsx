@@ -1,13 +1,18 @@
+import { Suspense } from "react"
+
 import { Metadata } from "next"
 
 import { getTranslations } from "next-intl/server"
 import { setRequestLocale } from "next-intl/server"
 
-import { getForSales } from "@/lib/api/for-sales"
-
-import { AdsCard } from "@/components/common/ads-card"
-
-import { TopForSales } from "./components/top-for-sales"
+import {
+  AdsListCard,
+  AdsListCardSkeleton,
+} from "@/app/[locale]/(main)/(browse)/for-sale/components/ads-list-card"
+import {
+  TopForSales,
+  TopForSalesSkeleton,
+} from "@/app/[locale]/(main)/(browse)/for-sale/components/top-for-sales"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -42,19 +47,15 @@ const Page = async ({ params }: Props) => {
 
   setRequestLocale(locale)
 
-  const forSales = await getForSales()
-
   return (
     <div className="px-8 pt-6 flex flex-col gap-y-6">
-      <TopForSales topForSales={forSales} />
+      <Suspense fallback={<TopForSalesSkeleton />}>
+        <TopForSales />
+      </Suspense>
       <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
-        {forSales.map((item) => {
-          return (
-            <div key={item.advertisement_id}>
-              <AdsCard data={item} />
-            </div>
-          )
-        })}
+        <Suspense fallback={<AdsListCardSkeleton />}>
+          <AdsListCard />
+        </Suspense>
       </div>
     </div>
   )
