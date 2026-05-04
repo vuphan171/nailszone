@@ -1,8 +1,16 @@
+"use client"
+
 import React from "react"
+
+import { useTranslations } from "next-intl"
 
 import IconLocation from "@/public/icons/ic-location.svg"
 
 import { Advertisement } from "@/types/advertisement"
+
+import { getForSalePrice } from "@/helpers/for-sale"
+import { joinText, normalizeText } from "@/helpers/format-string"
+import { formatTime } from "@/helpers/format-time"
 
 import { Typography } from "@/components/ui/typography"
 
@@ -16,12 +24,19 @@ type Props = {
 }
 
 const TopForSaleCard: React.FC<Props> = ({ data }) => {
+  const t = useTranslations("ForSale")
+
+  const forSalePrice = getForSalePrice({
+    data,
+    negotiableLabel: t("negotiable"),
+  })
+
   return (
     <div className="flex aspect-477/300 relative shadow-ads-card">
       <ImageFallback
         preload
         fill
-        src={"/images/top-for-sale-bg.png"}
+        src={data?.gallery?.[0]?.image_url}
         alt={data?.title}
         className="rounded-xl object-cover absolute inset-0"
       />
@@ -32,7 +47,7 @@ const TopForSaleCard: React.FC<Props> = ({ data }) => {
               variant="largeText"
               className="font-semibold text-primary-foreground"
             >
-              $4,200.00
+              {forSalePrice}
             </Typography>
           </div>
           <div className="flex items-center gap-x-2.5">
@@ -46,7 +61,7 @@ const TopForSaleCard: React.FC<Props> = ({ data }) => {
             variant="h4"
             className="text-primary-foreground font-bold line-clamp-2"
           >
-            Cần Sang Tiệm Nail Ở North Beach San Francisco CA
+            {normalizeText(data?.title)}
           </Typography>
           <div className="flex items-center gap-x-1 justify-between">
             <div className="flex items-center gap-x-1">
@@ -55,14 +70,17 @@ const TopForSaleCard: React.FC<Props> = ({ data }) => {
                 variant="p"
                 className="font-normal text-primary-foreground"
               >
-                San Francisco, California
+                {joinText({
+                  parts: [data?.city, data?.state],
+                  separator: ", ",
+                })}
               </Typography>
             </div>
             <Typography
               variant="p"
               className="font-normal text-primary-foreground"
             >
-              2023/03/20
+              {formatTime(data?.created_at)}
             </Typography>
           </div>
         </div>

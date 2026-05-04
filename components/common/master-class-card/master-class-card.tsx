@@ -14,7 +14,10 @@ type Props = {
 }
 
 const MasterClassCard = ({ data }: Props) => {
-  const fullName = joinText(data?.customer?.firstname, data?.customer?.lastname)
+  const fullName = joinText({
+    parts: [data?.customer?.firstname, data?.customer?.lastname],
+  })
+
   return (
     <div className="relative aspect-323/346 rounded-lg">
       <ImageFallback

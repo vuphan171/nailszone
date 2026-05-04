@@ -33,12 +33,12 @@ const TopForSaleCarousel: React.FC<Props> = ({ topForSales }) => {
         className="w-full"
       >
         <CarouselContent>
-          {topForSales.map((category) => (
+          {topForSales.map((ads) => (
             <CarouselItem
-              key={category.advertisement_id}
+              key={ads.advertisement_id}
               className="basis-1 md:basis-1/2  2xl:basis-1/3"
             >
-              <TopForSaleCard data={category} />
+              <TopForSaleCard data={ads} />
             </CarouselItem>
           ))}
         </CarouselContent>

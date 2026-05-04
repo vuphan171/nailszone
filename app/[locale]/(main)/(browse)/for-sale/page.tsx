@@ -2,8 +2,7 @@ import { Suspense } from "react"
 
 import { Metadata } from "next"
 
-import { getTranslations } from "next-intl/server"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import {
   AdsListCard,

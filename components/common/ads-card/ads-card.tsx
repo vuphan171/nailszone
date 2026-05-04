@@ -41,7 +41,7 @@ const AdsCard: React.FC<Props> = ({ data }) => {
             variant="smallText"
             className="leading-none font-normal text-interactive"
           >
-            {joinText(data?.city, data?.state)}
+            {joinText({ parts: [data?.city, data?.state], separator: ", " })}
           </Typography>
         </div>
         <Typography variant="h6" className="mt-1 font-medium">
