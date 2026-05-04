@@ -57,7 +57,7 @@ const Page = async ({ params }: Props) => {
   setRequestLocale(locale)
 
   return (
-    <div className="px-8 pt-6 flex flex-col gap-y-6">
+    <div className="px-8 pt-6 flex flex-col gap-y-6 pb-5">
       <Suspense fallback={<TopForSalesSkeleton />}>
         <TopForSales />
       </Suspense>
@@ -66,7 +66,7 @@ const Page = async ({ params }: Props) => {
         query={GET_LIST_ADVERTISEMENT_QUERY}
         variables={{
           currentPage: 1,
-          pageSize: PAGE_SIZES.FOR_SALE_ADS_LIST,
+          pageSize: PAGE_SIZES.FOR_SALE_ADS_LIST * 2,
           filter: {
             type: ADVERTISEMENT_TYPES.FOR_SALES,
           },

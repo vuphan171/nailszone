@@ -67,10 +67,7 @@ const AdsListCard: React.FC<Props> = ({ queryRef }) => {
 
   return (
     <>
-      <div
-        aria-busy={isPending}
-        className="grid grid-cols-3 2xl:grid-cols-4 gap-4"
-      >
+      <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
         {forSales.map((item) => {
           return (
             <div key={item.advertisement_id}>

@@ -44,7 +44,7 @@ const AdsCard: React.FC<Props> = ({ data }) => {
             {joinText({ parts: [data?.city, data?.state], separator: ", " })}
           </Typography>
         </div>
-        <Typography variant="h6" className="mt-1 font-medium">
+        <Typography variant="h6" className="mt-1 font-medium line-clamp-1">
           {normalizeText(data?.title)}
         </Typography>
         <div className="mt-1.25 flex items-center justify-between gap-x-2">
