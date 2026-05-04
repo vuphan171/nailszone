@@ -13,6 +13,16 @@ import {
   TopForSalesSkeleton,
 } from "@/app/[locale]/(main)/(browse)/for-sale/components/top-for-sales"
 
+import CACHE_KEYS from "@/configs/cache-keys"
+import CACHE_TIMES from "@/configs/cache-times"
+import { PAGE_SIZES } from "@/configs/page_size"
+
+import { ADVERTISEMENT_TYPES } from "@/types/advertisement"
+import { SORT_DIRECTIONS } from "@/types/sort-direction"
+
+import { PreloadQuery } from "@/lib/graphql/apollo-client"
+import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
+
 type Props = {
   params: Promise<{ locale: string }>
 }
@@ -51,11 +61,43 @@ const Page = async ({ params }: Props) => {
       <Suspense fallback={<TopForSalesSkeleton />}>
         <TopForSales />
       </Suspense>
-      <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
-        <Suspense fallback={<AdsListCardSkeleton />}>
-          <AdsListCard />
-        </Suspense>
-      </div>
+
+      <PreloadQuery
+        query={GET_LIST_ADVERTISEMENT_QUERY}
+        variables={{
+          currentPage: 1,
+          pageSize: PAGE_SIZES.FOR_SALE_ADS_LIST,
+          filter: {
+            type: ADVERTISEMENT_TYPES.FOR_SALES,
+          },
+          sort: [
+            {
+              created_at: SORT_DIRECTIONS.DESC,
+            },
+          ],
+        }}
+        context={{
+          fetchOptions: {
+            cache: "force-cache",
+            next: {
+              revalidate: CACHE_TIMES.FOR_SALES_LIST,
+              tags: [CACHE_KEYS.FOR_SALES_LIST],
+            },
+          },
+        }}
+      >
+        {(queryRef) => (
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
+                <AdsListCardSkeleton />
+              </div>
+            }
+          >
+            <AdsListCard queryRef={queryRef} />
+          </Suspense>
+        )}
+      </PreloadQuery>
     </div>
   )
 }
