@@ -1,0 +1,54 @@
+---
+globs: src/docs/**/*.md
+alwaysApply: false
+---
+# Flow-First Documentation Rule
+
+When writing docs for feature flows (especially login/auth), keep the document practical and easy to scan.
+
+## Required structure
+
+1. Brief purpose (1-2 lines)
+2. Supported flows or user types
+3. High-level step-by-step flow
+4. Data handoff between steps (only key fields)
+5. Supporting navigation/edge routes
+6. At least one Mermaid flow diagram
+7. Short notes (important behavior or limitations)
+8. Related Docs section (links to adjacent flow docs)
+
+## Writing style
+
+- Prefer high-level behavior over implementation details.
+- Do not over-explain libraries, hooks, or internal form setup unless explicitly requested.
+- Use short sections and concise bullets.
+- Keep terminology consistent across the doc (e.g. principal/staff, OTP/2FA).
+- Write the documentation in English only.
+
+## Diagram requirement
+
+- Include a Mermaid diagram (`flowchart TD` or `sequenceDiagram`).
+- Diagram should reflect the real user journey:
+  - start at login,
+  - branch by user type when relevant,
+  - end at OTP/next auth step,
+  - include failure branch.
+
+## Keep it useful
+
+- Optimize for PM/QA/dev shared understanding.
+- If a section does not improve flow understanding, remove it.
+
+## Related Docs requirement
+
+- Add a `## Related Docs` section at the end of every flow document.
+- Link to related feature docs (for example: Login <-> Forgot Password).
+- Prefer bidirectional linking between neighboring docs to keep navigation complete.
+- Use relative markdown links (for example: `./two-factor-login.md`).
+
+## Folder convention
+
+- Create one folder per feature under `src/docs/`.
+- Place flow docs inside the feature folder (for example: `src/docs/login/...`, `src/docs/forgot-password/...`).
+- Prefer one main flow file per feature unless there is a strong reason to split.
+- For every new feature doc set, create the feature folder first, then add docs.

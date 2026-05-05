@@ -1,0 +1,42 @@
+---
+description: Auto-select the right skill by task intent
+alwaysApply: true
+---
+
+# Senior Skill Routing
+
+Before implementing any request, infer task intent and proactively apply the most relevant skill.
+
+## Routing order (required)
+
+1. Classify the request into one primary intent:
+   - docs-flow
+   - react-nextjs-code
+   - design-figma
+   - workflow-automation
+   - pr-maintenance
+2. Pick one primary skill first, then optional secondary skills only if needed.
+3. Execute with the chosen skill guidance; avoid asking the user which skill to use unless ambiguous.
+
+## Intent -> Skill map
+
+- docs-flow:
+  - Primary: `create-rule` (for rule updates), or apply docs rule already in repo.
+  - Enforce `flow-first-documentation` when writing `src/docs/**/*.md`.
+- react-nextjs-code:
+  - Primary: `vercel-react-best-practices` or `vercel-composition-patterns`.
+  - Secondary: `shell` for build/test/lint commands.
+- design-figma:
+  - Primary: `figma-implement-design` (code from Figma) or `figma-use` (Figma write/read actions requiring JS context).
+  - Secondary: `figma-code-connect`, `figma-generate-library`, `figma-generate-design`.
+- workflow-automation:
+  - Primary: `create-hook`, `create-subagent`, or `cursor-sdk`.
+- pr-maintenance:
+  - Primary: `babysit` or `split-to-prs`.
+
+## Behavior requirements
+
+- Default to action: do the work directly after selecting the skill.
+- Keep answers concise and practical; propose trade-offs only when needed.
+- If request is ambiguous, state your assumption in one line and proceed.
+- If two skills overlap, choose the one that reduces risk and rework.
