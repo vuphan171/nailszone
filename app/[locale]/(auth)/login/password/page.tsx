@@ -2,8 +2,6 @@ import { Metadata } from "next"
 
 import { getTranslations } from "next-intl/server"
 
-import { LoginForm } from "@/app/[locale]/(auth)/login/components/login-form"
-
 import { routing } from "@/i18n/routing"
 
 type Props = {
@@ -38,9 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Page() {
   return (
     <div className="flex min-h-svh items-center justify-center px-5 py-4">
-      <div className="flex max-w-xl w-full mx-auto">
-        <LoginForm />
-      </div>
+      <div className="flex max-w-xl w-full mx-auto"></div>
     </div>
   )
 }

@@ -2,14 +2,26 @@
 
 import * as React from "react"
 
+import { useRouter } from "next/navigation"
+
+import { useTranslations } from "next-intl"
+
+import { useMutation } from "@apollo/client/react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
-import { toast } from "sonner"
+import { isValidPhoneNumber } from "react-phone-number-input"
 import * as z from "zod"
 
 import IconGoogle from "@/public/icons/ic-google.svg"
 
+import { LoggerService } from "@/helpers/logger-service"
+import { normalizePhoneNumber } from "@/helpers/phone"
+
+import { CHECK_PHONE_NUMBER_EXIST_MUTATION } from "@/lib/graphql/mutations/auth"
+import { cn } from "@/lib/utils"
+
 import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   Field,
   FieldError,
@@ -19,73 +31,96 @@ import {
 import { PhoneInput } from "@/components/ui/phone-input"
 import { Typography } from "@/components/ui/typography"
 
-const formSchema = z.object({
-  title: z
-    .string()
-    .min(5, "Bug title must be at least 5 characters.")
-    .max(32, "Bug title must be at most 32 characters."),
-  description: z
-    .string()
-    .min(20, "Description must be at least 20 characters.")
-    .max(100, "Description must be at most 100 characters."),
-})
-
 export default function LoginForm() {
+  const router = useRouter()
+  const t = useTranslations("login_page")
+
+  const [checkPhoneNumberRequest] = useMutation(
+    CHECK_PHONE_NUMBER_EXIST_MUTATION
+  )
+
+  const formSchema = React.useMemo(
+    () =>
+      z.object({
+        phoneNumber: z
+          .string()
+          .min(1, { message: t("phone_required") })
+          .refine((value) => isValidPhoneNumber(value, "US"), {
+            message: t("phone_invalid"),
+          }),
+        agreeToTextMessage: z.boolean().refine((value) => value, {
+          message: t("text_message_agreement"),
+        }),
+        agreeToTermsAndConditions: z.boolean().refine((value) => value, {
+          message: t("terms_and_conditions_agreement"),
+        }),
+      }),
+    [t]
+  )
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: "",
-      description: "",
+      phoneNumber: "",
     },
   })
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    toast("You submitted the following values:", {
-      description: (
-        <pre className="mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "bottom-right",
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius)  + 4px)",
-      } as React.CSSProperties,
-    })
+  const {
+    formState: { isValid, isSubmitting },
+  } = form
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const response = await checkPhoneNumberRequest({
+        variables: {
+          phoneNumber: normalizePhoneNumber(values.phoneNumber),
+        },
+      })
+
+      if (!response?.data?.checkPhoneNumberOrEmailExist) {
+        throw new Error("Failed to check phone number")
+      }
+
+      const { result } = response?.data?.checkPhoneNumberOrEmailExist
+
+      if (result) {
+        router.push("/login/password")
+      }
+    } catch (error) {
+      LoggerService.logError(error)
+    }
   }
 
   return (
-    <div className="px-5  md:px-13 border pt-15 pb-20 rounded-4xl w-full">
+    <div className="px-5 rounded-2xl md:px-13 border pt-15 pb-20 md:rounded-4xl w-full">
       <Typography
         variant="h3"
         className="text-3xl font-bold tracking-normal text-center"
       >
-        Sign up or Sign in
+        {t("title")}
       </Typography>
       <Typography variant="mediumText" className="mt-3 text-center font-normal">
-        Enter your phone Number to Sign up / Sign in.
+        {t("description")}
       </Typography>
       <form
         className="mt-5"
         id="form-rhf-demo"
         onSubmit={form.handleSubmit(onSubmit)}
       >
-        <FieldGroup className="gap-y-8">
+        <FieldGroup className="gap-y-6">
           <Controller
-            name="title"
+            name="phoneNumber"
             control={form.control}
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid}>
                 <FieldLabel required htmlFor="phone-number">
-                  Phone Number
+                  {t("phone_number")}
                 </FieldLabel>
                 <PhoneInput
                   {...field}
                   id="phone-number"
                   aria-invalid={fieldState.invalid}
-                  placeholder="Enter your phone number"
+                  placeholder={t("phone_number_placeholder")}
                   autoComplete="off"
                   countries={["US"]}
                   defaultCountry="US"
@@ -97,13 +132,69 @@ export default function LoginForm() {
               </Field>
             )}
           />
-          <div className="flex flex-col gap-y-5">
+          <div className="flex flex-col gap-y-4">
+            <Controller
+              name="agreeToTextMessage"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field
+                  data-invalid={fieldState.invalid}
+                  orientation="horizontal"
+                >
+                  <Checkbox
+                    id="agree-to-text-message"
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    aria-invalid={fieldState.invalid}
+                    name="agree-to-text-message"
+                  />
+                  <FieldLabel
+                    htmlFor="agree-to-text-message"
+                    className={cn("text-sm", {
+                      "text-muted-foreground": !fieldState.invalid,
+                    })}
+                  >
+                    {t("text_message_agreement")}
+                  </FieldLabel>
+                </Field>
+              )}
+            />
+            <Controller
+              name="agreeToTermsAndConditions"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field
+                  data-invalid={fieldState.invalid}
+                  orientation="horizontal"
+                >
+                  <Checkbox
+                    checked={field.value}
+                    aria-invalid={fieldState.invalid}
+                    onCheckedChange={field.onChange}
+                    id="agree-to-terms-and-conditions"
+                    name="agree-to-terms-and-conditions"
+                  />
+                  <FieldLabel
+                    htmlFor="agree-to-terms-and-conditions"
+                    className={cn("text-sm", {
+                      "text-muted-foreground": !fieldState.invalid,
+                    })}
+                  >
+                    {t("terms_and_conditions_agreement")}
+                  </FieldLabel>
+                </Field>
+              )}
+            />
+          </div>
+          <div className="mt-3 flex flex-col gap-y-5">
             <Button
+              loading={isSubmitting}
               className="w-full h-12 text-base font-medium tracking-normal"
               size="lg"
+              disabled={!isValid || isSubmitting}
               type="submit"
             >
-              Sign up / Sign in
+              {t("sign_in")}
             </Button>
             <Button
               className="w-full h-12 text-base font-medium tracking-normal"
@@ -112,7 +203,7 @@ export default function LoginForm() {
               type="button"
             >
               <IconGoogle className="size-6 mr-1" />
-              Sign up via Google account
+              {t("sign_in_with_google")}
             </Button>
           </div>
         </FieldGroup>

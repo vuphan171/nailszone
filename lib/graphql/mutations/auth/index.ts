@@ -11,7 +11,7 @@ const CHECK_PHONE_NUMBER_EXIST_MUTATION: TypedDocumentNode<
   CheckPhoneNumberOrEmailExistVariables
 > = gql`
   mutation checkPhoneNumberOrEmailExist($phoneNumber: String!) {
-    checkPhoneNumberOrEmailExist(phoneNumber: $phoneNumber) {
+    checkPhoneNumberOrEmailExist(account: $phoneNumber) {
       result
       isSetPassword
       email

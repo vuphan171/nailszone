@@ -1,0 +1,21 @@
+{
+    "login_page": {
+        "metadata": {
+            "title": "Login - NailsZone",
+            "description": "Login - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
+        },
+        "title": "Login",
+        "description": "Login to your NailsZone account",
+        "phone_number": "Phone Number",
+        "phone_number_placeholder": "Enter your phone number",
+        "phone_required": "Phone number is required",
+        "phone_invalid": "Please enter a valid phone number",
+        "password": "Password",
+        "password_placeholder": "Enter your password",
+        "sign_in": "Sign In",
+        "sign_up": "Sign Up",
+        "sign_in_with_google": "Sign In with Google",
+        "text_message_agreement": "I agree to get text messages from NailsZone about important updates and alerts. Message & data rates may apply. Message frequency may vary. Text STOP to unsubscribe, or HELP for help.",
+        "terms_and_conditions_agreement": "I agree to the Terms and Conditions and Privacy Policy."
+    }
+}

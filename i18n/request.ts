@@ -43,6 +43,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ...(
         await import(`../messages/${locale}/intellectual-property-policy.json`)
       ).default,
+      ...(await import(`../messages/${locale}/login.json`)).default,
     },
   }
 })

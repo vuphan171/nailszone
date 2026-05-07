@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { cva, type VariantProps } from "class-variance-authority"
+import { Loader2Icon } from "lucide-react"
 import { Slot } from "radix-ui"
 
 import { cn } from "@/lib/utils"
@@ -34,6 +35,9 @@ const buttonVariants = cva(
           "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
         "icon-lg": "size-9",
       },
+      loading: {
+        true: "text-transparent",
+      },
     },
     defaultVariants: {
       variant: "default",
@@ -47,10 +51,13 @@ function Button({
   variant = "default",
   size = "default",
   asChild = false,
+  loading = false,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    loading?: boolean
   }) {
   const Comp = asChild ? Slot.Root : "button"
 
@@ -59,9 +66,17 @@ function Button({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
+      disabled={loading || props.disabled}
+      className={cn(buttonVariants({ variant, size, className, loading }))}
       {...props}
-    />
+    >
+      {loading && (
+        <Loader2Icon
+          className={cn("text-muted absolute animate-spin size-5")}
+        />
+      )}
+      <Slot.Slottable>{children}</Slot.Slottable>
+    </Comp>
   )
 }
 
