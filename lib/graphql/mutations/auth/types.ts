@@ -13,7 +13,21 @@ interface CheckPhoneNumberOrEmailExistVariables {
   phoneNumber: string
 }
 
+interface GenerateCustomerTokenResponse {
+  generateCustomerToken: {
+    token: string
+    lock_expired: boolean
+  }
+}
+
+interface GenerateCustomerTokenVariables {
+  email: string
+  password: string
+}
+
 export type {
   CheckPhoneNumberOrEmailExistResponse,
   CheckPhoneNumberOrEmailExistVariables,
+  GenerateCustomerTokenResponse,
+  GenerateCustomerTokenVariables,
 }

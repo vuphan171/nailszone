@@ -4,6 +4,8 @@ import { TypedDocumentNode } from "@graphql-typed-document-node/core"
 import {
   CheckPhoneNumberOrEmailExistResponse,
   CheckPhoneNumberOrEmailExistVariables,
+  GenerateCustomerTokenResponse,
+  GenerateCustomerTokenVariables,
 } from "./types"
 
 const CHECK_PHONE_NUMBER_EXIST_MUTATION: TypedDocumentNode<
@@ -22,4 +24,16 @@ const CHECK_PHONE_NUMBER_EXIST_MUTATION: TypedDocumentNode<
   }
 `
 
-export { CHECK_PHONE_NUMBER_EXIST_MUTATION }
+const GENERATE_CUSTOMER_TOKEN_MUTATION: TypedDocumentNode<
+  GenerateCustomerTokenResponse,
+  GenerateCustomerTokenVariables
+> = gql`
+  mutation generateCustomerToken($email: String!, $password: String!) {
+    generateCustomerToken(email: $email, password: $password) {
+      token
+      lock_expired
+    }
+  }
+`
+
+export { CHECK_PHONE_NUMBER_EXIST_MUTATION, GENERATE_CUSTOMER_TOKEN_MUTATION }

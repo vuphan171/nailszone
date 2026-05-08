@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server"
 
 import { routing } from "@/i18n/routing"
 
+import PasswordForm from "./components/password-form"
+
 type Props = {
   params: Promise<{ locale: string }>
 }
@@ -36,7 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Page() {
   return (
     <div className="flex min-h-svh items-center justify-center px-5 py-4">
-      <div className="flex max-w-xl w-full mx-auto"></div>
+      <div className="flex max-w-xl w-full mx-auto">
+        <PasswordForm />
+      </div>
     </div>
   )
 }

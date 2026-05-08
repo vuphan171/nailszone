@@ -16,6 +16,11 @@
         "sign_up": "Sign Up",
         "sign_in_with_google": "Sign In with Google",
         "text_message_agreement": "I agree to get text messages from NailsZone about important updates and alerts. Message & data rates may apply. Message frequency may vary. Text STOP to unsubscribe, or HELP for help.",
-        "terms_and_conditions_agreement": "I agree to the Terms and Conditions and Privacy Policy."
+        "terms_and_conditions_agreement": "I agree to the Terms and Conditions and Privacy Policy.",
+        "enter_password": "Enter your password",
+        "enter_password_to_sign_in": "Enter your password to Sign in",
+        "forgot_password": "Forgot Password?",
+        "sign_in_with_otp": "Sign in with OTP",
+        "password_required": "Please enter password"
     }
 }
