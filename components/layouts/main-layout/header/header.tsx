@@ -7,7 +7,7 @@ import IconBell from "@/public/icons/ic-bell.svg"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-import { Account } from "@/components/main-layout/header/components/account"
+import { Account } from "@/components/layouts/main-layout/header/components/account"
 
 import SiteMenu from "./components/site-menu"
 

@@ -12,8 +12,8 @@ import IconStore from "@/public/icons/ic-store.svg"
 
 import { APP_ROUTES } from "@/configs/routes"
 
-import SideBarItem from "@/components/main-layout/sidebar/components/sidebar-item"
-import { SidebarMenuItem } from "@/components/main-layout/sidebar/types"
+import SideBarItem from "@/components/layouts/main-layout/sidebar/components/sidebar-item"
+import { SidebarMenuItem } from "@/components/layouts/main-layout/sidebar/types"
 
 const SideBar = async () => {
   const t = await getTranslations("Common.Navigation")

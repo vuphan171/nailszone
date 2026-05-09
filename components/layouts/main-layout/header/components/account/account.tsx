@@ -24,7 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-import MenuItem from "@/components/main-layout/header/components/account/menu-item"
+import MenuItem from "@/components/layouts/main-layout/header/components/account/menu-item"
 
 const Account = async () => {
   const t = await getTranslations("Common.Header")

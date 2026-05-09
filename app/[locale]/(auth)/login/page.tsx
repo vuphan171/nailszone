@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Page() {
   return (
     <SessionProvider>
-      <div className="flex min-h-svh items-center justify-center px-5 py-4">
+      <div className="mt-4 w-full flex items-center justify-center gap-y-4 px-8 pt-16">
         <div className="flex max-w-xl w-full mx-auto">
           <LoginForm />
         </div>
