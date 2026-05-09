@@ -8,8 +8,13 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
 import SiteMenu from "./components/site-menu"
+import { getCustomerProfile } from "@/lib/api/customer"
 
-const Header = () => {
+const Header = async () => {
+  const customer = await getCustomerProfile()
+
+  
+
   return (
     <div className="fixed top-0 right-0 left-0 z-50 flex h-16 items-center justify-between bg-white px-7.5 py-2">
       <div>

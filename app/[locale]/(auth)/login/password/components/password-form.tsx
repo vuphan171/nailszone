@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { EyeIcon, EyeOffIcon } from "lucide-react"
+import { signIn } from "next-auth/react"
 import { Controller, useForm } from "react-hook-form"
 import * as z from "zod"
 
@@ -51,12 +52,10 @@ const PasswordForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const response = await generateCustomerToken(
-        "12139156465",
-        values.password
-      )
-
-      console.log(response)
+      await signIn("credentials", {
+        phoneNumber: "12139156465",
+        password: values.password,
+      })
     } catch (error) {
       LoggerService.logError(error)
     }

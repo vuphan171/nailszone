@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl"
 
 import { useMutation } from "@apollo/client/react"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useSession } from "next-auth/react"
 import { Controller, useForm } from "react-hook-form"
 import { isValidPhoneNumber } from "react-phone-number-input"
 import * as z from "zod"
@@ -33,6 +34,9 @@ import { Typography } from "@/components/ui/typography"
 
 export default function LoginForm() {
   const router = useRouter()
+
+  const { data: session } = useSession()
+
   const t = useTranslations("login_page")
 
   const [checkPhoneNumberRequest] = useMutation(
@@ -93,6 +97,7 @@ export default function LoginForm() {
 
   return (
     <div className="px-5 rounded-2xl md:px-13 border pt-15 pb-20 md:rounded-4xl w-full">
+      {JSON.stringify(session)}
       <Typography
         variant="h3"
         className="text-3xl font-bold tracking-normal text-center"
