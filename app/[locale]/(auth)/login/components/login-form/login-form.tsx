@@ -2,21 +2,23 @@
 
 import * as React from "react"
 
-import { useRouter } from "next/navigation"
-
 import { useTranslations } from "next-intl"
 
 import { useMutation } from "@apollo/client/react"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useSession } from "next-auth/react"
 import { Controller, useForm } from "react-hook-form"
 import { isValidPhoneNumber } from "react-phone-number-input"
 import * as z from "zod"
 
 import IconGoogle from "@/public/icons/ic-google.svg"
 
+import { APP_DEFAULTS } from "@/configs/app-defaults"
+import { APP_ROUTES } from "@/configs/routes"
+
 import { LoggerService } from "@/helpers/logger-service"
 import { normalizePhoneNumber } from "@/helpers/phone"
+
+import { useRouter } from "@/i18n/navigation"
 
 import { CHECK_PHONE_NUMBER_EXIST_MUTATION } from "@/lib/graphql/mutations/auth"
 import { cn } from "@/lib/utils"
@@ -32,10 +34,8 @@ import {
 import { PhoneInput } from "@/components/ui/phone-input"
 import { Typography } from "@/components/ui/typography"
 
-export default function LoginForm() {
+const LoginForm = () => {
   const router = useRouter()
-
-  const { data: session } = useSession()
 
   const t = useTranslations("login_page")
 
@@ -49,9 +49,12 @@ export default function LoginForm() {
         phoneNumber: z
           .string()
           .min(1, { message: t("phone_required") })
-          .refine((value) => isValidPhoneNumber(value, "US"), {
-            message: t("phone_invalid"),
-          }),
+          .refine(
+            (value) => isValidPhoneNumber(value, APP_DEFAULTS.COUNTRY_CODE),
+            {
+              message: t("phone_invalid"),
+            }
+          ),
         agreeToTextMessage: z.boolean().refine((value) => value, {
           message: t("text_message_agreement"),
         }),
@@ -75,9 +78,11 @@ export default function LoginForm() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      const cleanedPhoneNumber = normalizePhoneNumber(values.phoneNumber)
+
       const response = await checkPhoneNumberRequest({
         variables: {
-          phoneNumber: normalizePhoneNumber(values.phoneNumber),
+          phoneNumber: cleanedPhoneNumber,
         },
       })
 
@@ -88,7 +93,7 @@ export default function LoginForm() {
       const { result } = response?.data?.checkPhoneNumberOrEmailExist
 
       if (result) {
-        router.push("/login/password")
+        router.push(APP_ROUTES.loginPassword(cleanedPhoneNumber))
       }
     } catch (error) {
       LoggerService.logError(error)
@@ -97,7 +102,6 @@ export default function LoginForm() {
 
   return (
     <div className="px-5 rounded-2xl md:px-13 border pt-15 pb-20 md:rounded-4xl w-full">
-      {JSON.stringify(session)}
       <Typography
         variant="h3"
         className="text-3xl font-bold tracking-normal text-center"
@@ -216,3 +220,5 @@ export default function LoginForm() {
     </div>
   )
 }
+
+export default LoginForm

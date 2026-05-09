@@ -21,47 +21,47 @@ const SideBar = async () => {
   const MENUS: SidebarMenuItem[] = [
     {
       title: t("home"),
-      href: APP_ROUTES.HOME,
+      href: APP_ROUTES.home,
       icon: <IconHome className="size-7 shrink-0" />,
     },
     {
       title: t("jobs"),
-      href: APP_ROUTES.JOBS,
+      href: APP_ROUTES.jobs,
       icon: <IconBag className="size-7 shrink-0" />,
     },
     {
       title: t("master_class"),
-      href: APP_ROUTES.MASTER_CLASS,
+      href: APP_ROUTES.masterClass,
       icon: <IconMasterClass className="size-7 shrink-0" />,
     },
     {
       title: t("for_sale"),
-      href: APP_ROUTES.FOR_SALE,
+      href: APP_ROUTES.forSale,
       icon: <IconStore className="size-7 shrink-0" />,
     },
     {
       title: t("legal"),
-      href: APP_ROUTES.LEGAL,
+      href: APP_ROUTES.legal,
       icon: <IconDocument className="size-7 shrink-0" />,
     },
     {
       title: t("customer_service"),
-      href: APP_ROUTES.CUSTOMER_SERVICE,
+      href: APP_ROUTES.customerService,
       icon: <IconHeadPhone className="size-7 shrink-0" />,
     },
     {
       title: t("request_support"),
-      href: APP_ROUTES.REQUEST_SUPPORT,
+      href: APP_ROUTES.requestSupport,
       icon: <IconFeedBack className="size-7 shrink-0" />,
     },
     {
       title: t("about_nailszone"),
-      href: APP_ROUTES.ABOUT_NAILZONE,
+      href: APP_ROUTES.aboutNailzone,
       icon: <IconNailsZone className="size-7 shrink-0" />,
     },
     {
       title: t("add_nailszone_to_your_device"),
-      href: APP_ROUTES.ADD_NAILZONE_TO_YOUR_DEVICE,
+      href: APP_ROUTES.addNailzoneToYourDevice,
       icon: <IconSmartPhone className="size-7 shrink-0" />,
     },
   ]

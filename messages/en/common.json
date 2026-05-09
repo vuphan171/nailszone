@@ -14,6 +14,9 @@
             "request_support": "Request Support",
             "about_nailszone": "About NailsZone",
             "add_nailszone_to_your_device": "Add NailsZone to your device"
+        },
+        "Header": {
+            "sign_in": "Sign in"
         }
     }
 }

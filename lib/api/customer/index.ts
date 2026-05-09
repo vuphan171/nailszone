@@ -2,12 +2,7 @@
 
 import { cache } from "react"
 
-import { cookies } from "next/headers"
-
 import { auth, signOut } from "@/auth"
-import { getCookie } from "cookies-next/server"
-
-import { COOKIE_KEYS } from "@/configs/cookies"
 
 import { Customer } from "@/types/customer"
 
@@ -19,9 +14,9 @@ import { GET_CUSTOMER_PROFILE_QUERY } from "@/lib/graphql/queries/customer"
 const getCustomerProfile = cache(
   async (customerId?: string): Promise<Customer | null> => {
     try {
-      const token = await getCookie(COOKIE_KEYS.USER_TOKEN, { cookies })
+      const session = await auth()
 
-      if (!token) return null
+      if (!session?.token) return null
 
       const { data } = await getClient().query({
         query: GET_CUSTOMER_PROFILE_QUERY,

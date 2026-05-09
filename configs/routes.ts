@@ -1,13 +1,18 @@
 const APP_ROUTES = {
-  HOME: "/",
-  JOBS: "/jobs",
-  MASTER_CLASS: "/event",
-  FOR_SALE: "/for-sale",
-  LEGAL: "/legal",
-  CUSTOMER_SERVICE: "/customer-service",
-  REQUEST_SUPPORT: "/request-support",
-  ABOUT_NAILZONE: "/about-nailszone",
-  ADD_NAILZONE_TO_YOUR_DEVICE: "/add-nailszone-to-your-device",
+  home: "/",
+  jobs: "/jobs",
+  masterClass: "/event",
+  forSale: "/for-sale",
+  legal: "/legal",
+  customerService: "/customer-service",
+  requestSupport: "/request-support",
+  aboutNailzone: "/about-nailszone",
+  addNailzoneToYourDevice: "/add-nailszone-to-your-device",
+  jobDetail: (jobId: string) => `/jobs/${jobId}`,
+  forSaleDetail: (postId: string) => `/for-sale/${postId}`,
+  login: "/login",
+  loginPassword: (phoneNumber: string) =>
+    `/login/password?phoneNumber=${phoneNumber}`,
 } as const
 
 export { APP_ROUTES }

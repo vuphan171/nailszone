@@ -11,6 +11,8 @@ import { Controller, useForm } from "react-hook-form"
 import { toast } from "sonner"
 import * as z from "zod"
 
+import { APP_ROUTES } from "@/configs/routes"
+
 import { Link, useRouter } from "@/i18n/navigation"
 
 import { Button } from "@/components/ui/button"
@@ -23,7 +25,11 @@ import {
 import { Input } from "@/components/ui/input"
 import { Typography } from "@/components/ui/typography"
 
-const PasswordForm = () => {
+type Props = {
+  phoneNumber: string
+}
+
+const PasswordForm: React.FC<Props> = ({ phoneNumber }) => {
   const t = useTranslations("login_page")
   const router = useRouter()
 
@@ -50,7 +56,7 @@ const PasswordForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     const response = await signIn("credentials", {
-      phoneNumber: "12139156465",
+      phoneNumber: phoneNumber,
       password: values.password,
       redirect: false,
     })
@@ -62,7 +68,7 @@ const PasswordForm = () => {
       return
     }
 
-    router.push("/")
+    router.push(APP_ROUTES.home)
   }
 
   return (
