@@ -53,11 +53,5 @@ export default async function Page({
     return redirect({ href: APP_ROUTES.login, locale: locale })
   }
 
-  return (
-    <div className="flex min-h-svh items-center justify-center px-5 py-4">
-      <div className="flex max-w-xl w-full mx-auto">
-        <PasswordForm phoneNumber={phoneNumber} />
-      </div>
-    </div>
-  )
+  return <PasswordForm phoneNumber={phoneNumber} />
 }

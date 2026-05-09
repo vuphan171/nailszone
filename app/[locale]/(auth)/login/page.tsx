@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 import { getTranslations } from "next-intl/server"
 
-import { LoginForm } from "@/app/[locale]/(auth)/login/components/login-form"
+import { LoginForm } from "@/app/[locale]/(auth)/login/form"
 import { SessionProvider } from "next-auth/react"
 
 import { routing } from "@/i18n/routing"
@@ -39,11 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function Page() {
   return (
     <SessionProvider>
-      <div className="mt-4 w-full flex items-center justify-center gap-y-4 px-8 pt-16">
-        <div className="flex max-w-xl w-full mx-auto">
-          <LoginForm />
-        </div>
-      </div>
+      <LoginForm />
     </SessionProvider>
   )
 }

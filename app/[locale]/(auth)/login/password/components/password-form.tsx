@@ -72,7 +72,7 @@ const PasswordForm: React.FC<Props> = ({ phoneNumber }) => {
   }
 
   return (
-    <div className="px-5 rounded-2xl md:px-13 border pt-15 pb-20 md:rounded-4xl w-full">
+    <div className="pt-4 md:px-13 md:border md:pt-15 md:pb-20 md:rounded-4xl w-full">
       <Typography
         variant="h3"
         className="text-3xl font-bold tracking-normal text-center"
