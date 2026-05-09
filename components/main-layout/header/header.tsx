@@ -7,7 +7,8 @@ import IconBell from "@/public/icons/ic-bell.svg"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-import HeaderAccount from "./components/header-account"
+import { Account } from "@/components/main-layout/header/components/account"
+
 import SiteMenu from "./components/site-menu"
 
 const Header = async () => {
@@ -38,7 +39,7 @@ const Header = async () => {
             />
           }
         >
-          <HeaderAccount />
+          <Account />
         </Suspense>
       </div>
     </div>
