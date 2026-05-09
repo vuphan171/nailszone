@@ -2,14 +2,11 @@ import { Suspense } from "react"
 
 import Image from "next/image"
 
-import IconBell from "@/public/icons/ic-bell.svg"
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 
 import { Account } from "@/components/layouts/main-layout/header/components/account"
-
-import SiteMenu from "./components/site-menu"
+import { Notifications } from "@/components/layouts/main-layout/header/components/notifications"
+import { QuickMenu } from "@/components/layouts/main-layout/header/components/quick-menu"
 
 const Header = async () => {
   return (
@@ -24,13 +21,8 @@ const Header = async () => {
         />
       </div>
       <div className="flex items-center gap-x-7.5">
-        <SiteMenu />
-        <Button className="relative size-8 w-fit" variant="ghost" size="icon">
-          <IconBell className="size-8" />
-          <Badge className="absolute -top-2.5 -right-2.5 h-5 min-w-5 rounded-full px-1 tabular-nums">
-            8
-          </Badge>
-        </Button>
+        <QuickMenu />
+        <Notifications />
         <Suspense
           fallback={
             <div

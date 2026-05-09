@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Typography } from "@/components/ui/typography"
 
-import MenuItem from "./menu-item"
+import MenuItem from "@/components/layouts/main-layout/header/components/quick-menu/menu-item"
 
-const SiteMenu = () => {
+const QuickMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -48,4 +48,4 @@ const SiteMenu = () => {
   )
 }
 
-export default SiteMenu
+export default QuickMenu
