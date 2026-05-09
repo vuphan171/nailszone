@@ -22,7 +22,9 @@ const authLink = new SetContextLink(async (prevContext) => {
   return {
     headers: {
       ...prevContext.headers,
-      authorization: session?.token ? `Bearer ${session.token}` : "",
+      authorization:
+        prevContext.headers?.authorization ||
+        (session?.token ? `Bearer ${session.token}` : ""),
     },
   }
 })

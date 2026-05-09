@@ -4,6 +4,8 @@ import { Inter } from "next/font/google"
 
 import { clsx } from "clsx"
 
+import { Toaster } from "@/components/ui/sonner"
+
 import { ApolloWrapper } from "./apollo-wrapper"
 import "./globals.css"
 
@@ -18,6 +20,7 @@ export default async function RootLayout({ children }: Props) {
     <html>
       <body className={clsx(inter.className)}>
         <ApolloWrapper>{children}</ApolloWrapper>
+        <Toaster position="top-right" />
       </body>
     </html>
   )

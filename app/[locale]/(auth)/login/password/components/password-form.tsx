@@ -8,13 +8,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { EyeIcon, EyeOffIcon } from "lucide-react"
 import { signIn } from "next-auth/react"
 import { Controller, useForm } from "react-hook-form"
+import { toast } from "sonner"
 import * as z from "zod"
 
-import { LoggerService } from "@/helpers/logger-service"
-
-import { Link } from "@/i18n/navigation"
-
-import { generateCustomerToken } from "@/lib/actions/auth"
+import { Link, useRouter } from "@/i18n/navigation"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -28,6 +25,7 @@ import { Typography } from "@/components/ui/typography"
 
 const PasswordForm = () => {
   const t = useTranslations("login_page")
+  const router = useRouter()
 
   const [showPwd, setShowPwd] = React.useState(false)
 
@@ -51,14 +49,20 @@ const PasswordForm = () => {
   } = form
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      await signIn("credentials", {
-        phoneNumber: "12139156465",
-        password: values.password,
-      })
-    } catch (error) {
-      LoggerService.logError(error)
+    const response = await signIn("credentials", {
+      phoneNumber: "12139156465",
+      password: values.password,
+      redirect: false,
+    })
+
+    const { error, code } = response
+
+    if (error) {
+      toast.error(t(code ?? "invalid_credentials"))
+      return
     }
+
+    router.push("/")
   }
 
   return (

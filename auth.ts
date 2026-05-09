@@ -1,4 +1,4 @@
-import NextAuth, { DefaultSession } from "next-auth"
+import NextAuth, { CredentialsSignin, DefaultSession } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 
 import { Customer } from "@/types/customer"
@@ -15,6 +15,14 @@ declare module "next-auth" {
     token: string
     user: Customer & DefaultSession["user"]
   }
+
+  interface User extends Partial<Customer> {
+    accessToken?: string
+  }
+}
+
+class InvalidLoginError extends CredentialsSignin {
+  code = "invalid_credentials"
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -26,56 +34,47 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: {},
       },
       async authorize(credentials) {
-        const { data } = await getClient().mutate({
-          mutation: GENERATE_CUSTOMER_TOKEN_MUTATION,
-          variables: {
-            email: credentials.phoneNumber as string,
-            password: credentials.password as string,
-          },
-        })
-
-        const token = data?.generateCustomerToken?.token
-
-        if (!token) {
-          throw new Error("Invalid credentials.")
-        }
-
-        const { data: customerProfileData } = await getClient().query({
-          query: GET_CUSTOMER_PROFILE_QUERY,
-          variables: {
-            customerId: "",
-          },
-          context: {
-            headers: {
-              authorization: `Bearer ${token}`,
+        try {
+          const { data } = await getClient().mutate({
+            mutation: GENERATE_CUSTOMER_TOKEN_MUTATION,
+            variables: {
+              email: credentials.phoneNumber as string,
+              password: credentials.password as string,
             },
-          },
-        })
+          })
 
-        const customer = customerProfileData?.customerProfile || null
+          const token = data?.generateCustomerToken?.token
 
-        if (!customer) {
-          throw new Error("Invalid credentials.")
-        }
+          if (!token) throw new InvalidLoginError("Invalid credentials")
 
-        return {
-          ...customer,
-          accessToken: token,
+          const { data: customerProfileData } = await getClient().query({
+            query: GET_CUSTOMER_PROFILE_QUERY,
+            variables: { customerId: "" },
+            context: { headers: { authorization: `Bearer ${token}` } },
+          })
+
+          const customer = customerProfileData?.customerProfile
+
+          if (!customer) throw new InvalidLoginError("Invalid credentials")
+
+          return { ...customer, accessToken: token }
+        } catch (err) {
+          if (err instanceof CredentialsSignin) throw err
+
+          throw new InvalidLoginError("Invalid credentials")
         }
       },
     }),
   ],
-  // callbacks: {
-  //   async jwt({ token, user }) {
-  //     if (user) {
-  //       token.accessToken = user.accessToken
-  //     }
-  //     return token
-  //   },
-  //   async session({ session, token }) {
-  //     console.log("session token", token)
-  //     session.token = token.accessToken as string
-  //     return session
-  //   },
-  // },
+  callbacks: {
+    async jwt({ token, user }) {
+      return user ? { ...token, ...user } : token
+    },
+    async session({ session, token }) {
+      const { accessToken, firstname, lastname, avatar, account_type } = token
+      session.token = accessToken as string
+      Object.assign(session.user, { firstname, lastname, avatar, account_type })
+      return session
+    },
+  },
 })
