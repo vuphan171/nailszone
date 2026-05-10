@@ -7,6 +7,10 @@ import { TransportedQueryRef } from "@apollo/client-integration-nextjs"
 import { useQueryRefHandlers, useReadQuery } from "@apollo/client/react"
 import { useInView } from "react-intersection-observer"
 
+import { APP_ROUTES } from "@/configs/routes"
+
+import { Link } from "@/i18n/navigation"
+
 import {
   GetListAdvertisementResponse,
   GetListAdvertisementVariables,
@@ -71,7 +75,9 @@ const AdsListCard: React.FC<Props> = ({ queryRef }) => {
         {forSales.map((item) => {
           return (
             <div key={item.advertisement_id}>
-              <AdsCard data={item} />
+              <Link href={APP_ROUTES.forSaleDetail(item.url_key)}>
+                <AdsCard data={item} />
+              </Link>
             </div>
           )
         })}

@@ -1,5 +1,7 @@
 "use client"
 
+import { Advertisement } from "@/types/advertisement"
+
 import {
   Carousel,
   CarouselContent,
@@ -8,7 +10,11 @@ import {
 
 import { ImageFallback } from "@/components/common/image-fallback"
 
-const Gallery = () => {
+type Props = {
+  data: Advertisement
+}
+
+const Gallery: React.FC<Props> = ({ data }) => {
   return (
     <div className="flex-5">
       <div className="relative">
@@ -19,17 +25,33 @@ const Gallery = () => {
           className="w-full"
         >
           <CarouselContent>
-            <CarouselItem>
-              <div className="relative aspect-908/475">
-                <ImageFallback
-                  src="/images/bg-nz.png"
-                  alt="For sale gallery"
-                  fill
-                  className="object-cover rounded-xl"
-                  preload
-                />
-              </div>
-            </CarouselItem>
+            {data?.gallery?.length ? (
+              data?.gallery?.map((image) => (
+                <CarouselItem key={image.image}>
+                  <div className="relative aspect-908/475">
+                    <ImageFallback
+                      src={image.image_url}
+                      alt={image.image}
+                      fill
+                      className="object-cover rounded-xl"
+                      preload
+                    />
+                  </div>
+                </CarouselItem>
+              ))
+            ) : (
+              <CarouselItem>
+                <div className="relative aspect-908/475">
+                  <ImageFallback
+                    src="/images/bg-nz.png"
+                    alt="For sale gallery"
+                    fill
+                    className="object-cover rounded-xl"
+                    preload
+                  />
+                </div>
+              </CarouselItem>
+            )}
           </CarouselContent>
         </Carousel>
       </div>

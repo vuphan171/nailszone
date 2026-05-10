@@ -94,7 +94,7 @@ const Page = async ({ params }: Props) => {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="flex gap-x-8 max-w-7xl">
-        <Gallery />
+        <Gallery data={advertisement} />
         <Summary data={advertisement} />
       </div>
       <Description data={advertisement} />
