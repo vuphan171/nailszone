@@ -1,6 +1,6 @@
-import { Advertisement } from "./advertisement"
-import { Feed } from "./feed"
-import { MasterClass } from "./master-class"
+import { Advertisement, AdvertisementStatus } from "./advertisement"
+import { Feed, FeedStatus } from "./feed"
+import { MasterClass, MasterClassStatus } from "./master-class"
 import { PageInfo } from "./page_info"
 import { Vote } from "./vote"
 
@@ -24,6 +24,12 @@ type HomePageResponse = {
   page_info: PageInfo
 }
 
-type HomePageItem = Feed | Advertisement
+type HomePageItem = Omit<Feed, "status"> &
+  Omit<Advertisement, "status"> &
+  Omit<MasterClass, "status"> &
+  Vote & {
+    status: MasterClassStatus | AdvertisementStatus | FeedStatus
+    type_item: "Job" | "feed" | "for_sale" | "vote"
+  }
 
 export type { NewHomePage, HomePageItem, HomePageResponse }

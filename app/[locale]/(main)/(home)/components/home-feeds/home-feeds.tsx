@@ -6,6 +6,9 @@ import { TransportedQueryRef } from "@apollo/client-integration-nextjs"
 import { useQueryRefHandlers, useReadQuery } from "@apollo/client/react"
 import { useInView } from "react-intersection-observer"
 
+import { Feed } from "@/types/feed"
+import { HomePageItem } from "@/types/home"
+
 import {
   GetHomePageResponse,
   GetHomePageVariables,
@@ -61,11 +64,19 @@ const HomeFeeds: React.FC<Props> = ({ queryRef }) => {
     })
   }, [fetchMore, currentPage, hasMore, isPending])
 
+  const renderHomePageItem = (item: HomePageItem) => {
+    if (item.type_item === "feed") {
+      return <FeedCard key={item.feed_id} data={item as Feed} />
+    }
+
+    return null
+  }
+
   return (
     <>
-      {items.map((_item, index) => (
-        <FeedCard key={index} />
-      ))}
+      {items.map((_item) => {
+        return renderHomePageItem(_item)
+      })}
 
       {hasMore && (
         <div ref={ref} aria-busy={isPending}>

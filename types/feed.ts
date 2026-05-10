@@ -35,4 +35,4 @@ type Feed = {
 
 export { FeedStatues, FeedPrivacies }
 
-export type { Feed }
+export type { Feed, FeedStatus }

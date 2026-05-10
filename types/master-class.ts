@@ -36,4 +36,4 @@ type MasterClass = {
 
 export { MasterClassStatues }
 
-export type { MasterClass }
+export type { MasterClass, MasterClassStatus }
