@@ -1,12 +1,27 @@
 import { Metadata } from "next"
 
+import { notFound } from "next/navigation"
+
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
+import Description from "@/app/[locale]/(main)/(browse)/for-sale/[slug]/components/description"
 import Gallery from "@/app/[locale]/(main)/(browse)/for-sale/[slug]/components/gallery"
 import Summary from "@/app/[locale]/(main)/(browse)/for-sale/[slug]/components/summary"
 
-import Description from "./components/description"
-import DetailBreadcrumb from "./components/detail-breadcrumb"
+import { APP_ROUTES } from "@/configs/routes"
+
+import { Link } from "@/i18n/navigation"
+
+import { getForSaleDetail } from "@/lib/api/for-sales"
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>
@@ -17,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const t = await getTranslations({
     locale,
-    namespace: "ForSale.Detail.Metadata",
+    namespace: "for_sale_detail_page.metadata",
   })
 
   return {
@@ -40,18 +55,49 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: Props) => {
-  const { locale } = await params
+  const { locale, slug } = await params
+
+  const t = await getTranslations({
+    locale,
+    namespace: "for_sale_detail_page",
+  })
 
   setRequestLocale(locale)
 
+  const advertisement = await getForSaleDetail(slug)
+
+  if (!advertisement) {
+    notFound()
+  }
+
   return (
     <div className="px-8 pt-6 flex flex-col gap-y-6 pb-5 bg-white min-h-full">
-      <DetailBreadcrumb />
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href={APP_ROUTES.home}>{t("breadcrumb.home")}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator className="[&>svg]:size-4" />
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href={APP_ROUTES.home}>{t("breadcrumb.for_sale")}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator className="[&>svg]:size-4" />
+          <BreadcrumbItem>
+            <BreadcrumbPage className="text-subtle-foreground">
+              {advertisement.title}
+            </BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <div className="flex gap-x-8 max-w-7xl">
         <Gallery />
-        <Summary />
+        <Summary data={advertisement} />
       </div>
-      <Description />
+      <Description data={advertisement} />
     </div>
   )
 }

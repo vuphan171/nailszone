@@ -9,7 +9,10 @@ import { SORT_DIRECTIONS } from "@/types/sort-direction"
 import { LoggerService } from "@/helpers/logger-service"
 
 import { getClient } from "@/lib/graphql/apollo-client"
-import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
+import {
+  GET_ADVERTISEMENT_DETAIL_QUERY,
+  GET_LIST_ADVERTISEMENT_QUERY,
+} from "@/lib/graphql/queries/advertisement"
 
 const getForSales = async (
   pageSize: number = 10,
@@ -86,4 +89,19 @@ const getTopForSales = async (
   }
 }
 
-export { getForSales, getTopForSales }
+const getForSaleDetail = async (
+  url_key: string
+): Promise<Advertisement | null> => {
+  try {
+    const { data } = await getClient().query({
+      query: GET_ADVERTISEMENT_DETAIL_QUERY,
+      variables: { url_key },
+    })
+    return data?.adsDetail || null
+  } catch (error) {
+    LoggerService.logError(error)
+    return null
+  }
+}
+
+export { getForSales, getTopForSales, getForSaleDetail }

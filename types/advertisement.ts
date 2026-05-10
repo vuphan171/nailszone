@@ -1,3 +1,5 @@
+import { Customer } from "./customer"
+
 const ADVERTISEMENT_TYPES = {
   FOR_SALES: "Forsales",
   JOB: "Job",
@@ -25,17 +27,21 @@ interface Advertisement {
   salon_address: string
   postal_code: string
   country: string
+  salon_id: number
   city: string
   state: string
   salary: {
-    split_fixed_salary: number | null
-    negotiation: number | null
+    split_fixed_salary: {
+      split: string
+      fixed: string
+    }
+    negotiation: boolean
   }
   price: {
     price: string
     negotiation: boolean
   }
-  description: string | null
+  description: string
   created_at: string
   lat: string
   lng: string
@@ -43,11 +49,7 @@ interface Advertisement {
     image: string
     image_url: string
   }[]
-  customer: {
-    email: string
-    firstname: string
-    lastname: string
-  }
+  customer: Customer
   contact: string | null
   favorites_id: number
   url_key: string

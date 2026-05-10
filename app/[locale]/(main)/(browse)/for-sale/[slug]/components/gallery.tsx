@@ -1,7 +1,5 @@
 "use client"
 
-import { useTranslations } from "next-intl"
-
 import {
   Carousel,
   CarouselContent,
@@ -11,8 +9,6 @@ import {
 import { ImageFallback } from "@/components/common/image-fallback"
 
 const Gallery = () => {
-  const t = useTranslations("ForSale.Detail")
-
   return (
     <div className="flex-5">
       <div className="relative">
@@ -27,7 +23,7 @@ const Gallery = () => {
               <div className="relative aspect-908/475">
                 <ImageFallback
                   src="/images/bg-nz.png"
-                  alt={t("galleryImageAlt")}
+                  alt="For sale gallery"
                   fill
                   className="object-cover rounded-xl"
                   preload

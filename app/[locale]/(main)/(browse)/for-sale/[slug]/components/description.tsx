@@ -1,16 +1,25 @@
 import { getTranslations } from "next-intl/server"
 
+import { Advertisement } from "@/types/advertisement"
+
 import { Typography } from "@/components/ui/typography"
 
-const Description = async () => {
-  const t = await getTranslations("ForSale.Detail")
+type Props = {
+  data: Advertisement
+}
+
+const Description = async ({ data }: Props) => {
+  const t = await getTranslations("for_sale_detail_page")
 
   return (
     <div>
       <div className="px-2.5 py-5 border-b">
-        <Typography variant="h4">{t("descriptionHeading")}</Typography>
+        <Typography variant="h4">{t("description")}</Typography>
       </div>
-      <Typography className="mt-3">{t("descriptionBody")}</Typography>
+      <div
+        className="mt-3"
+        dangerouslySetInnerHTML={{ __html: data.description }}
+      />
     </div>
   )
 }

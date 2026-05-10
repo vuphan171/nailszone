@@ -5,13 +5,23 @@ import IconReport from "@/public/icons/ic-report.svg"
 import IconSend from "@/public/icons/ic-send.svg"
 import IconShare from "@/public/icons/ic-share.svg"
 
+import { Advertisement } from "@/types/advertisement"
+
+import { getForSalePrice } from "@/helpers/for-sale"
+import { joinText } from "@/helpers/format-string"
+import { formatTime } from "@/helpers/format-time"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Typography } from "@/components/ui/typography"
 
 import { BookmarkButton } from "@/components/common/bookmark-button"
 
-const Summary = async () => {
-  const t = await getTranslations("ForSale.Detail")
+type Props = {
+  data: Advertisement
+}
+const Summary = async ({ data }: Props) => {
+  const t = await getTranslations("for_sale_detail_page")
 
   return (
     <div className="flex-3 flex flex-col gap-y-6">
@@ -22,31 +32,45 @@ const Summary = async () => {
             className="text-interactive font-semibold"
             variant="mediumText"
           >
-            {t("location")}
+            {joinText({
+              parts: [data?.city, data?.state],
+              separator: ", ",
+            })}
           </Typography>
         </div>
         <BookmarkButton variant="muted" />
       </div>
-      <Typography variant="h3">{t("listingTitle")}</Typography>
+      <Typography variant="h3">{data?.title}</Typography>
       <div className="flex items-center gap-x-2 justify-between">
         <div className="flex items-center gap-x-2">
-          <div className="size-8.5 rounded-full bg-primary" />
+          <Avatar className="size-8.5">
+            <AvatarImage
+              src={data?.customer?.avatar}
+              alt={data?.customer?.firstname}
+            />
+            <AvatarFallback>
+              {data?.customer?.firstname?.charAt(0)}
+            </AvatarFallback>
+          </Avatar>
           <Typography
             className="text-muted-foreground font-medium"
             variant="mediumText"
           >
-            {t("sellerName")}
+            {joinText({
+              parts: [data?.customer?.firstname, data?.customer?.lastname],
+              separator: " ",
+            })}
           </Typography>
         </div>
         <Typography
           className="text-muted-foreground font-medium"
           variant="mediumText"
         >
-          {t("postedDate")}
+          {formatTime(data?.created_at)}
         </Typography>
       </div>
-      <Typography gradient variant="h1">
-        {t("price")}
+      <Typography gradient variant="h3">
+        {getForSalePrice({ data, negotiableLabel: t("negotiable") })}
       </Typography>
       <div className="grid grid-cols-12 gap-y-5 gap-x-4.5">
         <Button className="col-span-7 h-12 text-base font-semibold tracking-normal cursor-pointer">
@@ -62,7 +86,7 @@ const Summary = async () => {
           className="col-span-12 h-12 text-base font-semibold tracking-normal"
         >
           <IconReport className="size-5" />
-          {t("reportListing")}
+          {t("report")}
         </Button>
       </div>
     </div>
