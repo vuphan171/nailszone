@@ -1,9 +1,30 @@
 {
-    "ForSale": {
-        "Metadata": {
-            "title": "For Sale - NailsZone",
-            "description": "For Sale - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
-        },
-        "negotiable": "Negotiable"
+  "ForSale": {
+    "Metadata": {
+      "title": "For Sale - NailsZone",
+      "description": "Browse nail salons and businesses for sale on NailsZone."
+    },
+    "negotiable": "Negotiable",
+    "Detail": {
+      "Metadata": {
+        "title": "Listing details - NailsZone",
+        "description": "View photos, price, and description for this listing on NailsZone."
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "forSale": "For sale"
+      },
+      "listingTitle": "Nail technician wanted in North Beach, San Francisco, CA",
+      "location": "San Francisco, California",
+      "sellerName": "Savannah Nguyen",
+      "postedDate": "2023/03/20",
+      "price": "$4,200.00",
+      "contact": "Contact",
+      "share": "Share",
+      "reportListing": "Report listing",
+      "descriptionHeading": "Description",
+      "descriptionBody": "Lorem ipsum dolor sit amet consectetur. Ut augue velit sed porttitor pulvinar velit penatibus. Elementum vitae faucibus ultricies aliquam arcu in laoreet purus maecenas. Libero fermentum adipiscing eget risus netus felis aenean dignissim. Lectus semper sed suspendisse vel vitae mi hendrerit fermentum. Nullam a mauris ipsum dignissim sed fusce. Quis vitae id quis pharetra magna. Pellentesque integer semper turpis ullamcorper vitae massa ullamcorper duis nisi. A sem convallis ornare ornare auctor. Odio nascetur suspendisse amet elementum eget laoreet neque leo et. Pellentesque gravida posuere dolor sed sit morbi. Dignissim lorem eget non amet vitae amet rutrum porttitor at. Eget hendrerit ac elementum aliquet volutpat egestas erat. Risus molestie pretium euismod eget tristique rutrum. Quis nibh egestas massa tincidunt sodales nec fames suscipit. Venenatis in quisque aenean magna faucibus. Fermentum vestibulum non velit odio eget pellentesque eget ipsum. Blandit porta non et magnis pretium id sit tellus. Vitae massa adipiscing eu eget ac consectetur amet sed magnis. Quisque velit vestibulum platea aliquam diam massa condimentum mattis dignissim. Website: www.Americannailbarfrisco.com Facebook/americannailbarfrisco Instagram: AmericanNailBarFrisco",
+      "galleryImageAlt": "Listing photo"
     }
+  }
 }
