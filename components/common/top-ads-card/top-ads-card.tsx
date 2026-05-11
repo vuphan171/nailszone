@@ -1,8 +1,4 @@
-"use client"
-
 import React from "react"
-
-import { useTranslations } from "next-intl"
 
 import IconLocation from "@/public/icons/ic-location.svg"
 
@@ -23,12 +19,10 @@ type Props = {
   data: Advertisement
 }
 
-const TopForSaleCard: React.FC<Props> = ({ data }) => {
-  const t = useTranslations("ForSale")
-
+const TopAdsCard: React.FC<Props> = ({ data }) => {
   const forSalePrice = getForSalePrice({
     data,
-    negotiableLabel: t("negotiable"),
+    negotiableLabel: "negotiable",
   })
 
   return (
@@ -89,4 +83,4 @@ const TopForSaleCard: React.FC<Props> = ({ data }) => {
   )
 }
 
-export default TopForSaleCard
+export default TopAdsCard

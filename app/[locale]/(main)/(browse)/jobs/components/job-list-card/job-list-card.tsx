@@ -75,7 +75,7 @@ const JobListCard: React.FC<Props> = ({ queryRef }) => {
         {forSales.map((item) => {
           return (
             <div key={item.advertisement_id}>
-              <Link href={APP_ROUTES.forSaleDetail(item.url_key)}>
+              <Link href={APP_ROUTES.jobDetail(item.url_key)}>
                 <AdsCard data={item} />
               </Link>
             </div>

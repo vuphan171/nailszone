@@ -9,10 +9,9 @@ import { normalizeText } from "@/helpers/format-string"
 
 import { Typography } from "@/components/ui/typography"
 
-import ButtonShare from "@/components/common/ads-card/share-button"
+import { BookmarkButton } from "@/components/common/bookmark-button"
 import { ImageFallback } from "@/components/common/image-fallback"
-
-import BookmarkButton from "./bookmark-button"
+import { ShareButton } from "@/components/common/share-button"
 
 type Props = {
   data: Advertisement
@@ -30,8 +29,8 @@ const AdsCard: React.FC<Props> = ({ data }) => {
           className="rounded-t-xl object-cover"
         />
         <div className="absolute top-3.5 right-4 flex flex-col gap-y-2">
+          <ShareButton />
           <BookmarkButton />
-          <ButtonShare />
         </div>
       </div>
       <div className="mt-3 px-4.5 pb-4.75">

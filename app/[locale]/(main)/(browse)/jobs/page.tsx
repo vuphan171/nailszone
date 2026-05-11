@@ -16,6 +16,8 @@ import { PAGE_SIZES } from "@/configs/page_size"
 import { ADVERTISEMENT_TYPES } from "@/types/advertisement"
 import { SORT_DIRECTIONS } from "@/types/sort-direction"
 
+import { routing } from "@/i18n/routing"
+
 import { PreloadQuery } from "@/lib/graphql/apollo-client"
 import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
 
@@ -28,7 +30,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
 
-  const t = await getTranslations({ locale, namespace: "ForSale.Metadata" })
+  const t = await getTranslations({ locale, namespace: "jobs_page.metadata" })
 
   return {
     title: t("title"),
@@ -40,10 +42,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     alternates: {
-      canonical: `/${locale}/for-sale`,
+      canonical: `/${locale}/jobs`,
       languages: {
-        en: "/en/for-sale",
-        vi: "/vi/for-sale",
+        ...routing.locales.map((locale) => ({
+          [locale]: `/${locale}/jobs`,
+        })),
       },
     },
   }

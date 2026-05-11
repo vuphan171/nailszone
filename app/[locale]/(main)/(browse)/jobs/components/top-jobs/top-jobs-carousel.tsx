@@ -16,7 +16,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel"
 
-import { TopForSaleCard } from "@/components/common/top-for-sale-card"
+import { TopAdsCard } from "@/components/common/top-ads-card"
 
 type Props = {
   topJobs: Advertisement[]
@@ -43,7 +43,7 @@ const TopJobsCarousel: React.FC<Props> = ({ topJobs }) => {
               className="basis-1 md:basis-1/2  2xl:basis-1/3"
             >
               <Link href={APP_ROUTES.forSaleDetail(ads.url_key)}>
-                <TopForSaleCard data={ads} />
+                <TopAdsCard data={ads} />
               </Link>
             </CarouselItem>
           ))}

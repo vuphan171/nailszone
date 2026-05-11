@@ -8,7 +8,7 @@ const APP_ROUTES = {
   requestSupport: "/request-support",
   aboutNailzone: "/about-nailszone",
   addNailzoneToYourDevice: "/add-nailszone-to-your-device",
-  jobDetail: (jobId: string) => `/jobs/${jobId}`,
+  jobDetail: (urlKey: string) => `/jobs/${urlKey}`,
   forSaleDetail: (urlKey: string) => `/for-sale/${urlKey}`,
   login: "/login",
   loginPassword: (phoneNumber: string) =>
