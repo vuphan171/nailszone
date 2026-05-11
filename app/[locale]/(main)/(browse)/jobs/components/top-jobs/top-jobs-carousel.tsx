@@ -42,7 +42,7 @@ const TopJobsCarousel: React.FC<Props> = ({ topJobs }) => {
               key={ads.advertisement_id}
               className="basis-1 md:basis-1/2  2xl:basis-1/3"
             >
-              <Link href={APP_ROUTES.forSaleDetail(ads.url_key)}>
+              <Link href={APP_ROUTES.jobDetail(ads.url_key)}>
                 <TopAdsCard data={ads} />
               </Link>
             </CarouselItem>

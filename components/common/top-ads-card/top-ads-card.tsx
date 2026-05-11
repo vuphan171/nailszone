@@ -4,7 +4,10 @@ import IconLocation from "@/public/icons/ic-location.svg"
 
 import { Advertisement } from "@/types/advertisement"
 
-import { getForSalePrice } from "@/helpers/for-sale"
+import {
+  getAdvertisementDetailPath,
+  getAdvertisementPrice,
+} from "@/helpers/advertisement"
 import { joinText, normalizeText } from "@/helpers/format-string"
 import { formatTime } from "@/helpers/format-time"
 
@@ -20,10 +23,13 @@ type Props = {
 }
 
 const TopAdsCard: React.FC<Props> = ({ data }) => {
-  const forSalePrice = getForSalePrice({
+  const price = getAdvertisementPrice({
     data,
-    negotiableLabel: "negotiable",
+    negotiableLabel: "Negotiable",
   })
+
+  const shareHref = getAdvertisementDetailPath(data)
+  const shareTitle = normalizeText(data?.title)
 
   return (
     <div className="flex aspect-477/300 relative shadow-ads-card">
@@ -41,12 +47,12 @@ const TopAdsCard: React.FC<Props> = ({ data }) => {
               variant="largeText"
               className="font-semibold text-primary-foreground"
             >
-              {forSalePrice}
+              {price}
             </Typography>
           </div>
           <div className="flex items-center gap-x-2.5">
             <BookmarkButton />
-            <ShareButton />
+            <ShareButton href={shareHref} title={shareTitle} />
             <ContactButton />
           </div>
         </div>
