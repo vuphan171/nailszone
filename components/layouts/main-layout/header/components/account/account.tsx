@@ -13,6 +13,8 @@ import IconUser from "@/public/icons/ic-user.svg"
 
 import { APP_ROUTES } from "@/configs/routes"
 
+import { getFirstLetter } from "@/helpers/format-string"
+
 import { Link } from "@/i18n/navigation"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -52,7 +54,9 @@ const Account = async () => {
             src={session?.user?.avatar}
             alt={session?.user?.firstname}
           />
-          <AvatarFallback>{session?.user?.firstname.charAt(0)}</AvatarFallback>
+          <AvatarFallback>
+            {getFirstLetter(session?.user?.firstname)}
+          </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="min-w-sm rounded-xl p-0" align="end">

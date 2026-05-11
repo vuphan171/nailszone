@@ -17,6 +17,12 @@
         },
         "Header": {
             "sign_in": "Sign in"
+        },
+        "negotiable": "Negotiable",
+        "Share": {
+            "label": "Share listing",
+            "link_copied": "Link copied to clipboard",
+            "share_failed": "Could not share. Try again."
         }
     }
 }

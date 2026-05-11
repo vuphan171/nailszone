@@ -2,8 +2,6 @@ import { Suspense } from "react"
 
 import Image from "next/image"
 
-
-
 import { Account } from "@/components/layouts/main-layout/header/components/account"
 import { Notifications } from "@/components/layouts/main-layout/header/components/notifications"
 import { QuickMenu } from "@/components/layouts/main-layout/header/components/quick-menu"

@@ -58,6 +58,8 @@
   --color-react-wow: #fff9e4;
   --color-react-cry: #ebf5fd;
   --color-react-angry: #ffeff9;
+  --color-subtle-foreground: oklch(0.6483 0.0073 286.19);
+  --color-interactive-light: var(--interactive-light);
 }
 
 :root {
@@ -95,6 +97,8 @@
   --sidebar-ring: oklch(0.708 0 0);
   --surface: oklch(0.9626 0.0066 286.27);
   --interactive: oklch(0.6922 0.1679 250.29);
+  --subtle-foreground: oklch(0.6483 0.0073 286.19);
+  --interactive-light: oklch(0.6278 0.204 254.62);
 }
 
 .dark {
@@ -131,6 +135,8 @@
   --sidebar-ring: oklch(0.556 0 0);
   --surface: oklch(0.145 0 0);
   --interactive: oklch(0.6922 0.1679 250.29);
+  --subtle-foreground: oklch(0.6483 0.0073 286.19);
+  --interactive-light: oklch(0.6278 0.204 254.62);
 }
 
 @layer base {

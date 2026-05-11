@@ -1,9 +1,30 @@
 {
-    "ForSale": {
-        "Metadata": {
-            "title": "For Sale - NailsZone",
-            "description": "For Sale - NailsZone is a Vietnamese nail salon that provides a wide range of nail services to its customers."
-        },
-        "negotiable": "Negotiable"
+  "ForSale": {
+    "Metadata": {
+      "title": "Rao bán - NailsZone",
+      "description": "Xem các tiệm nail và doanh nghiệp đang rao bán trên NailsZone."
+    },
+    "negotiable": "Thỏa thuận",
+    "Detail": {
+      "Metadata": {
+        "title": "Chi tiết tin đăng - NailsZone",
+        "description": "Xem ảnh, giá và mô tả cho tin đăng này trên NailsZone."
+      },
+      "breadcrumb": {
+        "home": "Trang chủ",
+        "forSale": "Rao bán"
+      },
+      "listingTitle": "Cần tuyển thợ Nail Ở North Beach San Francisco CA",
+      "location": "San Francisco, California",
+      "sellerName": "Savannah Nguyen",
+      "postedDate": "2023/03/20",
+      "price": "$4,200.00",
+      "contact": "Liên hệ",
+      "share": "Chia sẻ",
+      "reportListing": "Báo cáo tin đăng",
+      "descriptionHeading": "Mô tả",
+      "descriptionBody": "Nội dung mô tả tin đăng (demo). Tiệm cần tuyển thợ có kinh nghiệm tại khu North Beach, San Francisco. Liên hệ trực tiếp để trao đổi thêm về lịch làm việc và chế độ. Website: www.Americannailbarfrisco.com Facebook/americannailbarfrisco Instagram: AmericanNailBarFrisco",
+      "galleryImageAlt": "Hình ảnh tin đăng"
     }
+  }
 }

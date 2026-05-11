@@ -1,0 +1,17 @@
+{
+  "for_sale_detail_page": {
+    "metadata": {
+      "title": "For sale details - NailsZone",
+      "description": "View photos, price, and description for this listing on NailsZone."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "for_sale": "For sale"
+    },
+    "description": "Description",
+    "report": "Report",
+    "contact": "Contact",
+    "share": "Share",
+    "negotiable": "Negotiable"
+  }
+}

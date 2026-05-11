@@ -19,10 +19,10 @@ import {
 import { TopAdsCard } from "@/components/common/top-ads-card"
 
 type Props = {
-  topForSales: Advertisement[]
+  topJobs: Advertisement[]
 }
 
-const TopForSaleCarousel: React.FC<Props> = ({ topForSales }) => {
+const TopJobsCarousel: React.FC<Props> = ({ topJobs }) => {
   return (
     <div className="group relative">
       <Carousel
@@ -37,12 +37,12 @@ const TopForSaleCarousel: React.FC<Props> = ({ topForSales }) => {
         className="w-full"
       >
         <CarouselContent>
-          {topForSales.map((ads) => (
+          {topJobs.map((ads) => (
             <CarouselItem
               key={ads.advertisement_id}
               className="basis-1 md:basis-1/2  2xl:basis-1/3"
             >
-              <Link href={APP_ROUTES.forSaleDetail(ads.url_key)}>
+              <Link href={APP_ROUTES.jobDetail(ads.url_key)}>
                 <TopAdsCard data={ads} />
               </Link>
             </CarouselItem>
@@ -55,4 +55,4 @@ const TopForSaleCarousel: React.FC<Props> = ({ topForSales }) => {
   )
 }
 
-export default TopForSaleCarousel
+export default TopJobsCarousel

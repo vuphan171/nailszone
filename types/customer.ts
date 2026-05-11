@@ -12,6 +12,7 @@ type Customer = {
   lastname: string
   avatar: string
   account_type: CustomerType
+  url_key: string
 }
 
 export { CustomerTypes }

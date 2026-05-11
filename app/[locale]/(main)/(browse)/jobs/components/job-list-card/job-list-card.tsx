@@ -2,7 +2,7 @@
 
 import { useCallback, useTransition } from "react"
 
-import { AdsListCardSkeleton } from "@/app/[locale]/(main)/(browse)/for-sale/components/ads-list-card"
+import { JobListCardSkeleton } from "@/app/[locale]/(main)/(browse)/jobs/components/job-list-card/index"
 import { TransportedQueryRef } from "@apollo/client-integration-nextjs"
 import { useQueryRefHandlers, useReadQuery } from "@apollo/client/react"
 import { useInView } from "react-intersection-observer"
@@ -25,7 +25,7 @@ type Props = {
   >
 }
 
-const AdsListCard: React.FC<Props> = ({ queryRef }) => {
+const JobListCard: React.FC<Props> = ({ queryRef }) => {
   const { fetchMore } = useQueryRefHandlers(queryRef)
   const { data } = useReadQuery(queryRef)
 
@@ -75,7 +75,7 @@ const AdsListCard: React.FC<Props> = ({ queryRef }) => {
         {forSales.map((item) => {
           return (
             <div key={item.advertisement_id}>
-              <Link href={APP_ROUTES.forSaleDetail(item.url_key)}>
+              <Link href={APP_ROUTES.jobDetail(item.url_key)}>
                 <AdsCard data={item} />
               </Link>
             </div>
@@ -88,11 +88,11 @@ const AdsListCard: React.FC<Props> = ({ queryRef }) => {
           className="grid grid-cols-3 2xl:grid-cols-4 gap-4"
           aria-busy={isPending}
         >
-          {isPending && <AdsListCardSkeleton />}
+          {isPending && <JobListCardSkeleton />}
         </div>
       )}
     </>
   )
 }
 
-export default AdsListCard
+export default JobListCard

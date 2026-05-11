@@ -1,0 +1,16 @@
+{
+  "job_detail_page": {
+    "metadata": {
+      "title": "Job details - NailsZone",
+      "description": "View job details on NailsZone."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "jobs": "Jobs"
+    },
+    "description": "Description",
+    "report": "Report",
+    "contact": "Contact",
+    "share": "Share"
+  }
+}

@@ -21,4 +21,17 @@ interface GetListAdvertisementVariables {
   }
 }
 
-export type { GetListAdvertisementResponse, GetListAdvertisementVariables }
+interface GetAdvertisementDetailResponse {
+  adsDetail: Advertisement
+}
+
+interface GetAdvertisementDetailVariables {
+  url_key: string
+}
+
+export type {
+  GetListAdvertisementResponse,
+  GetListAdvertisementVariables,
+  GetAdvertisementDetailResponse,
+  GetAdvertisementDetailVariables,
+}
