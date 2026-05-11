@@ -1,11 +1,15 @@
 import createMiddleware from "next-intl/middleware"
 
+import { auth } from "@/auth"
+
 import { routing } from "./i18n/routing"
 
-export default createMiddleware(routing)
+const intlMiddleware = createMiddleware(routing)
+
+export const proxy = auth((req) => {
+  return intlMiddleware(req)
+})
 
 export const config = {
   matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
 }
-
-export { auth as proxy } from "@/auth"

@@ -5,13 +5,9 @@ import { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import {
-  AdsListCard,
-  AdsListCardSkeleton,
-} from "@/app/[locale]/(main)/(browse)/for-sale/components/ads-list-card"
-import {
-  TopForSales,
-  TopForSalesSkeleton,
-} from "@/app/[locale]/(main)/(browse)/for-sale/components/top-for-sales"
+  TopJobs,
+  TopJobsSkeleton,
+} from "@/app/[locale]/(main)/(browse)/jobs/components/top-jobs/index"
 
 import CACHE_KEYS from "@/configs/cache-keys"
 import CACHE_TIMES from "@/configs/cache-times"
@@ -22,6 +18,8 @@ import { SORT_DIRECTIONS } from "@/types/sort-direction"
 
 import { PreloadQuery } from "@/lib/graphql/apollo-client"
 import { GET_LIST_ADVERTISEMENT_QUERY } from "@/lib/graphql/queries/advertisement"
+
+import { JobListCard, JobListCardSkeleton } from "./components/job-list-card"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -58,17 +56,17 @@ const Page = async ({ params }: Props) => {
 
   return (
     <div className="px-8 pt-6 flex flex-col gap-y-6 pb-5">
-      <Suspense fallback={<TopForSalesSkeleton />}>
-        <TopForSales />
+      <Suspense fallback={<TopJobsSkeleton />}>
+        <TopJobs />
       </Suspense>
 
       <PreloadQuery
         query={GET_LIST_ADVERTISEMENT_QUERY}
         variables={{
           currentPage: 1,
-          pageSize: PAGE_SIZES.FOR_SALE_ADS_LIST * 2,
+          pageSize: PAGE_SIZES.JOB_ADS_LIST * 2,
           filter: {
-            type: ADVERTISEMENT_TYPES.FOR_SALES,
+            type: ADVERTISEMENT_TYPES.JOB,
           },
           sort: [
             {
@@ -80,8 +78,8 @@ const Page = async ({ params }: Props) => {
           fetchOptions: {
             cache: "force-cache",
             next: {
-              revalidate: CACHE_TIMES.FOR_SALES_LIST,
-              tags: [CACHE_KEYS.FOR_SALES_LIST],
+              revalidate: CACHE_TIMES.JOB_LIST,
+              tags: [CACHE_KEYS.JOB_LIST],
             },
           },
         }}
@@ -90,11 +88,11 @@ const Page = async ({ params }: Props) => {
           <Suspense
             fallback={
               <div className="grid grid-cols-3 2xl:grid-cols-4 gap-4">
-                <AdsListCardSkeleton />
+                <JobListCardSkeleton />
               </div>
             }
           >
-            <AdsListCard queryRef={queryRef} />
+            <JobListCard queryRef={queryRef} />
           </Suspense>
         )}
       </PreloadQuery>

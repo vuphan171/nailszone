@@ -14,43 +14,6 @@ import {
   GET_LIST_ADVERTISEMENT_QUERY,
 } from "@/lib/graphql/queries/advertisement"
 
-const getForSales = async (
-  pageSize: number = 10,
-  currentPage: number = 1
-): Promise<Advertisement[]> => {
-  try {
-    const { data } = await getClient().query({
-      query: GET_LIST_ADVERTISEMENT_QUERY,
-      variables: {
-        pageSize,
-        filter: {
-          type: ADVERTISEMENT_TYPES.FOR_SALES,
-        },
-        currentPage,
-        sort: [
-          {
-            created_at: SORT_DIRECTIONS.DESC,
-          },
-        ],
-      },
-      context: {
-        fetchOptions: {
-          cache: "force-cache",
-          next: {
-            revalidate: CACHE_TIMES.FOR_SALES,
-            tags: [CACHE_KEYS.FOR_SALES],
-          },
-        },
-      },
-    })
-
-    return data?.getAdsList?.items || []
-  } catch (error) {
-    LoggerService.logError(error)
-    return []
-  }
-}
-
 const getTopForSales = async (
   pageSize: number = 10,
   currentPage: number = 1
@@ -104,4 +67,4 @@ const getForSaleDetail = async (
   }
 }
 
-export { getForSales, getTopForSales, getForSaleDetail }
+export { getTopForSales, getForSaleDetail }

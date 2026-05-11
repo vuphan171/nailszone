@@ -12,4 +12,10 @@ const normalizeText = (value?: string | null, fallback = "") => {
   return value?.trim() || fallback
 }
 
-export { joinText, normalizeText }
+const getFirstLetter = (value?: string | null, fallback = "") => {
+  const trimmed = value?.trim()
+  if (!trimmed) return fallback
+  return trimmed.charAt(0)
+}
+
+export { joinText, normalizeText, getFirstLetter }

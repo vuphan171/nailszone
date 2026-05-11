@@ -1,5 +1,8 @@
 "use server"
 
+import CACHE_KEYS from "@/configs/cache-keys"
+import CACHE_TIMES from "@/configs/cache-times"
+
 import { Advertisement, ADVERTISEMENT_TYPES } from "@/types/advertisement"
 import { SORT_DIRECTIONS } from "@/types/sort-direction"
 
@@ -11,7 +14,7 @@ import {
   GET_LIST_ADVERTISEMENT_QUERY,
 } from "@/lib/graphql/queries/advertisement"
 
-const getJobs = async (
+const getTopJobs = async (
   pageSize: number = 10,
   currentPage: number = 1
 ): Promise<Advertisement[]> => {
@@ -22,6 +25,7 @@ const getJobs = async (
         pageSize,
         filter: {
           type: ADVERTISEMENT_TYPES.JOB,
+          is_pinned: true,
         },
         currentPage,
         sort: [
@@ -30,11 +34,20 @@ const getJobs = async (
           },
         ],
       },
+      context: {
+        fetchOptions: {
+          cache: "force-cache",
+          next: {
+            revalidate: CACHE_TIMES.TOP_JOBS,
+            tags: [CACHE_KEYS.TOP_JOBS],
+          },
+        },
+      },
     })
 
     return data?.getAdsList?.items || []
   } catch (error) {
-    console.error(error)
+    LoggerService.logError(error)
     return []
   }
 }
@@ -52,4 +65,4 @@ const getJobDetail = async (url_key: string): Promise<Advertisement | null> => {
   }
 }
 
-export { getJobs, getJobDetail }
+export { getJobDetail, getTopJobs }
