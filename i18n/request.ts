@@ -45,6 +45,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       ).default,
       ...(await import(`../messages/${locale}/login.json`)).default,
       ...(await import(`../messages/${locale}/for-sale-detail.json`)).default,
+      ...(await import(`../messages/${locale}/job-detail.json`)).default,
     },
   }
 })

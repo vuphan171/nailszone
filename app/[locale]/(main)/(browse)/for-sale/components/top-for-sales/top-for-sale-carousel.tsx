@@ -2,7 +2,11 @@
 
 import React from "react"
 
+import { APP_ROUTES } from "@/configs/routes"
+
 import { Advertisement } from "@/types/advertisement"
+
+import { Link } from "@/i18n/navigation"
 
 import {
   Carousel,
@@ -38,7 +42,9 @@ const TopForSaleCarousel: React.FC<Props> = ({ topForSales }) => {
               key={ads.advertisement_id}
               className="basis-1 md:basis-1/2  2xl:basis-1/3"
             >
-              <TopForSaleCard data={ads} />
+              <Link href={APP_ROUTES.forSaleDetail(ads.url_key)}>
+                <TopForSaleCard data={ads} />
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
