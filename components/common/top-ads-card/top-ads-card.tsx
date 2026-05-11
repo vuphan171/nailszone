@@ -1,4 +1,8 @@
+"use client"
+
 import React from "react"
+
+import { useTranslations } from "next-intl"
 
 import IconLocation from "@/public/icons/ic-location.svg"
 
@@ -23,9 +27,11 @@ type Props = {
 }
 
 const TopAdsCard: React.FC<Props> = ({ data }) => {
+  const t = useTranslations("Common")
+
   const price = getAdvertisementPrice({
     data,
-    negotiableLabel: "Negotiable",
+    negotiableLabel: t("negotiable"),
   })
 
   const shareHref = getAdvertisementDetailPath(data)

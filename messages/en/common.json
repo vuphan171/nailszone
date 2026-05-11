@@ -18,7 +18,7 @@
         "Header": {
             "sign_in": "Sign in"
         },
-        "Negotiable": "Negotiable",
+        "negotiable": "Negotiable",
         "Share": {
             "label": "Share listing",
             "link_copied": "Link copied to clipboard",

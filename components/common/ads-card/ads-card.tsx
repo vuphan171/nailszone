@@ -31,7 +31,7 @@ const AdsCard: React.FC<Props> = ({ data }) => {
 
   const price = getAdvertisementPrice({
     data,
-    negotiableLabel: t("Negotiable"),
+    negotiableLabel: t("negotiable"),
   })
 
   const shareHref = getAdvertisementDetailPath(data)
